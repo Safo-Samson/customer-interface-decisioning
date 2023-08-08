@@ -1,12 +1,113 @@
 .applyLoan-container{
     width: 966px;
     height: 804px;
-    border: 1px solid black;
+    border: none;
+    border-top: 11px solid #005F44 ;
+    /* border: 1px solid black; */
     color: #005F44;
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+
+}
+.sev-mainContent{
+    display: flex;
+    flex-direction: row;
+    margin-top: 49px;
+    /* justify-content: space-evenly; */
+}
+.coinsIcon{
+
+
+
+    color: #005F44;
+    width: 46.596px;
+    height: 101px;
+}
+.inputFieldLoan{
+    margin-right: 80px;
+    margin-top: 12px;
+}
+.applyLoan-header{
+    width: 1498px;
+    height: 21px;
+    /* border: 1px solid #005F44; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 51px;
+}
+.overDraft, .creditCard, .loan, .carFinance, .mortgage{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #005F44;
+    opacity: 0.7;
+    background: #FFF;
+    color: #525252;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    
+}
+.overDraft{
+    margin-top: 47px;
+    margin-right: 52px;
+    
+}
+.overDraft:hover, .creditCard:hover, .loan:hover, .carFinance:hover, .mortgage:hover{
+    border: 4px solid #005F44;
+    color: #525252;
+    font-weight: 900;
+    opacity: 1;
+
+}
+
+.loan{
+    margin-top: 29px;
+    margin-right: 52px;
+
+}
+
+.carFinance{
+    margin-top: 29px;
+}
+
+.mortgage{
+    margin-top: 29px;
+    margin-right: 202px;
+}
+
+.backBtn{
+    width: 218px;
+    height: 42px;
+    flex-shrink: 0;
+    background: #A1A1A1;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 48px;
+    cursor: pointer;
+}
+
+.nextBtn{
+    width: 218px;
+    height: 42px;
+    background: #5E900F;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 447px;
+    cursor: pointer;
+    
 }
 
 .decide-container{
@@ -18,7 +119,9 @@
     line-height: normal;
     width: 483px;
     height: 661px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* justify-content: space-evenly; */
+
 }
 
 .enterAmount-container{
@@ -30,5 +133,35 @@
     line-height: normal;
     width: 483px;
     height: 661px;
-    border: 1px solid black;
+    border: none;
+    border-left: 1px solid #B8B3B3;
+}
+
+.loanAmount{
+    display: flex;
+    flex-direction: column;
+    margin-top: 192px;
+    margin-left: 102px;
+
+}
+
+.loanAmount input{
+    width: 277px;
+    height: 57px;
+    flex-shrink: 0;
+}
+
+.loanAmount label{
+    width: 150px;
+    color: #525252;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sev-loanHeader{
+    margin-left: 31px;
+    
 }
