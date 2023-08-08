@@ -30,11 +30,11 @@ return(<>
         <div className="sev-mainContent">
         <div className="decide-container">
             <p>Decide on your borrowing option:</p>
-            <button className="overDraft" ><FontAwesomeIcon icon={faHandHoldingDollar} style={{color: "#005F44"}} />Overdraft</button>
-            <button className="creditCard"> <FontAwesomeIcon icon={faCreditCard} style={{color: "#005F44"}} /> Credit Card</button>
-            <button className="loan"><FontAwesomeIcon icon={faMoneyCheckDollar} style={{color: "#005F44"}} />Loan</button>
-            <button className="carFinance"> <FontAwesomeIcon icon={faCar} style={{color: "#005F44"}} />Car Finance</button>
-            <button className="mortgage"><FontAwesomeIcon icon={faHouse} style={{color: "#005F44"}} />Mortgage</button>
+            <button className="overDraft" ><FontAwesomeIcon icon={faHandHoldingDollar} size='2xl'style={{color: "#005F44"}} /> Overdraft</button>
+            <button className="creditCard"> <FontAwesomeIcon icon={faCreditCard} size='2xl' style={{color: "#005F44"}} /> Credit Card</button>
+            <button className="loan"><FontAwesomeIcon icon={faMoneyCheckDollar} size='2xl' style={{color: "#005F44"}} />Loan</button>
+            <button className="carFinance"> <FontAwesomeIcon icon={faCar} size='2xl' style={{color: "#005F44"}} />Car Finance</button>
+            <button className="mortgage"><FontAwesomeIcon icon={faHouse} size='2xl' style={{color: "#005F44"}} />Mortgage</button>
             
         </div>
         <div className="enterAmount-container">
