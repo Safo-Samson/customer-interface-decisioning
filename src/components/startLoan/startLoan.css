@@ -1,6 +1,6 @@
 .applyLoan-container{
     width: 966px;
-    height: 804px;
+    height: 100%;
     border: none;
     border-top: 11px solid #005F44 ;
     /* border: 1px solid black; */
@@ -9,8 +9,13 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    background-color: white;
+   
 
 }
+
+
+
 .sev-mainContent{
     display: flex;
     flex-direction: row;
@@ -18,8 +23,7 @@
     /* justify-content: space-evenly; */
 }
 .coinsIcon{
-
-
+    margin-left: 20px;
 
     color: #005F44;
     width: 46.596px;
@@ -93,6 +97,7 @@
     line-height: normal;
     margin-left: 48px;
     cursor: pointer;
+    border: none;
 }
 
 .nextBtn{
@@ -107,6 +112,7 @@
     line-height: normal;
     margin-left: 447px;
     cursor: pointer;
+    border: none;
     
 }
 

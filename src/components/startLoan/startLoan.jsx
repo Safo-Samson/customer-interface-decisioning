@@ -11,6 +11,7 @@ import { faHandHoldingDollar } from "@fortawesome/free-solid-svg-icons";
 import { faSterlingSign } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import VerticalBar from "../UIComponents/VerticalBar";
 
 
 const StartLoan = () =>{
@@ -20,6 +21,7 @@ const [loanAmount, setLoan ] = useState("");
 
 
 return(<>
+
     <div className="applyLoan-container">
     <div className="applyLoan-header">
     <FontAwesomeIcon className='coinsIcon' icon={faCoins}/>
@@ -63,7 +65,7 @@ return(<>
     </div>
 
 
-</>)
+    </>)
 }
 
 

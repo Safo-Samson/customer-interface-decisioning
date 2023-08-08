@@ -1,13 +1,14 @@
-.body {
-  display: flex;
-}
+
 
 .newLoan-container {
   display: flex;
+  /* background-color: #EEEEEE; */
 }
 
 .newLoan-remaining-content {
   /* Use 90% of the remaining width */
+  margin-left: 200px;
   flex: 1;
+  /* background-color: white; */
   /* Add any additional styling you need for the remaining content */
 }

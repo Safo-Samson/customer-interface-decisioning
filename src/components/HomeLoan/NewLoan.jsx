@@ -1,5 +1,6 @@
 import VerticalBar from "../UIComponents/VerticalBar";
 import "./NewLoan.css";
+import StartLoan from "../StartLoan/StartLoan";
 
 function NewLoan() {
   return (
@@ -7,10 +8,8 @@ function NewLoan() {
       <VerticalBar />
 
       <div className="newLoan-remaining-content">
-        <h1>New Loan</h1>
-        <h1>New Loan</h1>
-        <h1>New Loan</h1>
-        <h1>New Loan</h1>
+        <StartLoan />
+
       </div>
     </div>
   );
