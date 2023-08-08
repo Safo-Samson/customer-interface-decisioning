@@ -7,11 +7,13 @@ const StartLoan = () =>{
 return(<>
     <div className="applyLoan-container">
         <h1 className="sev-loanHeader">START YOUR NEW LOAN APPLICATION</h1>
+        <div className="sev-mainContent">
         <div className="decide-container">
-            <h4>Decide on your borrowing option:</h4>
+            <p>Decide on your borrowing option:</p>
         </div>
         <div className="enterAmount-container">
-            <h4>Enter your desired amount: </h4>
+            <p>Enter your desired amount: </p>
+        </div>
         </div>
     </div>
 
