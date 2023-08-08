@@ -1,17 +1,14 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import StartLoan from './components/startLoan/startLoan.jsx';
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
+import NewLoan from "./components/HomeLoan/NewLoan";
+import CombinedBar from "./components/UIComponents/CombinedBar";
 
+function App() {
   return (
     <>
-    <StartLoan />
-
+      <CombinedBar />
+      <NewLoan />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

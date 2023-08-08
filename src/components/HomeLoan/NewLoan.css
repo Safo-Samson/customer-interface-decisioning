@@ -1,0 +1,13 @@
+.body {
+  display: flex;
+}
+
+.newLoan-container {
+  display: flex;
+}
+
+.newLoan-remaining-content {
+  /* Use 90% of the remaining width */
+  flex: 1;
+  /* Add any additional styling you need for the remaining content */
+}

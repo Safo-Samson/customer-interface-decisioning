@@ -1,0 +1,97 @@
+.user-bar {
+  display: flex; /* This enables Flexbox layout */
+  flex-direction: row; /* By default, Flexbox arranges items in a row */
+  background-color: rgb(207, 206, 206);
+  padding: 3px;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px;
+}
+
+.user-bar-text {
+  color: #006a4c;
+  align-self: center;
+  margin-left: auto;
+  display: flex; /* This enables Flexbox layout */
+  flex-direction: row;
+}
+
+.user-bar-text h4 {
+  margin-right: 30px;
+}
+
+.user-bank-logo {
+  width: 50px; /* Adjust the width of the logo as needed */
+  height: 40px; /* Adjust the height of the logo as needed */
+  margin-right: 10px; /* Add some spacing between the logo and the items */
+  margin-bottom: 5px;
+}
+
+.user-logo-text {
+  font-weight: bolder; /* Make text bold */
+  color: #757b79;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.user-logo-container {
+  display: flex; /* Nested flex container to align logo and text horizontally */
+  flex-direction: column; /* Arrange logo and text in a column */
+  align-items: flex-start; /* Center items horizontally */
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+/* Responsive styles for phones and small screens(up to 767px) */
+@media (max-width: 1280px) {
+  .user-container {
+    flex-direction: column; /* Stack items vertically on phones */
+    padding: 5px; /* Reduce padding for phones */
+  }
+
+  .user-bank-logo {
+    margin-right: 0; /* Remove margin between logo and items on phones */
+    margin-bottom: 10px; /* Add more space between the logo and the items */
+  }
+
+  .user-logo-container {
+    margin-left: 0; /* Remove margin-left for phones */
+    align-items: flex-start; /* Align items to the left on phones */
+  }
+}
+
+.user-custom-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.user-dropdown-header {
+  padding: 10px;
+  color: #006a4c;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  color: #006a4c;
+  background-color: #006a4c;
+  /* border: 1px solid #ccc; */
+
+  width: 100%;
+}
+
+.user-custom-dropdown:hover .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #006a4c;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #05980e;
+}

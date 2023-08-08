@@ -1,0 +1,42 @@
+.vertical-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #2d8259;
+  padding: 10px;
+  visibility: block;
+  position: relative;
+  height: 67.5vh;
+  max-width: 300px;
+  margin-left: 10px;
+}
+
+.vert-button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 16px;
+  border: none;
+
+  border-bottom: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #2d8259;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 50px;
+  width: 300px;
+}
+
+.vert-button:hover {
+  background-color: #45a049;
+}
+.vert-button.active {
+  color: #3fd113; /* White text color */
+  border: 2px solid #3fd113;
+  border-right: none;
+}
+
+.logout-button:hover {
+  border-color: #ffffff;
+}
