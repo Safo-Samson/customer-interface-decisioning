@@ -14,8 +14,6 @@
 
 }
 
-
-
 .sev-mainContent{
     display: flex;
     flex-direction: row;
@@ -84,6 +82,15 @@
     margin-right: 202px;
 }
 
+.overDraft .overdraftIcon{
+    margin-left: 10px;
+}
+.creditCard .creditCardIcon{
+    margin-left: 39px;
+}
+.loan .loanIcon{
+    margin-left: 50px;
+}
 .backBtn{
     width: 218px;
     height: 42px;
