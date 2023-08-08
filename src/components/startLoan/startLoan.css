@@ -1,0 +1,34 @@
+.applyLoan-container{
+    width: 966px;
+    height: 804px;
+    border: 1px solid black;
+    color: #005F44;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.decide-container{
+    color: #525252;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 483px;
+    height: 661px;
+    border: 1px solid black;
+}
+
+.enterAmount-container{
+    color: #525252;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 483px;
+    height: 661px;
+    border: 1px solid black;
+}
