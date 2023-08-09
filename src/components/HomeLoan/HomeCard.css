@@ -21,15 +21,12 @@
 .homeCard-icons {
   display: flex;
   flex-direction: column;
-
-  /* background-color: blue; */
 }
 
 .homeCard-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: red; */
 }
 
 .homeCard-text h2 {

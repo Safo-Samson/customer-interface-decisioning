@@ -1,11 +1,13 @@
 .Homepage-container {
   display: flex;
+
   /* background-color: #EEEEEE; */
 }
 
 .Homepage-remaining-content {
   /* Use 90% of the remaining width */
   flex: 1;
+  
   /* background-color: white; */
 
 }

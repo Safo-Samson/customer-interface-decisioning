@@ -8,8 +8,8 @@ import {
   faBookOpen,
   faClock,
   faCalculator,
-  faB,
 } from "@fortawesome/free-solid-svg-icons";
+import SmallSupport from "./SmallSupport";
 
 function Homepage() {
   return (
@@ -27,8 +27,7 @@ function Homepage() {
             promoIcon={faClock}
             promoHeader={`Get your money quickly`}
             promoText={` Receive your money straight away if you apply and are approved between 9am and 8:30pm.
-
-Otherwise, you'll have your money before 9am the next working day.`}
+             Otherwise, you'll have your money before 9am the next working day.`}
             buttonText={` APPLY FOR A LOAN`}
           />
           <HomeCard
@@ -41,7 +40,12 @@ Otherwise, you'll have your money before 9am the next working day.`}
             buttonText={`SOFT CREDIT CHECK`}
           />
         </div>
+
+        <SmallSupport />
       </div>
+      {/* <div className="Homepage-container">
+        <SmallSupport />
+      </div> */}
     </div>
   );
 }
