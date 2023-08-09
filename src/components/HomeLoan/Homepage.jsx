@@ -36,7 +36,7 @@ function Homepage() {
             homeCardText={` Thinking about applying for a mortgage, credit card or other type of borrowing? Check Your Credit Score for free, with no impact on your credit file.`}
             promoIcon={faBookOpen}
             promoHeader={`Learn about Credit`}
-            promoText={` What is a hard or soft credit check?What is a credit score and how does it work?How to improve your credit score?What effects your credit score?`}
+            promoText={` What is a hard or soft credit check?What is a credit score and how does it work?How to improve your credit score?`}
             buttonText={`SOFT CREDIT CHECK`}
           />
         </div>

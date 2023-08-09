@@ -52,6 +52,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin-left: -280px; /*to off the space in the space-evenly for the first box*/
+  /* background-color: #2178b0; */
 }
 
 .homeCard-promo {

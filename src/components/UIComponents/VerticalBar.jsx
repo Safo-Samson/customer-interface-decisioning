@@ -53,6 +53,14 @@ const VerticalBar = () => {
             <FontAwesomeIcon icon={faPlus} className="vert-button-icon" />
           </button>
           <button className="vert-button">
+            Lifetime ISA
+            <FontAwesomeIcon icon={faPlus} className="vert-button-icon" />
+          </button>
+          <button className="vert-button">
+            Savings ISA
+            <FontAwesomeIcon icon={faPlus} className="vert-button-icon" />
+          </button>
+          <button className="vert-button">
             others{" "}
             <FontAwesomeIcon icon={faPlus} className="vert-button-icon" />
           </button>
