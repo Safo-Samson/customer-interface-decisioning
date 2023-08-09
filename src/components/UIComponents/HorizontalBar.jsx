@@ -1,7 +1,8 @@
 import "./HorizontalBar.css";
 import horseLogo from "../../assets/horseLogo.jpeg";
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 const HorizontalBar = () => {
   return (
     <div className="horizontal-bar">
@@ -22,7 +23,10 @@ const HorizontalBar = () => {
 
       <div className="bar-text">
         <h4>Cookie policy</h4>
-        <h4>Your Security</h4>
+        <h4>
+          Your Security
+          <FontAwesomeIcon icon={faLock} style={{ marginLeft: "18px" }} />
+        </h4>
       </div>
 
       <i className="fa fa-user profile-icon"></i>

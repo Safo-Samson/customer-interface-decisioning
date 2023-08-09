@@ -1,10 +1,11 @@
 .user-bar {
   display: flex; /* This enables Flexbox layout */
   flex-direction: row; /* By default, Flexbox arranges items in a row */
-  background-color: rgb(207, 206, 206);
+  background-color: rgb(255, 255, 255);
   padding: 3px;
   align-items: center; /* Center items vertically */
   margin-bottom: 20px;
+   height: 50px;
 }
 
 .user-bar-text {
@@ -13,12 +14,41 @@
   margin-left: auto;
   display: flex; /* This enables Flexbox layout */
   flex-direction: row;
+   cursor: pointer;
+}
+.message-icon-container {
+  position: relative;
+  display: inline-block;
+  /* margin-right: 20px;  */
 }
 
+.message-icon {
+  font-size: 24px; /* Adjust the font size of the icon */
+  color: #006a4c;; /* Adjust the icon color */
+}
+
+.unread-messages {
+  position: absolute;
+  top: -5px; /* Adjust the vertical position of the circle */
+  right: -5px; /* Adjust the horizontal position of the circle */
+  background-color: red;
+  color: white;
+  font-size: 14px; /* Adjust the font size of the number */
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Create a circular shape */
+}
 .user-bar-text h4 {
   margin-right: 30px;
 }
 
+.Last-login{
+  font-size: 14px;
+}
 .user-bank-logo {
   width: 50px; /* Adjust the width of the logo as needed */
   height: 40px; /* Adjust the height of the logo as needed */
@@ -95,3 +125,7 @@
 .user-dropdown-content a:hover {
   background-color: #05980e;
 }
+
+/* Add these styles to your UserBar.css stylesheet */
+
+

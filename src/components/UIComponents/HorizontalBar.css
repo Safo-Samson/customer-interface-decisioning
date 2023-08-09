@@ -4,6 +4,8 @@
   background-color: #006a4c;
   padding: 5px;
   align-items: center; /* Center items vertically */
+  height: 60px;
+
 }
 
 .bar-text {
@@ -12,6 +14,7 @@
   margin-left: auto;
   display: flex; /* This enables Flexbox layout */
   flex-direction: row;
+  cursor: pointer;
 }
 
 .bar-text h4 {
@@ -30,6 +33,7 @@
   font-weight: bold; /* Make text bold */
   color: white;
   margin-right: 10px;
+  font-size: 18px;
 }
 
 .logo-container {
@@ -61,6 +65,7 @@
 .custom-dropdown {
   display: inline-block;
   position: relative;
+   z-index: 1; /* Set a higher z-index value for the dropdown container */
 }
 
 .dropdown-header {
@@ -78,6 +83,8 @@
   /* border: 1px solid #ccc; */
 
   width: 100%;
+   z-index: 2; /* Set an even higher z-index value for the dropdown content */
+
 }
 
 .custom-dropdown:hover .dropdown-content {
