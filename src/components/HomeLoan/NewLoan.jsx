@@ -10,7 +10,6 @@ function NewLoan() {
 
       <div className="newLoan-remaining-content">
         <StartLoan />
-        {/* <HomeCard /> */}
       </div>
     </div>
   );

@@ -5,7 +5,6 @@
 
 .Homepage-remaining-content {
   /* Use 90% of the remaining width */
-  margin-left: 200px;
   flex: 1;
   /* background-color: white; */
 

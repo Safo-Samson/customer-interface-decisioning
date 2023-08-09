@@ -1,7 +1,8 @@
 
 .HomeCard-container{
     width: 449px;
-    height: 606px;
+     height: 67.5vh;
+     /* height: 606px; */
     border: none;
     border-top: 11px solid #005F44 ;
     color: #005F44;
@@ -10,11 +11,86 @@
     font-weight: 800;
     line-height: normal;
     background-color: rgb(255, 255, 255);
+display: flex; 
+flex-direction: column;
+  align-items: center;  /*Center vertically */
+  /* justify-content: center; Center horizontally */
+  padding-top: 33.08px;
 }
 
+
+.homeCard-icons{
+    display: flex;
+    flex-direction: column;
+ 
+    /* background-color: blue; */
+}
+
+.homeCard-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.homeCard-text h2{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 25px;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+}
+.homeCard-text p{
+    padding: 60px;
+    padding-top: 0;
+    font-weight: 200px;
+    font-size: 18px;
+    color: rgb(94, 91, 91);
+    line-height: 22px; /* spacing between lines*/  
+    padding-bottom: 20px;
+    margin-bottom: 10px; 
+
+}
 .homeCard-layout{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.homeCard-promo{
+   width: 381px;
+   /* height: 183px; taking it off to make it automatic */
+   background: #2178B0;
+   margin : 32px;
+   margin-top: 0;
+}
+.homeCard-promo h4{
+ color: white;
+ font-size: 15px;
+align-items: left;
+margin-left: 20px;
+
+}
+
+.homeCard-promo p{
+    color: white;
+    font-size: 12px;
+    align-items: left;
+    margin-left: 20px;
+   
+    /* padding: 10px */
+}   
+
+.homeCard-button{
+    width: 297px;
+height: 67px;
+background-color: #005F44;
+color: white;
+font-size: 15px;
+font-weight: 800;
+text-transform: uppercase;
+border: none;
 }
