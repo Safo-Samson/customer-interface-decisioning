@@ -16,11 +16,14 @@ import { useNavigate } from "react-router-dom";
 
 const StartLoan = () =>{
   const navigate = useNavigate();
-  const handleClick = (e) => {
+  const nextClick = (e) => {
 		e.preventDefault();
     navigate('/CustomerInfo')
   }
-
+  const backClick = (e) => {
+		e.preventDefault();
+    navigate('/')
+  }
     
 const [loanAmount, setLoan ] = useState("");
 
@@ -100,11 +103,11 @@ return (
           </div>
         </div>
       </div>
-      <button className="backBtn">
+      <button className="backBtn" onClick={backClick}>
         {" "}
         <FontAwesomeIcon icon={faChevronLeft} /> Back
       </button>
-      <button className="nextBtn" onClick={handleClick}>
+      <button className="nextBtn" onClick={nextClick}>
         Next <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>
