@@ -1,7 +1,7 @@
 import "./App.css";
 import CombinedBar from "./components/UIComponents/CombinedBar";
-import HomePage from './components/StartLoan/Homepage';
-import InfoCombined from './components/InformationCheck/InfoCombined'
+import InfoCombined from "./components/InformationCheck/InfoCombined";
+import Homepage from "./components/startLoan/Homepage";
 
 function App() {
   return (
