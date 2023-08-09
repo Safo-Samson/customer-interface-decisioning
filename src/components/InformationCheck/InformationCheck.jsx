@@ -4,6 +4,8 @@ import { faCoins } from "@fortawesome/free-solid-svg-icons";
 import './InformationCheck.css'
 import { useState } from "react";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -215,9 +217,9 @@ const InformationCheck= () => {
 
                         </div>
                         <div className="buttons">
-						<button className="backBTN" onClick={handleClose}>Close</button>
+						<button className="backBTN" onClick={handleClose}> <FontAwesomeIcon icon={faChevronLeft} />Back</button>
                         <button className="editBTN">Edit</button>
-						<button className="applyBTN" >Show Results</button>
+						<button className="applyBTN" >Apply for loan <FontAwesomeIcon icon={faChevronRight} /></button>
                         </div>
                         </div>
 
