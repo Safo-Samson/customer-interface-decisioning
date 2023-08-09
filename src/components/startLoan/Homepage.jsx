@@ -13,11 +13,7 @@ import SmallSupport from "./SmallSupport";
 import { useNavigate } from "react-router-dom";
 
 function Homepage() {
-  const navigate = useNavigate();
-  const handleClick = (e) => {
-		e.preventDefault();
-    navigate('/NewLoan')
-  }
+
   return (
     <div className="Homepage-container">
       <VerticalBar />
@@ -25,7 +21,6 @@ function Homepage() {
       <div className="Homepage-remaining-content">
         <div className="homeCard-layout">
           <HomeCard
-            onClick = {handleClick}
             icon={faCoins}
             homeCardHeader={` APPLY FOR NEW LOAN`}
             homeCardText={` A personal loan could help you with your plans if you’re thinking
@@ -36,6 +31,7 @@ function Homepage() {
             promoText={` Receive your money straight away if you apply and are approved between 9am and 8:30pm.
              Otherwise, you'll have your money before 9am the next working day.`}
             buttonText={` APPLY FOR A LOAN`}
+            pathname={"/NewLoan"}
           />
           <HomeCard
             icon={faCalculator}
@@ -45,6 +41,7 @@ function Homepage() {
             promoHeader={`Learn about Credit`}
             promoText={` What is a hard or soft credit check?What is a credit score and how does it work?How to improve your credit score?`}
             buttonText={`SOFT CREDIT CHECK`}
+            pathname={"/NewLoan"}
           />
         </div>
 
