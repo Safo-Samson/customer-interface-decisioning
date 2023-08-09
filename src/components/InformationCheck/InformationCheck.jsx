@@ -33,11 +33,12 @@ const InformationCheck= () => {
                 <div className="informationCheck-header">
                     <FontAwesomeIcon className='coinsIcon' icon={faCoins}/>
                     <h1 className="sev-infoHeader">MY DETAILS</h1>
+                </div>
 
 					<form className="form-container">
 
 						<div className="personalInfo">
-                        <div className="personalInfoTxt">
+                            <div className="personalInfoTxt">
                                 CUSTOMER INFORMATION
                             </div>
                             <div className="personalFields">
@@ -88,9 +89,9 @@ const InformationCheck= () => {
 						<div className="loanInfo">
                             <div className="loanInfoTxt">Loan Information</div>
                             <div className="loanFields">
-                            <div className="dateApplied">
-								<label htmlFor="dateApplied"> Date Applied </label>
-								<input
+                                <div className="dateApplied">
+								    <label htmlFor="dateApplied"> Date Applied </label>
+								    <input
 									value={dateApplied}
 									onChange={(e) => setValue(e.target.value)}
 									type="date"
@@ -98,12 +99,12 @@ const InformationCheck= () => {
 									id="dateApplied"
 									name="dateApplied"
                                     readOnly
-								/>
-							</div>
+								    />
+							    </div>
 
-							<div className="loanType">
-								<label htmlFor="loanType"> Loan Type</label>
-								<input
+							    <div className="loanType">
+								    <label htmlFor="loanType"> Loan Type</label>
+								    <input
 									value={loanType}
 									onChange={(e) => setType(e.target.value)}
 									type="loanType"
@@ -111,38 +112,37 @@ const InformationCheck= () => {
 									id="loanType"
 									name="loanType"
                                     readOnly
-								/>
-							</div>
-                            <div className="loanAmount">
-								<label htmlFor="loanAmount"> Loan Amount</label>
-								<input
-									value={loanAmount}
-									onChange={(e) => setAmount(e.target.value)}
-									type="loanAmount"
-									placeholder=""
-									id="loanAmount"
-									name="loanAmount"
-                                    readOnly
-								/>
-							</div>
-
-                            <div className="loanTerm">
-                                <label htmlFor="loanTerm">Loan Term</label>
-                                <input
-                                    value={loanTerm}
-                                    onChange={(e)=> setTerm(e.target.value)}
-                                    type="loanTerm"
-                                    placeholder="months"
-                                    id="loanterm"
-                                    name="loanTerm"
-                                    readOnly
+								    />
+							    </div>
+                                <div className="loanAmount">
+                                    <label htmlFor="loanAmount"> Loan Amount</label>
+                                    <input
+                                        value={loanAmount}
+                                        onChange={(e) => setAmount(e.target.value)}
+                                        type="loanAmount"
+                                        placeholder=""
+                                        id="loanAmount"
+                                        name="loanAmount"
+                                        readOnly
                                     />
+                                </div>
+
+                                <div className="loanTerm">
+                                    <label htmlFor="loanTerm">Loan Term</label>
+                                    <input
+                                        value={loanTerm}
+                                        onChange={(e)=> setTerm(e.target.value)}
+                                        type="loanTerm"
+                                        placeholder="months"
+                                        id="loanterm"
+                                        name="loanTerm"
+                                        readOnly
+                                        />
+                                </div>
                             </div>
-                            </div>
+                         </div>    
 
 
-                            
-						</div>
                         <div className="financialInfo">
                             <div className="financialInfoTxt">Financial Information</div>
                         <div className="financialFields">
@@ -211,15 +211,17 @@ const InformationCheck= () => {
                                 />
                             </div>
 
-                            </div>
+                            
 
                         </div>
 						<button className="closeBTN" onClick={handleClose}>Close</button>
 						<button className="calculateBTN" >
 							Show Results
 						</button>
-                        </form>
-                </div>
+                        </div>
+
+                    </form>
+                
             </div>
         </>
     )
