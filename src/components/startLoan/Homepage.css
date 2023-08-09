@@ -1,0 +1,11 @@
+.Homepage-container {
+  display: flex;
+}
+
+.Homepage-remaining-content {
+  /* Use 90% of the remaining width */
+  flex: 1;
+  /* background-color: red; */
+  padding-left: 180px;
+  /* background-color: white; */
+}
