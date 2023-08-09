@@ -80,7 +80,7 @@ margin-left: 20px;
     font-size: 12px;
     align-items: left;
     margin-left: 20px;
-    cursor: pointer;
+   
    
     /* padding: 10px */
 }   
@@ -94,6 +94,7 @@ font-size: 15px;
 font-weight: 800;
 text-transform: uppercase;
 border: none;
+ cursor: pointer;
 }
 
 .homeCard-button:hover{
