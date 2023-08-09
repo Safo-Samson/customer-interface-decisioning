@@ -12,9 +12,14 @@ import { faSterlingSign } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import VerticalBar from "../UIComponents/VerticalBar";
-
+import { useNavigate } from "react-router-dom";
 
 const StartLoan = () =>{
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+		e.preventDefault();
+    navigate('/CustomerInfo')
+  }
 
     
 const [loanAmount, setLoan ] = useState("");
@@ -99,7 +104,7 @@ return (
         {" "}
         <FontAwesomeIcon icon={faChevronLeft} /> Back
       </button>
-      <button className="nextBtn">
+      <button className="nextBtn" onClick={handleClick}>
         Next <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>

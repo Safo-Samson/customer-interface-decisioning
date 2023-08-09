@@ -10,8 +10,14 @@ import {
   faCalculator,
 } from "@fortawesome/free-solid-svg-icons";
 import SmallSupport from "./SmallSupport";
+import { useNavigate } from "react-router-dom";
 
 function Homepage() {
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+		e.preventDefault();
+    navigate('/NewLoan')
+  }
   return (
     <div className="Homepage-container">
       <VerticalBar />
@@ -19,6 +25,7 @@ function Homepage() {
       <div className="Homepage-remaining-content">
         <div className="homeCard-layout">
           <HomeCard
+            onClick = {handleClick}
             icon={faCoins}
             homeCardHeader={` APPLY FOR NEW LOAN`}
             homeCardText={` A personal loan could help you with your plans if you’re thinking
