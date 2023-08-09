@@ -73,6 +73,7 @@
   color: white;
   cursor: pointer;
   font-size: 17px;
+  font-weight: bold;
 }
 
 .dropdown-content {

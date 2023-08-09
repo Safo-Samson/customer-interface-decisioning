@@ -1,0 +1,20 @@
+
+.HomeCard-container{
+    width: 449px;
+    height: 606px;
+    border: none;
+    border-top: 11px solid #005F44 ;
+    color: #005F44;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: rgb(255, 255, 255);
+}
+
+.homeCard-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
