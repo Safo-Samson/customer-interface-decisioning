@@ -19,7 +19,6 @@
   font-weight: bolder;
   font-size: 16px;
   border: none;
-
   border-bottom: 1px solid #000000;
   border-radius: 5px;
   background-color: #2d8259;
@@ -37,7 +36,9 @@
   border: 2px solid #3fd113;
   border-right: none;
 }
-
+.vert-button-icon {
+  margin-left: auto;
+}
 .logout-button:hover {
   border-color: #ffffff;
 }
