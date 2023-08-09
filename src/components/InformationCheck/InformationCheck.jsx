@@ -6,14 +6,16 @@ import { useState } from "react";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 
 
 const InformationCheck= () => {
+    const navigate = useNavigate();
 
     const handleClose = (e) =>{
         e.preventDefault();
-        // navigate('/AppUI')
+        navigate('/NewLoan')
     }
 
 	const [loanType, setType] = useState(location.state?.loanType || "undefined");
@@ -219,7 +221,7 @@ const InformationCheck= () => {
                         <div className="buttons">
 						<button className="backBTN" onClick={handleClose}> <FontAwesomeIcon icon={faChevronLeft} />Back</button>
                         <button className="editBTN">Edit</button>
-						<button className="applyBTN" >Apply for loan <FontAwesomeIcon icon={faChevronRight} /></button>
+						<button className="applyBTN"  >Apply for loan <FontAwesomeIcon icon={faChevronRight} /></button>
                         </div>
                         </div>
 
