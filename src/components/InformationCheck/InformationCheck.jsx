@@ -214,10 +214,11 @@ const InformationCheck= () => {
                             
 
                         </div>
-						<button className="closeBTN" onClick={handleClose}>Close</button>
-						<button className="calculateBTN" >
-							Show Results
-						</button>
+                        <div className="buttons">
+						<button className="backBTN" onClick={handleClose}>Close</button>
+                        <button className="editBTN">Edit</button>
+						<button className="applyBTN" >Show Results</button>
+                        </div>
                         </div>
 
                     </form>
