@@ -19,7 +19,7 @@ const InformationCheck= () => {
     }
 
 	const [loanType, setType] = useState(location.state?.loanType || "undefined");
-	const [loanAmount, setAmount] = useState(location.state?.amount || "undefined");
+	const [loanAmountinfo, setAmountInfo] = useState(location.state?.amount || "undefined");
 	const [dateApplied, setValue] = useState(location.state?.dateApplied || "undefined");
 	const [AccountNo, setAccount] = useState(location.state?.AccountNo || "none");
 	const [creditScore, setScore] = useState(location.state?.creditScore);
@@ -118,15 +118,15 @@ const InformationCheck= () => {
                                     readOnly
 								    />
 							    </div>
-                                <div className="loanAmount">
-                                    <label htmlFor="loanAmount"> Loan Amount</label>
+                                <div className="loanAmountinfo">
+                                    <label htmlFor="loanAmountinfo"> Loan Amount</label>
                                     <input
-                                        value={loanAmount}
-                                        onChange={(e) => setAmount(e.target.value)}
-                                        type="loanAmount"
+                                        value={loanAmountinfo}
+                                        onChange={(e) => setAmountInfo(e.target.value)}
+                                        type="loanAmountinfo"
                                         placeholder=""
-                                        id="loanAmount"
-                                        name="loanAmount"
+                                        id="loanAmountinfo"
+                                        name="loanAmountinfo"
                                         readOnly
                                     />
                                 </div>

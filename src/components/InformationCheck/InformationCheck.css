@@ -167,7 +167,7 @@
 	margin-top: 30px;
 }
 
-.loanAmount {
+.loanAmountinfo {
 	display: flex;
 	flex-direction: column;
     margin-left:15px;
@@ -185,6 +185,7 @@
 .loanTerm {
 	display: flex;
 	flex-direction: column;
+	margin-left: 20px;
 
 	margin-top: 30px;
 }
@@ -192,7 +193,7 @@
 	width: 108px;
 }
 
-.loanAmount input, .dependents input {
+.loanAmountinfo input, .dependents input {
 	width: 101px;
 }
 
