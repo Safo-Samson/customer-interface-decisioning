@@ -1,8 +1,8 @@
 import "./App.css";
 import NewLoan from "./components/StartLoan/NewLoan";
 import CombinedBar from "./components/UIComponents/CombinedBar";
-import StartLoan from "./components/StartLoan/StartLoan";
-import Homepage from "./components/HomeLoan/Homepage";
+import ModelDecision from "./components/startLoan/ModelDecision";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -12,23 +12,7 @@ function App() {
           path="/"
           element={
             <>
-              <CombinedBar /> <Homepage />
-            </>
-          }
-        />
-        <Route
-          path="/CustomerInfo"
-          element={
-            <>
-              <CombinedBar /> <InfoCombined />
-            </>
-          }
-        />
-        <Route
-          path="/NewLoan"
-          element={
-            <>
-              <CombinedBar /> <NewLoan />
+              <CombinedBar /> <ModelDecision />
             </>
           }
         />
