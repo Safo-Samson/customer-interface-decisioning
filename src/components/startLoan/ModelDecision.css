@@ -1,0 +1,185 @@
+.mainDecision-container {
+  display: flex;
+}
+
+.mainDecision-remaining-content {
+  /* Use 90% of the remaining width */
+  flex: 1;
+  /* background-color: red; */
+  padding-left: 130px;
+  padding-right: 100px;
+  /* background-color: white; */
+}
+
+.ModelDecision-container {
+  min-width: 700px;
+  min-height: 73.5vh;
+  border: none;
+  border-top: 11px solid #005f44;
+  color: #005f44;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: left; /*Center vertically */
+  padding-top: 33.08px;
+  padding-bottom: 33.08px;
+}
+.ModelDecision-container h1 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 29px;
+  margin-left: 30px;
+}
+
+.miniDecision-container {
+  min-width: 200px;
+  min-height: 23.5vh;
+  border: 1px solid #99c3b7;
+  color: #005f44;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: left; /*Center vertically */
+  padding-top: 33.08px;
+  padding-bottom: 33.08px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+
+.miniDecision-container-accepted {
+  border: 1px solid #99c3b7;
+  border-top: 20px solid #99c3b7;
+}
+.miniDecision-container-rejected {
+  border: 1px solid #dc2a4d;
+  border-top: 20px solid #dc2a4d;
+}
+.miniDecision-container-counter {
+  border: 1px solid #ffd02c;
+  border-top: 20px solid #ffd02c;
+}
+.miniDecision-container p {
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  margin: 40px;
+  margin-top: 0px;
+}
+.miniDecision-container-button {
+  border: 0.901px solid #005f44;
+  background: #fff;
+  color: #006a4d;
+  font-size: 16.8px;
+  font-weight: 500;
+  width: 238px;
+  height: 43.867px;
+  margin-left: 350px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.miniDecision-container-rejected-button {
+  border: 0.901px solid #dc2a4d;
+  color: #dc2a4d;
+}
+.miniDecision-container-rejected-button:hover {
+  border: 0.901px solid white;
+  background: #dc2a4d;
+  color: white;
+}
+
+.miniDecision-container-accepted-button {
+  border: 0.901px solid #005f44;
+}
+
+.miniDecision-container-counter-button {
+  border: 0.901px solid #ffd02c;
+  color: #ffd02c;
+}
+.miniDecision-container-counter-button:hover {
+  border: 0.901px solid white;
+  background: #ffd02c;
+  color: white;
+}
+.miniDecision-container-accepted-button:hover {
+  border: 0.901px solid white;
+  background: #45a049;
+  color: white;
+}
+.horizonaLine {
+  border: 1px solid #716e6e;
+  max-width: 85.5%;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.loanInfo-container {
+  max-width: 84.8%;
+  background-color: #99c3b7;
+  height: 24px;
+  /* min-width: 200px; */
+  margin-left: 80px;
+  margin-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 150px;
+}
+
+.loanFields {
+  display: flex;
+  flex-direction: row;
+  height: 126px;
+  border: 1px solid #99c3b7;
+  margin-left: -10px;
+  justify-content: space-around;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.loanField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.loanField input {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(63, 61, 61);
+}
+
+.mBack {
+  width: 218px;
+  height: 42px;
+  flex-shrink: 0;
+  background: #a1a1a1;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  margin-left: 80px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.mDone {
+  width: 218px;
+  height: 42px;
+  flex-shrink: 0;
+  background: #5e900f;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  margin-left: auto;
+  margin-right: 80px;
+  margin-top: -42px;
+  cursor: pointer;
+}
