@@ -91,7 +91,7 @@ const InformationCheck= () => {
 						</div>
 
 						<div className="loanInfo">
-                            <div className="loanInfoTxt">Loan Information</div>
+                            <div className="loanInfoTxt">LOAN INFORMATION</div>
                             <div className="loanFields">
                                 <div className="dateApplied">
 								    <label htmlFor="dateApplied"> Date Applied </label>
@@ -148,7 +148,7 @@ const InformationCheck= () => {
 
 
                         <div className="financialInfo">
-                            <div className="financialInfoTxt">Financial Information</div>
+                            <div className="financialInfoTxt">FINANCIAL INFORMATION</div>
                         <div className="financialFields">
 
                         <div className="employmentStatus">
