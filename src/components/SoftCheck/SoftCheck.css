@@ -41,7 +41,7 @@
 }
 
 .sev-softCheckHeader{
-    margin-top: 51px;
+    margin-top: 21px;
 }
 
 .insights-softCheck{
@@ -96,7 +96,12 @@
     width: 290px;
     height: 290px;
     background: #481468;
-    
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+        
 }
 
 .softCheck-good{
@@ -105,6 +110,11 @@
     
     background: #006A4D;
     margin-left: 10px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
     
 }
 
