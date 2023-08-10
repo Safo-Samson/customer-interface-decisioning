@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons";
+import { faExclamation } from "@fortawesome/free-solid-svg-icons";
+
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Apex from "./Apex";
 import './SoftCheck.css'
@@ -17,6 +21,18 @@ const SoftCheck= () =>{
             </div>
             <div className="insights-softCheck">
                 <p>Insights</p>
+                <div className="insights-softCheck-content">
+
+                    <div className="softCheck-bad">
+                    <FontAwesomeIcon className= 'softCheck-exclamationMarkIcon'icon={faExclamation} />
+
+                    </div>
+                    <div className="softCheck-good">
+                    <FontAwesomeIcon className= 'softCheck-checkMarkIcon'icon={faCheck} />
+
+                </div>
+                </div>
+
             </div>
 
             </div>
@@ -29,7 +45,12 @@ const SoftCheck= () =>{
                     <a>Learn more about credit <FontAwesomeIcon icon={faChevronRight} /></a>
                 </div>
             </div>
+            <div className="softCheck-buttons">
+                <button className="softCheck-doneBTN">Done</button>
+                <button className="softCheck-applyBTN">Apply for loan <FontAwesomeIcon icon={faChevronRight} /> </button>
+            </div>
         </div>
+
         </>
     )
 }
