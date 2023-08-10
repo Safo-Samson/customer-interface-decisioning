@@ -10,8 +10,10 @@ import {
   faCalculator,
 } from "@fortawesome/free-solid-svg-icons";
 import SmallSupport from "./SmallSupport";
+import { useNavigate } from "react-router-dom";
 
 function Homepage() {
+
   return (
     <div className="Homepage-container">
       <VerticalBar />
@@ -29,6 +31,7 @@ function Homepage() {
             promoText={` Receive your money straight away if you apply and are approved between 9am and 8:30pm.
              Otherwise, you'll have your money before 9am the next working day.`}
             buttonText={` APPLY FOR A LOAN`}
+            pathname={"/NewLoan"}
           />
           <HomeCard
             icon={faCalculator}
@@ -38,6 +41,7 @@ function Homepage() {
             promoHeader={`Learn about Credit`}
             promoText={` What is a hard or soft credit check?What is a credit score and how does it work?How to improve your credit score?`}
             buttonText={`SOFT CREDIT CHECK`}
+            pathname={"/NewLoan"}
           />
         </div>
 

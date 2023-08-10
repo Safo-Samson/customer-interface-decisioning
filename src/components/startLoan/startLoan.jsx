@@ -12,10 +12,18 @@ import { faSterlingSign } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import VerticalBar from "../UIComponents/VerticalBar";
-
+import { useNavigate } from "react-router-dom";
 
 const StartLoan = () =>{
-
+  const navigate = useNavigate();
+  const nextClick = (e) => {
+		e.preventDefault();
+    navigate('/CustomerInfo')
+  }
+  const backClick = (e) => {
+		e.preventDefault();
+    navigate('/')
+  }
     
 const [loanAmount, setLoan ] = useState("");
 
@@ -31,12 +39,13 @@ return (
       <div className="sev-mainContent">
         <div className="decide-container">
           <p>Decide on your borrowing option:</p>
+          
           <button className="overDraft">
             <FontAwesomeIcon
               className="overdraftIcon"
               icon={faHandHoldingDollar}
               size="2xl"
-              style={{ color: "#005F44" }}
+              style={{ color: "#005F44" , marginLeft: '20px', marginRight: '20px'}}
             />{" "}
             Overdraft
           </button>
@@ -46,7 +55,7 @@ return (
               className="creditCardIcon"
               icon={faCreditCard}
               size="2xl"
-              style={{ color: "#005F44" }}
+              style={{ color: "#005F44", marginLeft: '20px', marginRight: '20px' }}
             />{" "}
             Credit Card
           </button>
@@ -55,7 +64,7 @@ return (
               className="loanIcon"
               icon={faMoneyCheckDollar}
               size="2xl"
-              style={{ color: "#005F44" }}
+              style={{ color: "#005F44" , marginLeft: '35px', marginRight: '40px'}}
             />
             Loan
           </button>
@@ -64,7 +73,7 @@ return (
             <FontAwesomeIcon
               icon={faCar}
               size="2xl"
-              style={{ color: "#005F44" }}
+              style={{ color: "#005F44", marginLeft: '45px', marginRight: '60px' }}
             />
             Car Finance
           </button>
@@ -72,7 +81,7 @@ return (
             <FontAwesomeIcon
               icon={faHouse}
               size="2xl"
-              style={{ color: "#005F44" }}
+              style={{ color: "#005F44" , marginLeft: '20px', marginRight: '20px'}}
             />
             Mortgage
           </button>
@@ -95,11 +104,11 @@ return (
           </div>
         </div>
       </div>
-      <button className="backBtn">
+      <button className="backBtn" onClick={backClick}>
         {" "}
         <FontAwesomeIcon icon={faChevronLeft} /> Back
       </button>
-      <button className="nextBtn">
+      <button className="nextBtn" onClick={nextClick}>
         Next <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>

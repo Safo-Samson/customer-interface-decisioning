@@ -1,8 +1,14 @@
 import "./HomeCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 function HomeCard(props) {
   const questions = props.promoText.split("?").join(" ?, ").split(", ");
+  const navigate = useNavigate();
+  const handleCardClick = (e) => {
+    e.preventDefault();
+    navigate(props.pathname);
+  };
   return (
     <div className="HomeCard-container">
       <div className="homeCard-icons">
@@ -29,7 +35,9 @@ function HomeCard(props) {
           ))}
         </p>
       </div>
-      <button className="homeCard-button">{props.buttonText}</button>
+      <button className="homeCard-button" onClick={handleCardClick}>
+        {props.buttonText}
+      </button>
     </div>
   );
 }

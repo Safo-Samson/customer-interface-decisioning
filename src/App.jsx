@@ -2,14 +2,37 @@ import "./App.css";
 import NewLoan from "./components/StartLoan/NewLoan";
 import CombinedBar from "./components/UIComponents/CombinedBar";
 import StartLoan from "./components/StartLoan/StartLoan";
-import Homepage from "./components/startLoan/Homepage";
+import Homepage from "./components/HomeLoan/Homepage";
 
 function App() {
   return (
     <>
-      <CombinedBar />
-      {/* <NewLoan /> */}
-      <Homepage />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <CombinedBar /> <Homepage />
+            </>
+          }
+        />
+        <Route
+          path="/CustomerInfo"
+          element={
+            <>
+              <CombinedBar /> <InfoCombined />
+            </>
+          }
+        />
+        <Route
+          path="/NewLoan"
+          element={
+            <>
+              <CombinedBar /> <NewLoan />
+            </>
+          }
+        />
+      </Routes>
     </>
   );
 }

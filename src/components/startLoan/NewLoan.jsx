@@ -1,7 +1,6 @@
 import VerticalBar from "../UIComponents/VerticalBar";
 import "./NewLoan.css";
 import StartLoan from "../StartLoan/StartLoan";
-import HomeCard from "./HomeCard";
 
 function NewLoan() {
   return (
