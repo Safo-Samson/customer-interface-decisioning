@@ -1,10 +1,11 @@
 import "./App.css";
 import NewLoan from "./components/StartLoan/NewLoan";
 import CombinedBar from "./components/UIComponents/CombinedBar";
-import ModelDecision from "./components/startLoan/ModelDecision";
 import { Routes, Route } from "react-router-dom";
-import NewLoan from "./components/StartLoan/NewLoan";
 import SoftCombined from "./components/SoftCheck/SoftCombined";
+import Homepage from "./components/startLoan/Homepage";
+import InfoCombined from './components/InformationCheck/InfoCombined';
+import ModelDecision from './components/StartLoan/ModelDecision';
 
 function App() {
   return (
@@ -43,6 +44,15 @@ function App() {
             </>
           }
         />
+        <Route 
+          path="/ModelDecision"
+          element = {
+            <>
+            <CombinedBar />
+            <ModelDecision />
+            </>
+          }
+          />
       </Routes>
     </>
   );

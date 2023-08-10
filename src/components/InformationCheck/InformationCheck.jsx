@@ -17,6 +17,10 @@ const InformationCheck= () => {
         e.preventDefault();
         navigate('/NewLoan')
     }
+    const handleApply = (e) =>{
+        e.preventDefault();
+        navigate('/ModelDecision')
+    }
 
 	const [loanType, setType] = useState(location.state?.loanType || "undefined");
 	const [loanAmountinfo, setAmountInfo] = useState(location.state?.amount || "undefined");
@@ -221,7 +225,7 @@ const InformationCheck= () => {
                         <div className="buttons">
 						<button className="backBTN" onClick={handleClose}> <FontAwesomeIcon icon={faChevronLeft} />Back</button>
                         <button className="editBTN">Edit</button>
-						<button className="applyBTN"  >Apply for loan <FontAwesomeIcon icon={faChevronRight} /></button>
+						<button className="applyBTN"  onClick={handleApply}>Apply for loan <FontAwesomeIcon icon={faChevronRight} /></button>
                         </div>
                         </div>
 

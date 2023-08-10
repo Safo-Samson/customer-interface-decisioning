@@ -9,6 +9,7 @@ import {
   faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ModelDecision = ({ decision, setDecision }) => {
   // decisions can be "accepted 1" or "rejected 0" or rejected with "counter offer 2";
@@ -52,6 +53,11 @@ const ModelDecision = ({ decision, setDecision }) => {
   const decisionCounterOfferIcon = faCircleExclamation;
   const decisionCounterOfferButton = "Find out more";
   const counterOfferIconColor = "#ffd02c";
+  const navigate = useNavigate();
+  const handleBack = (e) =>{
+    e.preventDefault();
+    navigate('/CustomerInfo')
+  }
 
   return (
     <div className="mainDecision-container">
@@ -194,7 +200,7 @@ const ModelDecision = ({ decision, setDecision }) => {
               </div>
             </div>
           </div>
-          <button className="mBack">
+          <button className="mBack" onClick={handleBack}>
             {" "}
             <FontAwesomeIcon icon={faChevronLeft} />
             Back
