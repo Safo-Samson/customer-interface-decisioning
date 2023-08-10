@@ -1,0 +1,11 @@
+.apex-semicircle-h1 {
+	font-size: 25px;
+	font-weight: bold;
+	color: #000000; /* Black color */
+	text-align: center;
+}
+
+.apex-container {
+	position: relative;
+
+}

@@ -11,9 +11,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import SmallSupport from "./SmallSupport";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Homepage() {
+  const [SoftCheckOpen, setSoftCheckOpen] = useState(false);
 
+
+
+	const togglSoftCheckPopup = () => {
+		
+		setSoftCheckOpen(!SoftCheckOpen)
+	};
   return (
     <div className="Homepage-container">
       <VerticalBar />
@@ -41,8 +49,18 @@ function Homepage() {
             promoHeader={`Learn about Credit`}
             promoText={` What is a hard or soft credit check?What is a credit score and how does it work?How to improve your credit score?`}
             buttonText={`SOFT CREDIT CHECK`}
-            pathname={"/NewLoan"}
+            pathname={"/SoftCheck"}
           />
+          {/* {SoftCheckOpen && (
+            <Popup
+              content={
+                <>
+                  <b>Do you want to accept the loan?</b>
+                </>
+              }
+              handleClose={toggleAcceptPopup}
+            />
+            )} */}
         </div>
 
         <SmallSupport />
