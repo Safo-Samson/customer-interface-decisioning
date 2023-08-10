@@ -30,6 +30,7 @@
 .inputFieldLoan{
     margin-right: 80px;
     margin-top: 12px;
+    width: 350px ;
 }
 .applyLoan-header{
     width: 1498px;
@@ -179,6 +180,7 @@
     flex-direction: column;
     margin-top: 192px;
     margin-left: 102px;
+    
 
 }
 

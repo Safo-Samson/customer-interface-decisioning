@@ -7,7 +7,8 @@
   
   .infoCombined-remaining-content {
     /* Use 90% of the remaining width */
-    margin-left: 200px;
+    padding-left: 130px;
+    padding-right: 100px;
     flex: 1;
     /* background-color: white; */
     /* Add any additional styling you need for the remaining content */

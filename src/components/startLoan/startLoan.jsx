@@ -91,7 +91,7 @@ return (
           <div className="loanAmount">
             <label className="loanAmountLabel"> Loan Amount</label>
             <div className="inputFieldLoan">
-              <FontAwesomeIcon className="poundSign" icon={faSterlingSign} />
+              <FontAwesomeIcon className="poundSign" icon={faSterlingSign} style={{height:'35px', marginRight:'5px', marginBottom:'-10px'}}/>
               <input
                 value={loanAmount}
                 onChange={(e) => setLoan(e.target.value)}
