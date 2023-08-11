@@ -7,8 +7,18 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Apex from "./Apex";
 import './SoftCheck.css'
+import { useNavigate } from "react-router-dom";
 
 const SoftCheck= () =>{
+    const navigate = useNavigate();
+    const handleDone = (e) =>{
+        e.preventDefault();
+        navigate('/')
+    }
+    const handleApply = (e) => {
+        e.preventDefault();
+        navigate('/NewLoan')
+    }
     return(
         <>
         <div className="softCheck-container">
@@ -57,8 +67,8 @@ const SoftCheck= () =>{
                 </div>
             </div>
             <div className="softCheck-buttons">
-                <button className="softCheck-doneBTN">Done</button>
-                <button className="softCheck-applyBTN">Apply for loan <FontAwesomeIcon icon={faChevronRight} /> </button>
+                <button className="softCheck-doneBTN" onClick={handleDone}>Done</button>
+                <button className="softCheck-applyBTN" onClick={handleApply}>Apply for loan <FontAwesomeIcon icon={faChevronRight} /> </button>
             </div>
         </div>
 
