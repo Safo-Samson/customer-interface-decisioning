@@ -17,20 +17,22 @@ function LoginForm() {
 			setError("Please fill out all the fields.");
 		} else {
 			setError("");
-			navigate("/AppUI");
+			navigate("/home");
 		}
 	};
 
 	return (
     <>
       <div className="auth-form-container">
-        <div className="logo-header">
+        <div className="loginForm-logo-header">
+        <h1 className="loginForm-header"> LLOYDS BANK </h1>
           <img className="loginForm-logo" src={horseLogo} alt="Logo" />
-          <h1 className="loginForm-header"> LLOYDS BANK </h1>
+          
+          </div>
           <form className="login-form" onSubmit={handleSubmit} noValidate>
             <h2 className="login-text">Login</h2>
             <div className="input-row">
-              <label htmlFor="AdvisorID">Advisor ID</label>
+              <label htmlFor="AdvisorID">Customer ID</label>
               <input
                 value={advisorID}
                 onChange={(e) => setID(e.target.value)}
@@ -54,7 +56,6 @@ function LoginForm() {
             <button style={{ border: "none" }}>Login </button>
           </form>
         </div>
-      </div>
       {error && <p className="error-message">{error}</p>}
     </>
   );

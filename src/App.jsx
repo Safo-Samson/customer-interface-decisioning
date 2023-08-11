@@ -13,7 +13,7 @@ function App() {
     <>
       <Routes>
         <Route
-          path="/"
+          path="/home"
           element={
             <>
               <CombinedBar /> <Homepage />
@@ -55,7 +55,7 @@ function App() {
           }
           />
           <Route
-          path="/LoginForm"
+          path="/"
           element = {
             <LoginForm/>
           } />

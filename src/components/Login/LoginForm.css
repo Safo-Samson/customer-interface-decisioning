@@ -1,10 +1,11 @@
 .auth-form-container{
 	text-align: center;
   display: flex;
+  flex-direction: column;
 	min-height: 100vh;
-  min-width: 500%;
-	align-items: center;
-	justify-content: center;
+  min-width: 100%;
+	/* justify-content: center; */
+    /* align-items: center; */
   background-color: #2a684f;
 	
 }
@@ -61,28 +62,32 @@
     font-size: large;
     color: white;
     top: 60px;
+    cursor: pointer;
 
   }
 
 .loginForm-logo{
     height:89px;
-    left: 70%;
-    top: -250px;
-    position: relative;
+    /* left: 60%; */
+    /* top: -250px; */
+    position:relative;
     width: 160px; /*474 */
     transform: translateX(-50%); 
+    margin-left: 130px;
+    /* margin-top: 100px; */
 
 }
 
 .loginForm-header{
-    height: 97px;
-    left: 00px;
-    top: -350px;
+    /* height: 97px;
+    /* top: -350px; 
     position: relative;
     width: 350px;
     color: white;
-    left: 30%;
-    transform: translateX(-50%); 
+    /* left: 30%; 
+    transform: translateX(-50%);  */
+    position: relative;
+    color: white;
 
 }
 
@@ -97,4 +102,16 @@
     white-space: nowrap;
     width: fit-content;
     text-align: center;
+}
+
+.loginForm-logo-header{
+    width: 1392px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left:250px;
+    margin-top: 70px;
+    /* margin-left: 200px; */
 }

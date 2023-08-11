@@ -22,7 +22,7 @@ const StartLoan = () =>{
   }
   const backClick = (e) => {
 		e.preventDefault();
-    navigate('/')
+    navigate('/home')
   }
     
 const [loanAmount, setLoan ] = useState("");
