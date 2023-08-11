@@ -69,6 +69,10 @@
     justify-content: center;
 
 }
+.decide-container .empty{
+    opacity: 0;
+    cursor:auto;
+}
 
 .overDraft:hover, .creditCard:hover, .loan:hover, .carFinance:hover, .mortgage:hover{
     border: 4px solid #005F44;
@@ -78,20 +82,6 @@
 
 }
 
-/* .loan{
-    margin-top: 29px;
-    margin-right: 52px;
-
-} */
-
-/* .carFinance{
-    margin-top: 29px;
-} */
-
-/* .mortgage{
-    margin-top: 29px;
-    margin-right: 202px;
-} */
 
 
 
@@ -109,6 +99,7 @@
     margin-left: 48px;
     cursor: pointer;
     border: none;
+    margin-top: 20px;
 }
 
 .nextBtn{
@@ -124,6 +115,8 @@
     margin-left: 447px;
     cursor: pointer;
     border: none;
+    margin-top: 20px;
+
     
 }
 
@@ -135,7 +128,7 @@
     font-weight: 400;
     line-height: normal;
     width: 483px;
-    height: 661px;
+    height: 600px;
     
 
     /* justify-content: space-evenly; */
@@ -150,7 +143,7 @@
     font-weight: 400;
     line-height: normal;
     width: 483px;
-    height: 661px;
+    height: 600px;
     border: none;
     border-left: 1px solid #B8B3B3;
 }

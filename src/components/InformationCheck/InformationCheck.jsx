@@ -148,7 +148,7 @@ const InformationCheck= () => {
                                         />
                                 </div>
                             </div>
-                         </div>    
+                        </div>    
 
 
                         <div className="financialInfo">
