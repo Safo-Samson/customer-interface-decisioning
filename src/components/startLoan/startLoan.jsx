@@ -105,6 +105,7 @@ return (
           </div>
         </div>
       </div>
+      <div className="newloan-buttons">
       <button className="backBtn" onClick={backClick}>
         {" "}
         <FontAwesomeIcon icon={faChevronLeft} /> Back
@@ -112,6 +113,7 @@ return (
       <button className="nextBtn" onClick={nextClick}>
         Next <FontAwesomeIcon icon={faChevronRight} />
       </button>
+      </div>
     </div>
   </>
 );

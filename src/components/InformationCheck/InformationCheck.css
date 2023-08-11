@@ -37,15 +37,15 @@
     margin-top: 46px;
     margin-left: 54px;
 }
-.loanInfo, .financialInfo{
+.sev-loanInfo, .financialInfo{
     max-width: 85%;
     margin-left: 54px;
-    /* margin-top: 47px; */
+    margin-top: 37px;
     /* margin-top: 100px; */
     /* margin-right: 100px; */
 }
 .financialInfo{
-	/* margin-top: 10px; */
+	margin-top: 10px;
 }
 .personalFields {
 	display: flex;
@@ -67,7 +67,7 @@
 	font-weight: 400;
 	line-height: 140%; 
 }*/
-.loanInfo .loanInfoTxt, .financialInfo .financialInfoTxt, .personalInfo .personalInfoTxt {
+.sev-loanInfo .loanInfoTxt, .financialInfo .financialInfoTxt, .personalInfo .personalInfoTxt {
 	background-color: #99c3b7;
 	/* margin-top: 47px; */
 
@@ -82,7 +82,7 @@
 }
 
 .dateApplied{
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .form-container{
     display: flex;
@@ -111,18 +111,20 @@
 	display: flex;
 	flex-direction: row;
 	/* border: 1px solid black; */
-	height: 245px;
+	height: 205px;
     border: 1px solid #99C3B7;
     
 
 
 }
 
-.loanFields {
+.sev-loanFields {
 	display: flex;
 	flex-direction: row;
 	/* justify-content: space-evenly; */
     border: 1px solid #99C3B7;
+	height: 126px;
+	justify-content: space-evenly;
 
 }
 
@@ -137,12 +139,12 @@
 .employmentStatus, .dependents, .income, .defaults{
     display: flex;
 	flex-direction: column;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 .residentialStatus {
 	display: flex;
 	flex-direction: column;
-	margin-top: 140px;
+	margin-top: 120px;
 	margin-left: -793px;
 }
 
@@ -172,7 +174,7 @@
 .loanAmountinfo {
 	display: flex;
 	flex-direction: column;
-    margin-left:15px;
+    /* margin-left:15px; */
 
 	margin-top: 30px;
 }
@@ -180,14 +182,14 @@
 .loanType {
 	display: flex;
 	flex-direction: column;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 
 	margin-top: 30px;
 }
 .loanTerm {
 	display: flex;
 	flex-direction: column;
-	margin-left: 20px;
+	/* margin-left: 20px; */
 
 	margin-top: 30px;
 }
@@ -222,7 +224,7 @@
     margin-top: 45px;
 }
 .backBTN {
-	background-color: #b8b3b3;
+	background-color: #A1A1A1;
 	border: none;
  } 
 

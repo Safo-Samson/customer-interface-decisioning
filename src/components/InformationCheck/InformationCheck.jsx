@@ -94,9 +94,9 @@ const InformationCheck= () => {
 
 						</div>
 
-						<div className="loanInfo">
+						<div className="sev-loanInfo">
                             <div className="loanInfoTxt">LOAN INFORMATION</div>
-                            <div className="loanFields">
+                            <div className="sev-loanFields">
                                 <div className="dateApplied">
 								    <label htmlFor="dateApplied"> Date Applied </label>
 								    <input
