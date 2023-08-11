@@ -6,6 +6,7 @@ import SoftCombined from "./components/SoftCheck/SoftCombined";
 import Homepage from "./components/startLoan/Homepage";
 import InfoCombined from './components/InformationCheck/InfoCombined';
 import ModelDecision from './components/StartLoan/ModelDecision';
+import LoginForm from "./components/Login/LoginForm";
 
 function App() {
   return (
@@ -53,6 +54,11 @@ function App() {
             </>
           }
           />
+          <Route
+          path="/LoginForm"
+          element = {
+            <LoginForm/>
+          } />
       </Routes>
     </>
   );

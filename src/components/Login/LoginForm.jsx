@@ -1,0 +1,63 @@
+import React, { useState } from "react";
+import "./LoginForm.css";
+import horseLogo from "../../assets/horseLogo.jpeg";
+
+import { useNavigate } from "react-router-dom";
+
+function LoginForm() {
+	const [advisorID, setID] = useState("");
+	const [password, setPass] = useState("");
+	const [error, setError] = useState("");
+	const navigate = useNavigate();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+
+		if (advisorID.trim() === "" || password.trim() === "") {
+			setError("Please fill out all the fields.");
+		} else {
+			setError("");
+			navigate("/AppUI");
+		}
+	};
+
+	return (
+    <>
+      <div className="auth-form-container">
+        <div className="logo-header">
+          <img className="loginForm-logo" src={horseLogo} alt="Logo" />
+          <h1 className="loginForm-header"> LLOYDS BANK </h1>
+          <form className="login-form" onSubmit={handleSubmit} noValidate>
+            <h2 className="login-text">Login</h2>
+            <div className="input-row">
+              <label htmlFor="AdvisorID">Advisor ID</label>
+              <input
+                value={advisorID}
+                onChange={(e) => setID(e.target.value)}
+                type="advisorID"
+                placeholder=""
+                id="AdvisorID"
+                name="AdvisorID"
+                required
+              />
+              <label htmlFor="password">Password</label>
+              <input
+                value={password}
+                onChange={(e) => setPass(e.target.value)}
+                type="password"
+                placeholder=""
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+            <button style={{ border: "none" }}>Login </button>
+          </form>
+        </div>
+      </div>
+      {error && <p className="error-message">{error}</p>}
+    </>
+  );
+}
+
+export default React.memo(LoginForm);
