@@ -6,6 +6,7 @@ import SoftCombined from "./components/SoftCheck/SoftCombined";
 import Homepage from "./components/startLoan/Homepage";
 import InfoCombined from './components/InformationCheck/InfoCombined';
 import ModelDecision from './components/StartLoan/ModelDecision';
+import CurrrentLoans from "./components/startLoan/CurrentLoans";
 
 function App() {
   return (
@@ -44,15 +45,24 @@ function App() {
             </>
           }
         />
-        <Route 
+        <Route
           path="/ModelDecision"
-          element = {
+          element={
             <>
-            <CombinedBar />
-            <ModelDecision />
+              <CombinedBar />
+              <ModelDecision />
             </>
           }
-          />
+        />
+        <Route
+          path="/CurrentLoans"
+          element={
+            <>
+              <CombinedBar />
+              <CurrrentLoans />
+            </>
+          }
+        />
       </Routes>
     </>
   );

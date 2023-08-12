@@ -10,3 +10,22 @@
   padding-right: 100px;
   /* background-color: white; */
 }
+
+.loans-container {
+  min-width: 700px;
+  min-height: 73.5vh;
+  border: none;
+  border-top: 11px solid #005f44;
+  color: #005f44;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: left; /*Center vertically */
+  padding-top: 33.08px;
+  padding-bottom: 33.08px;
+}
+
