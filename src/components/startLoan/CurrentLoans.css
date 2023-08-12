@@ -29,3 +29,48 @@
   padding-bottom: 33.08px;
 }
 
+.current-loanInfo-container {
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 0.5rem;
+  padding-left: 0px;
+  padding-right: 90px;
+  margin: 1rem 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: rgb(43, 42, 42);
+  background-color: #ede8db;
+  text-transform: uppercase;
+  height: 24px;
+  width: 1000px;
+}
+
+.currentLoanHeaders {
+  display: flex;
+  flex-direction: row;
+  position: absolute; /* making it fixed on the current loanInfo container*/
+  justify-content: space-between;
+  width: 993px;
+  padding-left: 60px;
+  /* border: 5px solid blue; */
+}
+
+.currentLoanHeaders b {
+  margin-left: 0px;
+  margin-right: 80px;
+  padding-left: 30px;
+  /* background: var(--neutral-50, #fbfcfe); */
+}
+.current-loanFields {
+  display: flex;
+  flex-direction: column;
+  width: 1090px;
+  position: absolute; /* making it fixed on the current loanInfo container*/
+  /* height: 126px; */
+  border: 1px solid #99c3b7;
+  /* margin-left: -10px; */
+  justify-content: space-around;
+  color: black;
+  margin-top: 30px;
+  /* border: 5px solid rgb(232, 10, 236); */
+}

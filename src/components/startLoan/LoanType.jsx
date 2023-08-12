@@ -28,38 +28,16 @@ const LoanType = (props) => {
   };
 
   return (
-    <div className="current-loanInfo-container" onClick={handleClick}>
-      <div className="currentLoanHeaders">
-        <b>LOAN TYPE</b> <b>STATUS</b>
-        <b>AMOUNT </b>
-        <b>DETAILS</b>
-        <b>NEXT PAYMENT</b>
+    <div className="current-loanFields-item">
+      <div className="icon-type">{loanIcon}</div>
+      <div className="details-page">{props.loanType}</div>
+      <div className="details-page" style={{ minWidth: "150px" }}>
+        {props.status}
       </div>
-
-      <div className="current-loanFields">
-        <div className="current-loanFields-item">
-          {/* <div className="icon-type">{loanIcon}</div> */}
-
-          <div className="details-page">
-            <b>Account No:</b> <br></br>
-            {props.AccountNo}
-          </div>
-
-          <div className="details-page-extended">
-            <b>Date Applied:</b>
-            <br></br>
-            {props.dateApplied}
-          </div>
-
-          <div className="details-page">
-            <b>Amount: </b> <br></br>£{props.amount}
-          </div>
-
-          <div className="details-page">
-            <b>Loan Type:</b> <br></br>
-            {props.loanType}
-          </div>
-        </div>
+      <div className="details-page-amtDeet">£ {props.amount}</div>
+      <div className="details-page-amtDeet">{props.details}</div>
+      <div className="details-page" style={{ paddingLeft: "40px" }}>
+        {props.nextPayment}
       </div>
     </div>
   );
