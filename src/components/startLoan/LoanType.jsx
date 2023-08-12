@@ -31,9 +31,19 @@ const LoanType = (props) => {
     <div className="current-loanFields-item">
       <div className="icon-type">{loanIcon}</div>
       <div className="details-page">{props.loanType}</div>
-      <div className="details-page" style={{ minWidth: "150px" }}>
+      <button
+        className={` ${
+          props.status === "Pending"
+            ? "currentLoan-status-pending"
+            : props.status === "In Progress"
+            ? "currentLoan-status-progress"
+            : props.status === "Done"
+            ? "currentLoan-status-done"
+            : ""
+        }`}
+        style={{ minWidth: "150px" }}>
         {props.status}
-      </div>
+      </button>
       <div className="details-page-amtDeet">£ {props.amount}</div>
       <div className="details-page-amtDeet">{props.details}</div>
       <div className="details-page" style={{ paddingLeft: "40px" }}>
