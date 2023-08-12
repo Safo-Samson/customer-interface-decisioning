@@ -1,0 +1,12 @@
+.currentLoans-container {
+  display: flex;
+}
+
+.currentLoans-remaining-content {
+  /* Use 90% of the remaining width */
+  flex: 1;
+  /* background-color: red; */
+  padding-left: 130px;
+  padding-right: 100px;
+  /* background-color: white; */
+}

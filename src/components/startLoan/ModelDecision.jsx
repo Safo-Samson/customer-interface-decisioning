@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const ModelDecision = ({ decision, setDecision }) => {
   // decisions can be "accepted 1" or "rejected 0" or rejected with "counter offer 2";
-  const ModelDecision = 3;
+  const ModelDecision = Math.floor(Math.random() * 3) + 1;
 
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
@@ -54,10 +54,10 @@ const ModelDecision = ({ decision, setDecision }) => {
   const decisionCounterOfferButton = "Find out more";
   const counterOfferIconColor = "#ffd02c";
   const navigate = useNavigate();
-  const handleBack = (e) =>{
+  const handleBack = (e) => {
     e.preventDefault();
-    navigate('/CustomerInfo')
-  }
+    navigate("/CustomerInfo");
+  };
 
   return (
     <div className="mainDecision-container">
