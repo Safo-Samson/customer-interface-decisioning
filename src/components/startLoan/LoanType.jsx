@@ -5,6 +5,7 @@ import {
   faUser,
   faCar,
   faHouse,
+  faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -30,7 +31,9 @@ const LoanType = (props) => {
   return (
     <div className="current-loanFields-item">
       <div className="icon-type">{loanIcon}</div>
-      <div className="details-page">{props.loanType}</div>
+      <div className="details-page" style={{ fontSize: "17px" }}>
+        {props.loanType}
+      </div>
       <button
         className={` ${
           props.status === "Pending"
@@ -40,14 +43,22 @@ const LoanType = (props) => {
             : props.status === "Done"
             ? "currentLoan-status-done"
             : ""
-        }`}
-        style={{ minWidth: "150px" }}>
+        }`}>
         {props.status}
       </button>
-      <div className="details-page-amtDeet">£ {props.amount}</div>
-      <div className="details-page-amtDeet">{props.details}</div>
+      <div className="details-page-amtDeet" style={{ fontSize: "17px" }}>
+        £ {props.amount.toLocaleString()}
+        {/* to localeString uses commmas to split it */}
+      </div>
+      <button className="currentLoan-details">
+        <FontAwesomeIcon
+          icon={faCircleExclamation}
+          style={{ marginRight: "5px" }}
+        />
+        {props.details}
+      </button>
       <div className="details-page" style={{ paddingLeft: "40px" }}>
-        {props.nextPayment}
+        {props.nextPayment ? props.nextPayment : "---------"}
       </div>
     </div>
   );

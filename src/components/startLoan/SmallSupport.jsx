@@ -1,7 +1,12 @@
 import "./SmallSupport.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSterlingSign } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 function SmallSupport() {
+  const navigate = useNavigate();
+  function manageCurrentLoans() {
+    navigate("/CurrentLoans");
+  }
   return (
     <div className="small-support-container">
       <img
@@ -27,7 +32,9 @@ function SmallSupport() {
           help you. If your needs have changed, we're here to help.
         </p>
       </div>
-      <button className="small-support-container-button">
+      <button
+        className="small-support-container-button"
+        onClick={manageCurrentLoans}>
         MANAGE CURRENT LOANS
       </button>
     </div>

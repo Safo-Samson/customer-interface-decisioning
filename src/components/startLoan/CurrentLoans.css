@@ -27,6 +27,7 @@
   align-items: left; /*Center vertically */
   padding-top: 33.08px;
   padding-bottom: 33.08px;
+  position: relative; /* for the button to be styled well*/
 }
 
 .current-loanInfo-container {
@@ -39,7 +40,7 @@
   margin-left: 50px;
   margin-right: 50px;
   color: rgb(43, 42, 42);
-  background-color: #ede8db;
+  background-color: #b5b5b578;
   text-transform: uppercase;
   height: 24px;
   width: 1000px;
@@ -52,6 +53,7 @@
   justify-content: space-between;
   width: 993px;
   padding-left: 60px;
+  color: rgba(18, 17, 17, 0.727);
   /* border: 5px solid blue; */
 }
 
@@ -67,10 +69,54 @@
   width: 1090px;
   position: absolute; /* making it fixed on the current loanInfo container*/
   /* height: 126px; */
-  border: 1px solid #99c3b7;
+  /* border: 1px solid #99c3b7; */
   /* margin-left: -10px; */
   justify-content: space-around;
   color: black;
   margin-top: 30px;
   /* border: 5px solid rgb(232, 10, 236); */
+}
+
+.currentLoan-back {
+  width: 218px;
+  height: 42px;
+  flex-shrink: 0;
+  background: #a1a1a1;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: absolute; /* in relation to the container*/
+  bottom: 0;
+  left: 0;
+}
+
+.currentLoan-centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  border: 2px solid rgb(219, 219, 219);
+  border-left: none;
+  border-right: none;
+}
+
+.currentLoan-centered-container h1 {
+  font-size: 24px; /* Set font size */
+  color: rgb(0, 105, 24); /* Set font color */
+}
+
+.current-poundSign {
+  padding-right: 15px;
+  background-color: #005f44;
+  height: 20px;
+  color: white;
+  padding: 20px;
+  /* padding-bottom: 3; */
+  margin-right: 20px;
+  font-size: 30px;
+  border-radius: 50px;
 }
