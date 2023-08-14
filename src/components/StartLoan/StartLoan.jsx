@@ -1,5 +1,5 @@
 import React from "react";
-import './startLoan.css';
+import './StartLoan.css';
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins } from "@fortawesome/free-solid-svg-icons";
