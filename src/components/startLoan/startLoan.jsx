@@ -57,7 +57,8 @@ return (
         <div className="decide-container">
           <p>Decide on your borrowing option:</p>
           
-          <button className="overDraft">
+          <button className="overDraft"
+          onClick={() => handleSelectedLoan('Overdraft')}>
             <FontAwesomeIcon
               className="overdraftIcon"
               icon={faHandHoldingDollar}
@@ -70,7 +71,7 @@ return (
           className="creditCard" 
           value="creditCard"
           // onChange={(e) => setLoanValue('creditCard')}
-          onClick={() => handleSelectedLoan('credit card')}
+          onClick={() => handleSelectedLoan('Credit Card')}
           >
             {" "}
             <FontAwesomeIcon
@@ -81,7 +82,8 @@ return (
             />{" "}
             Credit Card
           </button>
-          <button className="loan">
+          <button className="loan"
+          onClick={() => handleSelectedLoan('Loan')}>
             <FontAwesomeIcon
               className="loanIcon"
               icon={faMoneyCheckDollar}
@@ -90,7 +92,8 @@ return (
             />
             Loan
           </button>
-          <button className="carFinance">
+          <button className="carFinance"
+          onClick={() => handleSelectedLoan('Car Finance')}>
             {" "}
             <FontAwesomeIcon
               icon={faCar}
@@ -99,7 +102,8 @@ return (
             />
             Car Finance
           </button>
-          <button className="mortgage">
+          <button className="mortgage"
+          onClick={() => handleSelectedLoan('Mortgage')}>
             <FontAwesomeIcon
               icon={faHouse}
               size="2xl"
