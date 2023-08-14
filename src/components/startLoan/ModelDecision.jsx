@@ -58,14 +58,19 @@ const ModelDecision = ({ decision, setDecision }) => {
     e.preventDefault();
     navigate("/CustomerInfo");
   };
-  const handleAskForHelp = (e) =>{
+  const handleAskForHelp = (e) => {
     e.preventDefault();
     navigate("/FindOutMore");
-  }
-  const handleFindOutMore = (e) =>{
+  };
+  const handleFindOutMore = (e) => {
     e.preventDefault();
     navigate("/FindOutMoreLowerAmount");
-  }
+  };
+
+  const handlePaymentDetails = (e) => {
+    e.preventDefault();
+    navigate("/PaymentDetails");
+  };
 
   return (
     <div className="mainDecision-container">
@@ -88,7 +93,9 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionAcceptedIcon}
                   style={{ fontSize: "50px", color: acceptedIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-accepted-button">
+                <button
+                  className="miniDecision-container-button miniDecision-container-accepted-button"
+                  onClick={handlePaymentDetails}>
                   {decisionAcceptedButton}
                 </button>
               </div>
@@ -109,7 +116,9 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionRejectedIcon}
                   style={{ fontSize: "50px", color: rejectedIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-rejected-button" onClick={handleAskForHelp }>
+                <button
+                  className="miniDecision-container-button miniDecision-container-rejected-button"
+                  onClick={handleAskForHelp}>
                   {deccisionRejectedButton}
                 </button>
               </div>
@@ -133,7 +142,9 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionCounterOfferIcon}
                   style={{ fontSize: "50px", color: counterOfferIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-counter-button" onClick={handleFindOutMore}>
+                <button
+                  className="miniDecision-container-button miniDecision-container-counter-button"
+                  onClick={handleFindOutMore}>
                   {decisionCounterOfferButton}
                 </button>
               </div>
