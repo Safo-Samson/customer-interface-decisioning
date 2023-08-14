@@ -52,6 +52,7 @@
   width: 246px;
   height: 33px;
   margin-left: 100px;
+  cursor: pointer;
 }
 
 .small-support-container-button:hover {
