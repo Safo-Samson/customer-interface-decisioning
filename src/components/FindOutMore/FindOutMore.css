@@ -1,0 +1,172 @@
+.findOutMore-VerticalContainer{
+    display: flex;
+}
+.findOutMore-container{
+    width: 966px;
+    height: 100%;
+    border: none;
+    border-top: 11px solid #005F44 ;
+    /* border: 1px solid black; */
+    color: #005F44;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    flex: 1;
+}
+
+.findOutMore-mainContent{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     width: 966px;
+     border: none;
+     border-bottom: 1px solid black;
+     
+    
+
+}
+
+.findOutMore-tips{
+    color: #005F44;
+    
+}
+
+
+.sev-findOutMoreHeader{
+    margin-top: 21px;
+}
+
+.details-findOutMore{
+    width: 959px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #010101;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* margin-right: 30px; */
+    border: 1px solid #481468;
+    margin-bottom: 20px;
+}
+
+.understandingCredit p{
+    width: 545px;
+    color: #525252;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.findOutMore-questionMarkIcon{
+    background-color: #014049 ;
+    color: white;
+    width: 78px;
+    height: 78px;
+    padding: 30px;
+}
+
+.understandingCredit{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin-top: 7px;
+}
+
+.understandingCredit-texts{
+    margin-bottom: 40px;
+    margin-left: 66px;
+}
+
+.findOutMore-bad{
+    width: 290px;
+    height: 290px;
+    background: #481468;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+        
+}
+
+.findOutMore-good{
+    width: 290px;
+    height: 290px;
+    
+    background: #006A4D;
+    margin-left: 10px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    
+}
+
+.insights-findOutMore-content{
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.findOutMore-exclamationMarkIcon, .findOutMore-checkMarkIcon {
+    color: white;
+    border: 2px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 35px;
+    padding: 10px;
+    margin-top: 11px;
+}
+
+.findOutMore-buttons{
+    width: 866px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+}
+
+.findOutMore-doneBTN, .findOutMore-applyBTN{
+    width: 218px;
+    height: 42px;   
+    background: #A1A1A1;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.findOutMore-applyBTN{
+    background: #5E900F;
+    
+    
+}
+
+.findOutMore-bad-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+}

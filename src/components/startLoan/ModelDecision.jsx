@@ -58,6 +58,10 @@ const ModelDecision = ({ decision, setDecision }) => {
     e.preventDefault();
     navigate("/CustomerInfo");
   };
+  const handleAskForHelp = (e) =>{
+    e.preventDefault();
+    navigate("/FindOutMore");
+  }
 
   return (
     <div className="mainDecision-container">
@@ -101,7 +105,7 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionRejectedIcon}
                   style={{ fontSize: "50px", color: rejectedIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-rejected-button">
+                <button className="miniDecision-container-button miniDecision-container-rejected-button" onClick={handleAskForHelp }>
                   {deccisionRejectedButton}
                 </button>
               </div>

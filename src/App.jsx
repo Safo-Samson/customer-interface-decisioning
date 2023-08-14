@@ -9,6 +9,7 @@ import ModelDecision from './components/StartLoan/ModelDecision';
 import LoginForm from "./components/Login/LoginForm";
 import CurrrentLoans from "./components/startLoan/CurrentLoans";
 import LoanAcceptedDetails from "./components/startLoan/LoanAcceptedDetails";
+import FindOutMore from "./components/FindOutMore/FindOutMore"
 
 function App() {
   return (
@@ -79,6 +80,14 @@ function App() {
             </>
           }
         />
+        <Route 
+        path="/FindOutMore"
+        element={
+          <>
+          <CombinedBar />
+          <FindOutMore />
+          </>
+        } />
       </Routes>
     </>
   );
