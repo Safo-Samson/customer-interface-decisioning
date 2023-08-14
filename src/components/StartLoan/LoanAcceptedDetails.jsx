@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import PaymentTable from "./PaymentTable";
 import SelectedCustomer from "./SelectedCustomer";
-
+import { useNavigate } from "react-router-dom";
 const LoanAcceptedDetails = () => {
   const headers = [
     "Month",
@@ -45,6 +45,16 @@ const LoanAcceptedDetails = () => {
     // ["Interest Savings", ""],
   ];
 
+  const nav = useNavigate();
+  const handleBack = (e) => {
+    e.preventDefault();
+    nav("/ModelDecision", {
+      state: {
+        decision: 1, // doesnt work as intended
+      },
+    });
+  };
+
   return (
     <div className="acceptedDetails-container">
       <VerticalBar />
@@ -78,7 +88,7 @@ const LoanAcceptedDetails = () => {
               Next payment scheduled for 02/08/2023{" "}
             </h2>
           </div>
-          <button className="paymentschedule-back">
+          <button className="paymentschedule-back" onClick={handleBack}>
             <FontAwesomeIcon icon={faChevronLeft} /> back
           </button>
         </div>
