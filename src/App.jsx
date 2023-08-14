@@ -10,6 +10,7 @@ import LoginForm from "./components/Login/LoginForm";
 import CurrrentLoans from "./components/startLoan/CurrentLoans";
 import LoanAcceptedDetails from "./components/startLoan/LoanAcceptedDetails";
 import FindOutMore from "./components/FindOutMore/FindOutMore"
+import FindOutMoreLowerAmount from "./components/FindOutMore/FindOutMoreLowerAmount";
 
 function App() {
   return (
@@ -86,6 +87,14 @@ function App() {
           <>
           <CombinedBar />
           <FindOutMore />
+          </>
+        } />
+        <Route 
+        path="/FindOutMoreLowerAmount"
+        element={
+          <>
+          <CombinedBar />
+          <FindOutMoreLowerAmount />
           </>
         } />
       </Routes>

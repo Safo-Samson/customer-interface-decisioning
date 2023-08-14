@@ -1,0 +1,181 @@
+.findOutMoreLowerAmount-VerticalContainer{
+    display: flex;
+}
+.findOutMoreLowerAmount-container{
+    width: 966px;
+    height: 100%;
+    border: none;
+    border-top: 11px solid #005F44 ;
+    /* border: 1px solid black; */
+    color: #005F44;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    flex: 1;
+}
+
+.findOutMoreLowerAmount-mainContent{
+    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     width: 966px;
+     border: none;
+     border-bottom: 1px solid black;
+     
+    
+
+}
+
+.findOutMoreLowerAmount-tips{
+    color: #005F44;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+}
+
+
+.sev-findOutMoreLowerAmountHeader{
+    /* margin-top: 21px; */
+}
+
+.details-findOutMoreLowerAmount{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #010101;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* margin-right: 30px; */
+    border: 1px solid #481468;
+    margin-bottom: 20px;
+    /* padding: 20px; */
+}
+
+.understandingCredit p{
+    width: 545px;
+    color: #525252;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.findOutMoreLowerAmount-userIcon{
+    background-color:#005F44 ;
+    color: white;
+    width: 78px;
+    height: 78px;
+    padding: 20px;
+    border-radius:100px;
+}
+
+.understandingCredit{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin-top: 7px;
+}
+
+.understandingCredit-texts{
+    margin-bottom: 40px;
+    margin-left: 66px;
+}
+
+
+
+
+
+
+
+.findOutMoreLowerAmount-buttons{
+    width: 866px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    margin-bottom: 19px;
+}
+
+.findOutMoreLowerAmount-doneBTN, .findOutMoreLowerAmount-applyBTN{
+    width: 218px;
+    height: 42px;   
+    background: #A1A1A1;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.findOutMoreLowerAmount-applyBTN{
+    background: #5E900F;
+    
+    
+}
+
+
+
+.tip{
+    margin: 0;
+}
+
+.findOutMoreLowerAmount-newLoan{
+
+    border: 3px solid #481468;
+    margin-bottom: 20px;
+    width: 100%;
+    color: #010101;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+
+.findOutMoreLowerAmount-applyLoanBtn{
+    width: 218px;
+    height: 42px;
+    flex-shrink: 0;
+    background: #5E900F;
+    color: #EEE;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+
+}
+

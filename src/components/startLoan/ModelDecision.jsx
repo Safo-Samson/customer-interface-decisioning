@@ -62,6 +62,10 @@ const ModelDecision = ({ decision, setDecision }) => {
     e.preventDefault();
     navigate("/FindOutMore");
   }
+  const handleFindOutMore = (e) =>{
+    e.preventDefault();
+    navigate("/FindOutMoreLowerAmount");
+  }
 
   return (
     <div className="mainDecision-container">
@@ -129,7 +133,7 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionCounterOfferIcon}
                   style={{ fontSize: "50px", color: counterOfferIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-counter-button">
+                <button className="miniDecision-container-button miniDecision-container-counter-button" onClick={handleFindOutMore}>
                   {decisionCounterOfferButton}
                 </button>
               </div>
