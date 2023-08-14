@@ -9,12 +9,17 @@ import {
   faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const ModelDecision = ({ decision, setDecision }) => {
   // decisions can be "accepted 1" or "rejected 0" or rejected with "counter offer 2";
-  const ModelDecision = Math.floor(Math.random() * 3) + 1;
+  // const ModelDecision = decision || Math.floor(Math.random() * 3) + 1;
 
+  const location = useLocation();
+
+  const [ModelDecision, setModelDeicison] = useState(
+    decision || location.state?.decision || Math.floor(Math.random() * 3) + 1
+  );
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
     location.state?.amount || "undefined"
@@ -53,19 +58,26 @@ const ModelDecision = ({ decision, setDecision }) => {
   const decisionCounterOfferIcon = faCircleExclamation;
   const decisionCounterOfferButton = "Find out more";
   const counterOfferIconColor = "#ffd02c";
+
   const navigate = useNavigate();
+
   const handleBack = (e) => {
     e.preventDefault();
     navigate("/CustomerInfo");
   };
-  const handleAskForHelp = (e) =>{
+  const handleAskForHelp = (e) => {
     e.preventDefault();
     navigate("/FindOutMore");
-  }
-  const handleFindOutMore = (e) =>{
+  };
+  const handleFindOutMore = (e) => {
     e.preventDefault();
     navigate("/FindOutMoreLowerAmount");
-  }
+  };
+
+  const handlePaymentDetails = (e) => {
+    e.preventDefault();
+    navigate("/PaymentDetails");
+  };
 
   return (
     <div className="mainDecision-container">
@@ -88,7 +100,9 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionAcceptedIcon}
                   style={{ fontSize: "50px", color: acceptedIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-accepted-button">
+                <button
+                  className="miniDecision-container-button miniDecision-container-accepted-button"
+                  onClick={handlePaymentDetails}>
                   {decisionAcceptedButton}
                 </button>
               </div>
@@ -109,7 +123,9 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionRejectedIcon}
                   style={{ fontSize: "50px", color: rejectedIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-rejected-button" onClick={handleAskForHelp }>
+                <button
+                  className="miniDecision-container-button miniDecision-container-rejected-button"
+                  onClick={handleAskForHelp}>
                   {deccisionRejectedButton}
                 </button>
               </div>
@@ -133,7 +149,9 @@ const ModelDecision = ({ decision, setDecision }) => {
                   icon={decisionCounterOfferIcon}
                   style={{ fontSize: "50px", color: counterOfferIconColor }}
                 />
-                <button className="miniDecision-container-button miniDecision-container-counter-button" onClick={handleFindOutMore}>
+                <button
+                  className="miniDecision-container-button miniDecision-container-counter-button"
+                  onClick={handleFindOutMore}>
                   {decisionCounterOfferButton}
                 </button>
               </div>

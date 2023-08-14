@@ -25,40 +25,40 @@
   display: flex;
   flex-direction: column;
   align-items: left; /*Center vertically */
-  padding-top: 33.08px;
+  padding-top: 13.08px;
   padding-bottom: 33.08px;
-  padding-left: 38px;
+  padding-left: 25px;
   position: relative; /* for the button to be styled well*/
 }
 
 .payment-schedule-container {
   display: flex;
   flex-direction: column;
-    /* align-items: center; */
- /* align-items: center; */
- justify-content: space-evenly;
+  justify-content: space-evenly;
   padding: 0.5rem;
-  padding-left: 30px;
+  padding-top: 20px;
   padding-right: 90px;
   margin: 1rem 0;
-  margin-left: 50px;
+  margin-left: 28px;
   margin-right: 50px;
   color: rgb(43, 42, 42);
-  background-color: #99C3B7;
+  background-color: #99c3b7;
   text-transform: uppercase;
-  min-height: 426px;
-  min-width: 1000px;
-
+  max-height: 480px;
+  max-width: 963px;
 }
 
-.loan-schedule-header{
-    display: flex;
-    min-width:  700px;
-    /* align-items: center; */
-    justify-content: space-evenly;
-    text-transform: capitalize;
+.loan-schedule-header {
+  display: flex;
+  min-width: 700px;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  padding-left: 100px;
+  margin-top: 10px;
+  font-size: medium;
 }
-.paymentschedule-back{
+.paymentschedule-back {
   width: 218px;
   height: 42px;
   flex-shrink: 0;
@@ -67,25 +67,33 @@
   color: white;
   font-size: 15px;
   font-style: normal;
-  margin-left: 90px;
-  margin-bottom: 20px;
+  margin-left: 53px;
+  /* margin-bottom: 20px; */
   cursor: pointer;
   position: absolute; /* in relation to the container*/
   bottom: 0;
   left: 0;
 }
 
-.loan-schedule-tables-container{
-    display: flex;
-    justify-content: space-evenly;
- 
+.loan-schedule-tables-container {
+  display: flex;
+  /* justify-content: space-evenly; */
+  min-width: 900px;
+  padding-left: 20px;
+  /* background-color: red; */
 }
-.small-tables-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* space between makes the size match the bigger one*/
-       /* margin-top: -39px; */
-    margin-right: 50px;
-    /* margin-left: 50px; */
+.small-tables-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* space between makes the size match the bigger one*/
+  font-size: smaller;
+  /* background-color: aqua; */
+  margin-right: 20px;
+  /* background-color: red; */
+}
 
+.big-table {
+  min-width: 747px;
+  min-height: 380px;
+  /* background-color: bisque; */
 }

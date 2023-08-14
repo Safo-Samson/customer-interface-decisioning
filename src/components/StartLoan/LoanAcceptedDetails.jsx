@@ -3,7 +3,8 @@ import "./LoanAcceptedDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoins, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import PaymentTable from "./PaymentTable";
-
+import SelectedCustomer from "./SelectedCustomer";
+import { useNavigate } from "react-router-dom";
 const LoanAcceptedDetails = () => {
   const headers = [
     "Month",
@@ -23,9 +24,9 @@ const LoanAcceptedDetails = () => {
     ["July", "05-Jul", "$500", "$160", "$0", "$1190"],
     ["August", "15-Aug", "$500", "$170", "$0", "$1020"],
     ["September", "10-Sep", "$500", "$180", "$0", "$840"],
-    ["October", "10-Oct", "$500", "$190", "$0", "$650"],
-    ["November", "15-Nov", "$500", "$200", "$0", "$450"],
-    ["December", "20-Dec", "$500", "$210", "$0", "$240"],
+    // ["October", "10-Oct", "$500", "$190", "$0", "$650"],
+    // ["November", "15-Nov", "$500", "$200", "$0", "$450"],
+    // ["December", "20-Dec", "$500", "$210", "$0", "$240"],
   ];
 
   const headers1 = ["Month", "Date"];
@@ -41,8 +42,18 @@ const LoanAcceptedDetails = () => {
     ["Term of Loan in Years", ""],
     ["Total Payments", ""],
     ["Total Interest", ""],
-    ["Interest Savings", ""],
+    // ["Interest Savings", ""],
   ];
+
+  const nav = useNavigate();
+  const handleBack = (e) => {
+    e.preventDefault();
+    nav("/ModelDecision", {
+      state: {
+        decision: 1, // doesnt work as intended
+      },
+    });
+  };
 
   return (
     <div className="acceptedDetails-container">
@@ -57,6 +68,8 @@ const LoanAcceptedDetails = () => {
             />
             YOUR LOAN DETAILS
           </h1>
+          <SelectedCustomer />
+
           <div className="payment-schedule-container">
             <h2 className="loan-schedule-header">Loan Payment Schedule </h2>
             <div className="loan-schedule-tables-container">
@@ -66,13 +79,16 @@ const LoanAcceptedDetails = () => {
                 <PaymentTable headers={headers2} data={data2} />
               </div>
 
-              <PaymentTable headers={headers} data={data} />
+              <div className="big-table">
+                {" "}
+                <PaymentTable headers={headers} data={data} />
+              </div>
             </div>
             <h2 className="loan-schedule-header">
               Next payment scheduled for 02/08/2023{" "}
             </h2>
           </div>
-          <button className="paymentschedule-back">
+          <button className="paymentschedule-back" onClick={handleBack}>
             <FontAwesomeIcon icon={faChevronLeft} /> back
           </button>
         </div>
