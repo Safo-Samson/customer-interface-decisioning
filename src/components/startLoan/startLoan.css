@@ -75,18 +75,6 @@
     cursor:auto;
 }
 
-.overDraft:hover, .creditCard:hover, .loan:hover, .carFinance:hover, .mortgage:hover{
-    border: 4px solid #005F44;
-    color: #525252;
-    font-weight: 900;
-    opacity: 1;
-
-}
-
-
-
-
-
 
 .decide-container{
     color: #525252;
@@ -192,3 +180,20 @@
 
     
 }
+.overDraft:hover, 
+.creditCard:hover, 
+.loan:hover, 
+.carFinance:hover, 
+.mortgage:hover, 
+.overDraft.selectedButton, 
+.creditCard.selectedButton , 
+.loan.selectedButton, 
+.mortgage.selectedButton, 
+.carFinance.selectedButton {
+    border: 4px solid #005F44;
+    color: #525252;
+    font-weight: 900;
+    opacity: 1;
+  } 
+
+
