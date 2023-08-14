@@ -14,11 +14,18 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import VerticalBar from "../UIComponents/VerticalBar";
 import { useNavigate } from "react-router-dom";
 
+
 const StartLoan = () =>{
   const navigate = useNavigate();
   const nextClick = (e) => {
 		e.preventDefault();
-    navigate('/CustomerInfo')
+    navigate('/CustomerInfo',{   
+      state: {
+      loanType : selectLoanValue,
+      loanAmount : loanAmount
+     }}
+
+    )
   }
   const backClick = (e) => {
 		e.preventDefault();
@@ -26,6 +33,16 @@ const StartLoan = () =>{
   }
     
 const [loanAmount, setLoan ] = useState("");
+const [selectLoanValue, setLoanValue] = useState('')
+const handleSelectedLoan = (value) =>{
+  // e.preventDefault();
+  setLoanValue(value);
+  console.log(selectLoanValue)
+
+}
+
+
+
 
 
 return (
@@ -49,7 +66,12 @@ return (
             />{" "}
             Overdraft
           </button>
-          <button className="creditCard">
+          <button 
+          className="creditCard" 
+          value="creditCard"
+          // onChange={(e) => setLoanValue('creditCard')}
+          onClick={() => handleSelectedLoan('credit card')}
+          >
             {" "}
             <FontAwesomeIcon
               className="creditCardIcon"
