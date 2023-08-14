@@ -13,7 +13,7 @@ const SoftCheck= () =>{
     const navigate = useNavigate();
     const handleDone = (e) =>{
         e.preventDefault();
-        navigate('/')
+        navigate('/home')
     }
     const handleApply = (e) => {
         e.preventDefault();

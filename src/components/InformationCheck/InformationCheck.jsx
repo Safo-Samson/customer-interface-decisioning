@@ -6,12 +6,13 @@ import { useState } from "react";
 import { faIdBadge } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation} from "react-router-dom";
 
 
 
 const InformationCheck= () => {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleClose = (e) =>{
         e.preventDefault();
@@ -23,7 +24,7 @@ const InformationCheck= () => {
     }
 
 	const [loanType, setType] = useState(location.state?.loanType || "undefined");
-	const [loanAmountinfo, setAmountInfo] = useState(location.state?.amount || "undefined");
+	const [loanAmountinfo, setAmountInfo] = useState(location.state?.loanAmount || "undefined");
 	const [dateApplied, setValue] = useState(location.state?.dateApplied || "undefined");
 	const [AccountNo, setAccount] = useState(location.state?.AccountNo || "none");
 	const [creditScore, setScore] = useState(location.state?.creditScore);
@@ -94,9 +95,9 @@ const InformationCheck= () => {
 
 						</div>
 
-						<div className="loanInfo">
+						<div className="sev-loanInfo">
                             <div className="loanInfoTxt">LOAN INFORMATION</div>
-                            <div className="loanFields">
+                            <div className="sev-loanFields">
                                 <div className="dateApplied">
 								    <label htmlFor="dateApplied"> Date Applied </label>
 								    <input
@@ -148,7 +149,7 @@ const InformationCheck= () => {
                                         />
                                 </div>
                             </div>
-                         </div>    
+                        </div>    
 
 
                         <div className="financialInfo">

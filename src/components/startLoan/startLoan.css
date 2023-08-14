@@ -10,7 +10,8 @@
     font-weight: 800;
     line-height: normal;
     background-color: white;
-   
+   /* justify-content: center; */
+   align-items: center;
 
 }
 
@@ -69,63 +70,11 @@
     justify-content: center;
 
 }
-
-.overDraft:hover, .creditCard:hover, .loan:hover, .carFinance:hover, .mortgage:hover{
-    border: 4px solid #005F44;
-    color: #525252;
-    font-weight: 900;
-    opacity: 1;
-
+.decide-container .empty{
+    opacity: 0;
+    cursor:auto;
 }
 
-/* .loan{
-    margin-top: 29px;
-    margin-right: 52px;
-
-} */
-
-/* .carFinance{
-    margin-top: 29px;
-} */
-
-/* .mortgage{
-    margin-top: 29px;
-    margin-right: 202px;
-} */
-
-
-
-.backBtn{
-    width: 218px;
-    height: 42px;
-    flex-shrink: 0;
-    background: #A1A1A1;
-    color: #FFF;
-    text-align: center;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-left: 48px;
-    cursor: pointer;
-    border: none;
-}
-
-.nextBtn{
-    width: 218px;
-    height: 42px;
-    background: #5E900F;
-    color: #FFF;
-    text-align: center;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-left: 447px;
-    cursor: pointer;
-    border: none;
-    
-}
 
 .decide-container{
     color: #525252;
@@ -135,12 +84,14 @@
     font-weight: 400;
     line-height: normal;
     width: 483px;
-    height: 661px;
+    height: 600px;
     
 
     /* justify-content: space-evenly; */
 
 }
+
+
 
 .enterAmount-container{
     color: #525252;
@@ -150,7 +101,7 @@
     font-weight: 400;
     line-height: normal;
     width: 483px;
-    height: 661px;
+    height: 600px;
     border: none;
     border-left: 1px solid #B8B3B3;
 }
@@ -184,3 +135,65 @@
     margin-left: 31px;
     
 }
+
+.newloan-buttons{
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    /* margin-top: 45px; */
+    /* border: 1px solid black; */
+    width: 866px;
+    margin-left: 60px;
+}
+
+.backBtn{
+    width: 218px;
+    height: 42px;
+    flex-shrink: 0;
+    background: #A1A1A1;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    /* font-weight: 700; */
+    line-height: normal;
+    /* margin-left: 48px; */
+    cursor: pointer;
+    border: none;
+    /* margin-top: 20px;s */
+}
+
+.nextBtn{
+    width: 218px;
+    background: #5E900F;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    /* font-weight: 700; */
+    line-height: normal;
+    /* margin-left: 447px; */
+    cursor: pointer;
+    border: none;
+    /* margin-top: 20px; */
+
+    
+}
+.overDraft:hover, 
+.creditCard:hover, 
+.loan:hover, 
+.carFinance:hover, 
+.mortgage:hover, 
+.overDraft.selectedButton, 
+.creditCard.selectedButton , 
+.loan.selectedButton, 
+.mortgage.selectedButton, 
+.carFinance.selectedButton {
+    border: 4px solid #005F44;
+    color: #525252;
+    font-weight: 900;
+    opacity: 1;
+  } 
+
+

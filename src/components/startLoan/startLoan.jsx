@@ -14,18 +14,35 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import VerticalBar from "../UIComponents/VerticalBar";
 import { useNavigate } from "react-router-dom";
 
+
 const StartLoan = () =>{
   const navigate = useNavigate();
   const nextClick = (e) => {
 		e.preventDefault();
-    navigate('/CustomerInfo')
+    navigate('/CustomerInfo',{   
+      state: {
+      loanType : selectLoanValue,
+      loanAmount : loanAmount
+     }}
+
+    )
   }
   const backClick = (e) => {
 		e.preventDefault();
-    navigate('/')
+    navigate('/home')
   }
     
 const [loanAmount, setLoan ] = useState("");
+const [selectLoanValue, setLoanValue] = useState('')
+const handleSelectedLoan = (value) =>{
+  // e.preventDefault();
+  setLoanValue(value);
+  console.log(selectLoanValue)
+
+}
+
+
+
 
 
 return (
@@ -40,7 +57,8 @@ return (
         <div className="decide-container">
           <p>Decide on your borrowing option:</p>
           
-          <button className="overDraft">
+          <button className={`overDraft ${selectLoanValue === 'Overdraft' ? 'selectedButton' : ''}`}
+          onClick={() => handleSelectedLoan('Overdraft')}>
             <FontAwesomeIcon
               className="overdraftIcon"
               icon={faHandHoldingDollar}
@@ -49,7 +67,12 @@ return (
             />{" "}
             Overdraft
           </button>
-          <button className="creditCard">
+          <button 
+          className={`creditCard ${selectLoanValue === 'Credit Card' ? 'selectedButton' : ''}`}
+          // value="creditCard"
+          // onChange={(e) => setLoanValue('creditCard')}
+          onClick={() => handleSelectedLoan('Credit Card')}
+          >
             {" "}
             <FontAwesomeIcon
               className="creditCardIcon"
@@ -59,7 +82,8 @@ return (
             />{" "}
             Credit Card
           </button>
-          <button className="loan">
+          <button className={`loan ${selectLoanValue === 'Loan' ? 'selectedButton' : ''}`}
+          onClick={() => handleSelectedLoan('Loan')}>
             <FontAwesomeIcon
               className="loanIcon"
               icon={faMoneyCheckDollar}
@@ -68,7 +92,8 @@ return (
             />
             Loan
           </button>
-          <button className="carFinance">
+          <button className={`carFinance ${selectLoanValue === 'Car Finance' ? 'selectedButton' : ''}`}
+          onClick={() => handleSelectedLoan('Car Finance')}>
             {" "}
             <FontAwesomeIcon
               icon={faCar}
@@ -77,7 +102,8 @@ return (
             />
             Car Finance
           </button>
-          <button className="mortgage">
+          <button className={`mortgage ${selectLoanValue === 'Mortgage' ? 'selectedButton' : ''}`}
+          onClick={() => handleSelectedLoan('Mortgage')}>
             <FontAwesomeIcon
               icon={faHouse}
               size="2xl"
@@ -85,6 +111,7 @@ return (
             />
             Mortgage
           </button>
+          <button className="empty">empty</button>
         </div>
         <div className="enterAmount-container">
           <p>Enter your desired amount: </p>
@@ -104,6 +131,7 @@ return (
           </div>
         </div>
       </div>
+      <div className="newloan-buttons">
       <button className="backBtn" onClick={backClick}>
         {" "}
         <FontAwesomeIcon icon={faChevronLeft} /> Back
@@ -111,6 +139,7 @@ return (
       <button className="nextBtn" onClick={nextClick}>
         Next <FontAwesomeIcon icon={faChevronRight} />
       </button>
+      </div>
     </div>
   </>
 );
