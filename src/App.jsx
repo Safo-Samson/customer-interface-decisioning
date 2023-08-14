@@ -7,6 +7,7 @@ import Homepage from "./components/startLoan/Homepage";
 import InfoCombined from './components/InformationCheck/InfoCombined';
 import ModelDecision from './components/StartLoan/ModelDecision';
 import CurrrentLoans from "./components/startLoan/CurrentLoans";
+import LoanAcceptedDetails from "./components/startLoan/LoanAcceptedDetails";
 
 function App() {
   return (
@@ -60,6 +61,15 @@ function App() {
             <>
               <CombinedBar />
               <CurrrentLoans />
+            </>
+          }
+        />
+        <Route
+          path="/PaymentDetails"
+          element={
+            <>
+              <CombinedBar />
+              <LoanAcceptedDetails />
             </>
           }
         />

@@ -1,0 +1,25 @@
+.custom-table {
+  border-collapse: collapse;
+ width: max-content;
+ min-width: 300px;
+  border: 1px solid rgb(66, 65, 65);
+  text-transform: lowercase;
+  border-radius: 50px;
+}
+
+.custom-table th, .custom-table td {
+  border: 1px solid #99C3B7;;
+  padding: 8px;
+  text-align: center;
+  padding-left: 10px;
+  min-width: 90px;
+  text-transform: capitalize;
+}
+
+.custom-table thead {
+  background-color: #dfdddd;
+}
+
+.custom-table tbody {
+  background-color: white;
+}
