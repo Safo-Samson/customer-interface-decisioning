@@ -69,6 +69,7 @@ const FindOutMoreLowerAmount= () =>{
             </div>
             <div className="findOutMoreLowerAmount-buttons">
                 <button className="findOutMoreLowerAmount-doneBTN" onClick={handleDone}>Done</button>
+                <button className="findOutMoreLowerAmount-askBTN">Ask for help</button>
             </div>
         </div>
         </div>

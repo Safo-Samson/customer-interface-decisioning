@@ -118,7 +118,7 @@
     margin-bottom: 19px;
 }
 
-.findOutMoreLowerAmount-doneBTN, .findOutMoreLowerAmount-applyBTN{
+.findOutMoreLowerAmount-doneBTN, .findOutMoreLowerAmount-askBTN{
     width: 218px;
     height: 42px;   
     background: #A1A1A1;
@@ -132,8 +132,10 @@
     cursor: pointer;
 }
 
-.findOutMoreLowerAmount-applyBTN{
-    background: #5E900F;
+.findOutMoreLowerAmount-askBTN{
+    background: white;
+    border: 1px solid #006A4D;
+    color: #006A4D;
     
     
 }
@@ -175,6 +177,8 @@
     line-height: normal;
     margin-bottom: 30px;
     margin-top: 30px;
+    border: none;
+    cursor: pointer;
     
 
 }
