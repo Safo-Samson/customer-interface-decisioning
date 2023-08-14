@@ -22,8 +22,11 @@ const FindOutMore= () =>{
     }
 
     const tip1 = "Electricity bill payment past due"
+    const tip1example = "Pay your electricity bill on time for the next six months to improve your credit score"
     const tip2 = "Moved 3 times the past year"
+    const tip2example = "To improve your credit score, rent the same apartment/house for the next year"
     const tip3 = "Pay off your existing debts"
+    const tip3example = "By paying off your existing debt you can significantly improve your credit score"
     return(
         <>
         <div className="findOutMore-VerticalContainer">
@@ -35,7 +38,23 @@ const FindOutMore= () =>{
             <div className="findOutMore-mainContent">
             <div className="details-findOutMore">
                 <p>Unfortunately your application has been rejected. Here are some tips to improve your credit score:</p>
-                <div className="findOutMore-tips">{tip1}{tip2}{tip3}</div>
+                <div className="findOutMore-tips">
+                    <p>{tip1}</p>
+                    {tip1 && (<div>
+
+                                  <ul className="tip"><li>{tip1example}</li></ul>
+                            </div> )}
+                    <p>{tip2}</p>
+                    {tip2 && (<div>
+
+                                <ul className="tip"><li>{tip2example}</li></ul>
+                        </div> )}                   
+                    <p>{tip3}</p>
+                    {tip3 && (<div>
+
+                              <ul className="tip"><li>{tip3example}</li></ul>
+                        </div> )}   
+                    </div>
             </div>
 
             </div>
