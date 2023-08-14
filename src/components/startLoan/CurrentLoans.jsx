@@ -11,7 +11,7 @@ const CurrrentLoans = () => {
   const nav = useNavigate();
 
   function backHome() {
-    nav("/");
+    nav("/home");
   }
   return (
     <div className="currentLoans-container">
