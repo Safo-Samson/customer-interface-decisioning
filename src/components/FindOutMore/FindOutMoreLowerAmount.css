@@ -175,6 +175,8 @@
     line-height: normal;
     margin-bottom: 30px;
     margin-top: 30px;
+    border: none;
+    cursor: pointer;
     
 
 }
