@@ -1,7 +1,7 @@
 .custom-table {
   border-collapse: collapse;
- width: max-content;
- min-width: 300px;
+ width: 100%; /*max content made it smaller*/
+ min-width: 250px;
   border: 1px solid rgb(66, 65, 65);
   text-transform: lowercase;
   border-radius: 50px;
@@ -10,11 +10,13 @@
 .custom-table th, .custom-table td {
   border: 1px solid #99C3B7;;
   padding: 8px;
-  text-align: center;
+  text-align: left;
   padding-left: 10px;
-  min-width: 90px;
+  min-width: 0px;
   text-transform: capitalize;
+  padding-right: 0;
 }
+
 
 .custom-table thead {
   background-color: #dfdddd;
