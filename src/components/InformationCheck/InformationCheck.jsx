@@ -11,9 +11,21 @@ const InformationCheck = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-    const handleClose = (e) =>{
-        e.preventDefault();
-        navigate('/NewLoan')
+  const [editBTNtext, setEditText] = useState("Edit");
+  const loanTypes = ["Credit Card", "Mortgage", "Personal Loan", "Car Loan"];
+  const ResidentTypes = ["Owned", "Rent", "Mortgaged", "Parents' House"];
+  const EmpStatusTypes = ["Employed", "Unemployed", "Self-Employed", "Student"];
+
+  const [editingLoanAmount, setEditingLoanAmount] = useState(false);
+
+  const enableEdit = (e) => {
+    e.preventDefault();
+    if (editBTNtext === "Edit") {
+      setEditText("Save");
+      setEditingLoanAmount(true);
+    } else {
+      setEditText("Edit");
+      setEditingLoanAmount(false);
     }
   };
 
@@ -24,7 +36,7 @@ const InformationCheck = () => {
       .replace(/\d(?=(\d{3})+\.)/g, "$&,");
   };
 
-  // handling apply buton
+  // handling apply button
   const handleApply = (e) => {
     e.preventDefault();
     navigate("/ModelDecision");
@@ -249,87 +261,136 @@ const InformationCheck = () => {
             </div>
           </div>
 
-                        <div className="financialInfo">
-                            <div className="financialInfoTxt">FINANCIAL INFORMATION</div>
-                        <div className="financialFields">
+          <div className="financialInfo">
+            <div className="financialInfoTxt">FINANCIAL INFORMATION</div>
+            <div className="financialFields">
+              {editBTNtext === "Save" ? (
+                <div className="employmentStatus">
+                  <label htmlFor="employmentStatus"> Employment Status</label>
+                  <select
+                    value={employmentStatus}
+                    onChange={(e) => setEmployment(e.target.value)}
+                    type="employmentStatus"
+                    id="employmentStatus"
+                    name="employmentStatus"
+                    className="info-editable-field" // Apply red outline style here
+                  >
+                    {EmpStatusTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ) : (
+                <div className="employmentStatus">
+                  <label htmlFor="employmentStatus"> Employment Status</label>
+                  <input
+                    value={employmentStatus}
+                    onChange={(e) => setEmployment(e.target.value)}
+                    type="text"
+                    placeholder=""
+                    id="employmentStatus"
+                    name="employmentStatus"
+                    readOnly
+                  />
+                </div>
+              )}
+              {/* <div className="defaults">
+                <label htmlFor="defaults"> Defaults</label>
+                <input
+                  value={defaults}
+                  onChange={(e) => setDefaults(e.target.value)}
+                  type="defaults"
+                  placeholder=""
+                  id="defaults"
+                  name="defaults"
+                  readOnly
+                />
+              </div> */}
+              <div className="income">
+                <label htmlFor="income"> Income</label>
+                <input
+                  value={formatMoney(income)}
+                  onChange={(e) => setIncome(e.target.value)}
+                  type="income"
+                  placeholder=""
+                  id="income"
+                  name="income"
+                  readOnly
+                />
+              </div>
+              <div className="dependents">
+                <label htmlFor="dependents"> Dependents</label>
+                <input
+                  value={dependents}
+                  onChange={(e) => setDependents(e.target.value)}
+                  type="dependents"
+                  placeholder=""
+                  id="dependents"
+                  name="dependents"
+                  readOnly
+                />
+              </div>
 
-                        <div className="employmentStatus">
-                                <label htmlFor="employmentStatus"> Employment Status</label>
-                                <input
-                                    value={employmentStatus}
-                                    onChange={(e) => setEmployment(e.target.value)}
-                                    type = "employmentStatus"
-                                    placeholder=""
-                                    id="employmentStatus"
-                                    name="employmentStatus"
-                                    readOnly
-                                />
-                            </div>
-                        <div className="defaults">
-                                <label htmlFor="defaults"> Defaults</label>
-                                <input
-                                    value={defaults}
-                                    onChange={(e) => setDefaults(e.target.value)}
-                                    type = "defaults"
-                                    placeholder=""
-                                    id="defaults"
-                                    name="defaults"
-                                    readOnly
-                                />
-
-                        </div>
-                        <div className="income">
-                                <label htmlFor="income"> Income</label>
-                                <input
-                                    value={income}
-                                    onChange={(e) => setIncome(e.target.value)}
-                                    type = "income"
-                                    placeholder=""
-                                    id="income"
-                                    name="income"
-                                    readOnly
-                                />
-
-                            </div>
-                        <div className="dependents">
-                                <label htmlFor="dependents"> Dependents</label>
-                                <input
-                                    value={dependents}
-                                    onChange={(e) => setDependents(e.target.value)}
-                                    type = "dependents"
-                                    placeholder=""
-                                    id="dependents"
-                                    name="dependents"
-                                    readOnly
-                                />
-                            </div>
-
-                            <div className="residentialStatus">
-                                <label htmlFor="residentialStatus"> Residential Status</label>
-                                <input
-                                    value={residentialStatus}
-                                    onChange={(e) => setResidential(e.target.value)}
-                                    type = "residentialStatus"
-                                    placeholder=""
-                                    id="residentialStatus"
-                                    name="residentialStatus"
-                                    readOnly
-                                />
-                            </div>
-
-                            
-
-                        </div>
-                        <div className="buttons">
-						<button className="backBTN" onClick={handleClose}> <FontAwesomeIcon icon={faChevronLeft} />Back</button>
-                        <button className="editBTN">Edit</button>
-						<button className="applyBTN"  onClick={handleApply}>Apply for loan <FontAwesomeIcon icon={faChevronRight} /></button>
-                        </div>
-                        </div>
-
-                    </form>
-                
+              {editBTNtext === "Save" ? (
+                <div className="residentialStatus">
+                  <label htmlFor="residentialStatus"> Residential Status</label>
+                  <select
+                    value={residentialStatus}
+                    onChange={(e) => setResidential(e.target.value)}
+                    type="residentialStatus"
+                    id="residentialStatus"
+                    name="residentialStatus"
+                    className="info-editable-field" // Apply red outline style here
+                  >
+                    {ResidentTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ) : (
+                <div className="residentialStatus">
+                  <label htmlFor="residentialStatus"> Residential Status</label>
+                  <input
+                    value={residentialStatus}
+                    onChange={(e) => setResidential(e.target.value)}
+                    type="text"
+                    placeholder=""
+                    id="residentialStatus"
+                    name="residentialStatus"
+                    readOnly
+                  />
+                </div>
+              )}
             </div>
-        </>
-    )
-}
+
+            <div className="buttons">
+              <button className="backBTN" onClick={handleClose}>
+                {" "}
+                <FontAwesomeIcon icon={faChevronLeft} />
+                Back
+              </button>
+              <button className="editBTN" onClick={enableEdit}>
+                {editBTNtext === "Edit" ? (
+                  <span>
+                    <FontAwesomeIcon icon={faPen} /> Edit
+                  </span>
+                ) : (
+                  "Save"
+                )}
+              </button>
+              <button className="applyBTN" onClick={handleApply}>
+                Apply for loan <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+};
+
+export default InformationCheck;
