@@ -11,7 +11,7 @@ function SmallSupport() {
     <div className="small-support-container">
       <img
         src="src\assets\llyods customer service.png"
-        alt="small-support"
+        alt="customer service image"
         className="small-service-img"
       />
 
