@@ -35,7 +35,7 @@ const ModelDecision = ({ decision, setDecision }) => {
   const [loanTerm, setTerm] = useState(location.state?.loanTerm || "3 months");
 
   // decision accepted headers,icons and paragraphs
-  const decisionHeaderAccepted = "SUCCESSFUL APPLICATION!.";
+  const decisionHeaderAccepted = "SUCCESSFUL APPLICATION!";
   const decisionAcceptedParagraph =
     "Thank you for applying your loan has been accepted. For further information and payment schedule please check details.";
   const decisionAcceptedIcon = faCircleCheck;

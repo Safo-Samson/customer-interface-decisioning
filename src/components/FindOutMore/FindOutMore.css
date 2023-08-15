@@ -46,9 +46,8 @@
 }
 
 
-.sev-findOutMoreHeader{
-    /* margin-top: 21px; */
-}
+
+
 
 .details-findOutMore{
     width: 959px;
@@ -69,15 +68,7 @@
     padding: 20px;
 }
 
-.understandingCredit p{
-    width: 545px;
-    color: #525252;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 
-}
 
 .findOutMore-questionMarkIcon{
     background-color: #014049 ;
@@ -182,4 +173,20 @@
 
 .tip{
     margin: 0;
+}
+
+.details-findOutMore p{
+    font-weight: 800;
+}
+.understandingCredit p{
+    width: 545px;
+    color: #525252;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+.findOutMore-tips p{
+    font-weight: 700;
 }
