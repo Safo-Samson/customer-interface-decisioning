@@ -72,6 +72,7 @@ function App() {
             <>
               <CombinedBar />
               <CurrrentLoans />
+              <Footer/>
             </>
           }
         />
@@ -81,6 +82,7 @@ function App() {
             <>
               <CombinedBar />
               <LoanAcceptedDetails />
+              <Footer/>
             </>
           }
         />
@@ -90,6 +92,7 @@ function App() {
           <>
           <CombinedBar />
           <FindOutMore />
+          <Footer/>
           </>
         } />
         <Route 
@@ -98,6 +101,7 @@ function App() {
           <>
           <CombinedBar />
           <FindOutMoreLowerAmount />
+          <Footer/>
           </>
         } />
       </Routes>

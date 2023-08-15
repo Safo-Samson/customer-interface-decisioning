@@ -39,27 +39,27 @@ const CurrrentLoans = () => {
                 loanType={"Credit Card"}
                 status={"Pending"}
                 amount={8000}
-                details={"Detail"}
+                details={"Details"}
                 // nextPayment={new Date("none").toLocaleDateString()}
               />
               <LoanType
                 loanType={"Mortgage"}
                 status={"In Progress"}
                 amount={100000}
-                details={"Detail"}
+                details={"Details"}
                 nextPayment={new Date().toLocaleDateString()}
               />
               <LoanType
                 loanType={"Personal Loan"}
                 status={"Done"}
                 amount={50000}
-                details={"Detail"}
+                details={"Details"}
                 // nextPayment={new Date().toLocaleDateString()}
               />
             </div>
           </div>
           <button className="currentLoan-back" onClick={backHome}>
-            <FontAwesomeIcon icon={faChevronLeft} /> back
+            <FontAwesomeIcon icon={faChevronLeft} /> Back
           </button>
         </div>
       </div>
