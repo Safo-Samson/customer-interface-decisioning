@@ -65,7 +65,9 @@ const InformationCheck = () => {
   const [dateApplied, setValue] = useState(
     location.state?.dateApplied || "undefined"
   );
-  const [AccountNo, setAccount] = useState(location.state?.AccountNo || "123");
+  const [AccountNo, setAccount] = useState(
+    location.state?.AccountNo || "6203423865"
+  );
   const [creditScore, setScore] = useState(location.state?.creditScore);
   const [birthDate, setBirth] = useState(location.state?.birthDate);
   const [residentialStatus, setResidential] = useState(
