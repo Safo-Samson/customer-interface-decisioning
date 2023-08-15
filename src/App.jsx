@@ -11,6 +11,7 @@ import CurrrentLoans from "./components/StartLoan/CurrentLoans";
 import LoanAcceptedDetails from "./components/StartLoan/LoanAcceptedDetails";
 import FindOutMore from "./components/FindOutMore/FindOutMore"
 import FindOutMoreLowerAmount from "./components/FindOutMore/FindOutMoreLowerAmount";
+import Footer from "./components/UIComponents/Footer";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           path="/home"
           element={
             <>
-              <CombinedBar /> <Homepage />
+               <CombinedBar /><Homepage /> <Footer/>
             </>
           }
         />
