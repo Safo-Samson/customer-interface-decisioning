@@ -1,0 +1,28 @@
+name: Deploy to GCP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure SSH keys
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$GCP_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Add GCP host to known_hosts
+        run: ssh-keyscan -H 34.68.9.16 >> ~/.ssh/known_hosts
+
+      - name: Deploy
+        run: |
+          jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
