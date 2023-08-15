@@ -25,36 +25,36 @@ function LoginForm() {
     <>
       <div className="auth-form-container">
         <div className="loginForm-logo-header">
-        <h1 className="loginForm-header"> LLOYDS BANK </h1>
+          <h1> LLOYDS BANK </h1>
           <img className="loginForm-logo" src={horseLogo} alt="Logo" />
           
+        </div>
+        <form className="login-form" onSubmit={handleSubmit} noValidate>
+          <h2 className="login-text">Login</h2>
+          <div className="input-row">
+            <label htmlFor="AdvisorID">Customer ID</label>
+            <input
+              value={advisorID}
+              onChange={(e) => setID(e.target.value)}
+              type="advisorID"
+              placeholder=""
+              id="AdvisorID"
+              name="AdvisorID"
+              required
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              value={password}
+              onChange={(e) => setPass(e.target.value)}
+              type="password"
+              placeholder=""
+              id="password"
+              name="password"
+              required
+            />
           </div>
-          <form className="login-form" onSubmit={handleSubmit} noValidate>
-            <h2 className="login-text">Login</h2>
-            <div className="input-row">
-              <label htmlFor="AdvisorID">Customer ID</label>
-              <input
-                value={advisorID}
-                onChange={(e) => setID(e.target.value)}
-                type="advisorID"
-                placeholder=""
-                id="AdvisorID"
-                name="AdvisorID"
-                required
-              />
-              <label htmlFor="password">Password</label>
-              <input
-                value={password}
-                onChange={(e) => setPass(e.target.value)}
-                type="password"
-                placeholder=""
-                id="password"
-                name="password"
-                required
-              />
-            </div>
-            <button style={{ border: "none" }}>Login </button>
-          </form>
+          <button style={{ border: "none" }}>Login </button>
+        </form>
         </div>
       {error && <p className="error-message">{error}</p>}
     </>

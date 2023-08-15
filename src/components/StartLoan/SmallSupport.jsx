@@ -28,7 +28,7 @@ function SmallSupport() {
           CREDIT SCORE CHECK
         </h5>
         <p>
-          If you already have a loan with us, we've a range of flexible ways to
+          If you already have a loan with us, we have a range of flexible ways to
           help you. If your needs have changed, we're here to help.
         </p>
       </div>
