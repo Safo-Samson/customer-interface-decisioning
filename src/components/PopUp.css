@@ -15,10 +15,9 @@
     max-height: 70vh;
     margin-top: calc(100vh - 85vh - 20px);
     background: #fff;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     padding: 20px;
     border: 1px solid #999;
-    overflow: auto;
     width: 682px;
     height: 406px;
     border-radius: 5px;
@@ -35,27 +34,42 @@
     height: 25px;
     border-radius: 50%;
     line-height: 20px;
-    text-align: center;
     border: 1px solid #999;
     font-size: 20px;
   }
   
-  .box.accepted{
+  .box.accepted b{
     color: #006A4D;
-    text-align: center;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     
   }
-  .box.rejected{
-    color: #006A4D;
-    text-align: center;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
+
+  .box.accepted p{
+    color: black;
+    justify-content: start;
+  }
+
+  .box.accepted button{
+    background: #006A4D;
+    border: none;
+    cursor: pointer;
+
+  }
+
+  .box.accepted button:hover{
+    background: #999;
+  }
+
+  .box.accepted .Popup-buttons{
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 230px;
+    /* margin-bottom: auto; */
+    justify-content: space-between;
   }

@@ -12,6 +12,7 @@ import LoanAcceptedDetails from "./components/StartLoan/LoanAcceptedDetails";
 import FindOutMore from "./components/FindOutMore/FindOutMore"
 import FindOutMoreLowerAmount from "./components/FindOutMore/FindOutMoreLowerAmount";
 import Footer from "./components/UIComponents/Footer";
+import PopUp from './components/PopUp'
 
 function App() {
   return (
@@ -104,6 +105,13 @@ function App() {
           <Footer/>
           </>
         } />
+        <Route 
+        path="/PopUp"
+        element={
+          <PopUp />
+        }
+        />
+
       </Routes>
     </>
   );

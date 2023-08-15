@@ -84,7 +84,8 @@
   background-color: white;
   height: 30px;
   width: 252px;
-  border: 1px solid gray;
+  border: none;
+  border-bottom: 1px solid gray;
   /* border-bottom: 1px solid black; */
   /* border-radius: 4px; */
   display: inline-block;
