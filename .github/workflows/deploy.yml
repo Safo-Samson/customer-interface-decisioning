@@ -16,7 +16,7 @@ jobs:
       - name: Configure SSH keys
         run: |
           mkdir -p ~/.ssh/
-          echo "$GCP_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          echo "${{ secrets.GCP_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
