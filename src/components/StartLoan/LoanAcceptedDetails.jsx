@@ -19,10 +19,10 @@ const LoanAcceptedDetails = () => {
   const data = Month.map((month, index) => [
     month,
     Date[index],
-    `$${Payment[index]}`,
-    `$${Principal[index]}`,
-    `$${Interest[index]}`,
-    `$${Balance[index]}`,
+    `£${Payment[index]}`,
+    `£${Principal[index]}`,
+    `£${Interest[index]}`,
+    `£${Balance[index]}`,
   ]);
   const headers1 = ["Month", "Date"];
   const data1 = [
@@ -84,7 +84,7 @@ const LoanAcceptedDetails = () => {
             </h2>
           </div>
           <button className="paymentschedule-back" onClick={handleBack}>
-            <FontAwesomeIcon icon={faChevronLeft} /> back
+            <FontAwesomeIcon icon={faChevronLeft} /> Back
           </button>
         </div>
       </div>

@@ -63,7 +63,7 @@ return (
               className="overdraftIcon"
               icon={faHandHoldingDollar}
               size="2xl"
-              style={{ color: "#005F44" , marginLeft: '20px', marginRight: '20px'}}
+              style={{ color: "#005F44" , marginBottom: '10px', marginLeft: '20px', marginRight: '20px'}}
             />{" "}
             Overdraft
           </button>
@@ -78,7 +78,7 @@ return (
               className="creditCardIcon"
               icon={faCreditCard}
               size="2xl"
-              style={{ color: "#005F44", marginLeft: '20px', marginRight: '20px' }}
+              style={{ color: "#005F44", marginBottom: '10px',marginLeft: '20px', marginRight: '20px' }}
             />{" "}
             Credit Card
           </button>
@@ -88,7 +88,7 @@ return (
               className="loanIcon"
               icon={faMoneyCheckDollar}
               size="2xl"
-              style={{ color: "#005F44" , marginLeft: '35px', marginRight: '40px'}}
+              style={{ color: "#005F44" ,marginBottom: '10px', marginLeft: '35px', marginRight: '40px'}}
             />
             Loan
           </button>
@@ -98,7 +98,7 @@ return (
             <FontAwesomeIcon
               icon={faCar}
               size="2xl"
-              style={{ color: "#005F44", marginLeft: '45px', marginRight: '60px' }}
+              style={{ color: "#005F44", marginBottom: '10px', marginLeft: '52px', marginRight: '60px' }}
             />
             Car Finance
           </button>
@@ -107,7 +107,7 @@ return (
             <FontAwesomeIcon
               icon={faHouse}
               size="2xl"
-              style={{ color: "#005F44" , marginLeft: '20px', marginRight: '20px'}}
+              style={{ color: "#005F44" , marginBottom: '10px',marginLeft: '20px', marginRight: '20px'}}
             />
             Mortgage
           </button>

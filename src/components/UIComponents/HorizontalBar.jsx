@@ -12,7 +12,7 @@ const HorizontalBar = () => {
       </div>
 
       <div className="custom-dropdown">
-        <div className="dropdown-header">Our product and services</div>
+        <div className="dropdown-header">Our Product and Services</div>
         <div className="dropdown-content">
           <a href="#">Loans</a>
           <a href="#">Discounts</a>

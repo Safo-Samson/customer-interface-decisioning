@@ -11,6 +11,7 @@ import CurrrentLoans from "./components/StartLoan/CurrentLoans";
 import LoanAcceptedDetails from "./components/StartLoan/LoanAcceptedDetails";
 import FindOutMore from "./components/FindOutMore/FindOutMore"
 import FindOutMoreLowerAmount from "./components/FindOutMore/FindOutMoreLowerAmount";
+import Footer from "./components/UIComponents/Footer";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           path="/home"
           element={
             <>
-              <CombinedBar /> <Homepage />
+               <CombinedBar /><Homepage /> <Footer/>
             </>
           }
         />
@@ -28,7 +29,7 @@ function App() {
           path="/CustomerInfo"
           element={
             <>
-              <CombinedBar /> <InfoCombined />
+              <CombinedBar /> <InfoCombined /> <Footer/>
             </>
           }
         />
@@ -36,7 +37,7 @@ function App() {
           path="/NewLoan"
           element={
             <>
-              <CombinedBar /> <NewLoan />
+              <CombinedBar /> <NewLoan /> <Footer/>
             </>
           }
         />
@@ -46,6 +47,7 @@ function App() {
             <>
               <CombinedBar />
               <SoftCombined />
+              <Footer/>
             </>
           }
         />
@@ -55,6 +57,7 @@ function App() {
             <>
               <CombinedBar />
               <ModelDecision />
+              <Footer/>
             </>
           }
         />
@@ -69,6 +72,7 @@ function App() {
             <>
               <CombinedBar />
               <CurrrentLoans />
+              <Footer/>
             </>
           }
         />
@@ -78,6 +82,7 @@ function App() {
             <>
               <CombinedBar />
               <LoanAcceptedDetails />
+              <Footer/>
             </>
           }
         />
@@ -87,6 +92,7 @@ function App() {
           <>
           <CombinedBar />
           <FindOutMore />
+          <Footer/>
           </>
         } />
         <Route 
@@ -95,6 +101,7 @@ function App() {
           <>
           <CombinedBar />
           <FindOutMoreLowerAmount />
+          <Footer/>
           </>
         } />
       </Routes>

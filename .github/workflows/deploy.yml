@@ -16,13 +16,14 @@ jobs:
       - name: Configure SSH keys
         run: |
           mkdir -p ~/.ssh/
-          echo "$GCP_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          echo "${{ secrets.GCP_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - name: Add GCP host to known_hosts
-        run: ssh-keyscan -H 34.68.9.16 >> ~/.ssh/known_hosts
+        run: |
+          ssh-keyscan -H 34.68.9.16 >> ~/.ssh/known_hosts
 
       - name: Deploy
         run: |
-          ssh jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
+          ssh -A jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
