@@ -5,6 +5,7 @@ import { faCoins, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import PaymentTable from "./PaymentTable";
 import SelectedCustomer from "./SelectedCustomer";
 import { useNavigate } from "react-router-dom";
+import jsonData from "../../assets/5843479162_loanSchedule.json";
 const LoanAcceptedDetails = () => {
   const headers = [
     "Month",
@@ -14,21 +15,15 @@ const LoanAcceptedDetails = () => {
     "Interest",
     "Balance",
   ];
-  const data = [
-    ["January", "01-Jan", "$500", "$100", "$25", "$2000"],
-    ["February", "15-Feb", "$500", "$110", "$20", "$1890"],
-    ["March", "10-Mar", "$500", "$120", "$15", "$1770"],
-    ["April", "05-Apr", "$500", "$130", "$10", "$1640"],
-    ["May", "20-May", "$500", "$140", "$5", "$1500"],
-    ["June", "25-Jun", "$500", "$150", "$0", "$1350"],
-    ["July", "05-Jul", "$500", "$160", "$0", "$1190"],
-    ["August", "15-Aug", "$500", "$170", "$0", "$1020"],
-    ["September", "10-Sep", "$500", "$180", "$0", "$840"],
-    // ["October", "10-Oct", "$500", "$190", "$0", "$650"],
-    // ["November", "15-Nov", "$500", "$200", "$0", "$450"],
-    // ["December", "20-Dec", "$500", "$210", "$0", "$240"],
-  ];
-
+  const { Month, Date, Payment, Principal, Interest, Balance } = jsonData;
+  const data = Month.map((month, index) => [
+    month,
+    Date[index],
+    `$${Payment[index]}`,
+    `$${Principal[index]}`,
+    `$${Interest[index]}`,
+    `$${Balance[index]}`,
+  ]);
   const headers1 = ["Month", "Date"];
   const data1 = [
     ["Annual Interest Rate", ""],
