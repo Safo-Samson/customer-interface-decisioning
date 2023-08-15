@@ -1,238 +1,246 @@
-.informationCheck-container{
-    width: 966px;
-    height: 100%;
-    border: none;
-    border-top: 11px solid #005F44 ;
-    /* border: 1px solid black; */
-    color: #005F44;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    background-color: white;
-    
-   
-
+.informationCheck-container {
+  width: 966px;
+  height: 100%;
+  border: none;
+  border-top: 11px solid #005f44;
+  /* border: 1px solid black; */
+  color: #005f44;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background-color: white;
 }
 
-.informationCheck-header{
-    width: 1498px;
-    height: 21px;
-    /* border: 1px solid #005F44; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 51px;
+.informationCheck-header {
+  width: 1498px;
+  height: 21px;
+  /* border: 1px solid #005F44; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 51px;
 }
 
-
-.sev-infoHeader{
-    margin-left: 31px;
-    
+.sev-infoHeader {
+  margin-left: 31px;
 }
 
-.personalInfo{
-    max-width: 85%;
-    height: 126px;
-    margin-top: 46px;
-    margin-left: 54px;
+.personalInfo {
+  max-width: 85%;
+  height: 126px;
+  margin-top: 46px;
+  margin-left: 54px;
 }
-.sev-loanInfo, .financialInfo{
-    max-width: 85%;
-    margin-left: 54px;
-    margin-top: 37px;
-    /* margin-top: 100px; */
-    /* margin-right: 100px; */
+.sev-loanInfo,
+.financialInfo {
+  max-width: 85%;
+  margin-left: 54px;
+  margin-top: 37px;
+  /* margin-top: 100px; */
+  /* margin-right: 100px; */
 }
-.financialInfo{
-	margin-top: 10px;
+.financialInfo {
+  margin-top: 10px;
 }
 .personalFields {
-	display: flex;
-	flex-direction: row;
-    height: 126px;
-	/* border: 1px solid black; */
-	justify-content: space-evenly;
-    border: 1px solid #99C3B7;
-
+  display: flex;
+  flex-direction: row;
+  height: 126px;
+  /* border: 1px solid black; */
+  justify-content: space-evenly;
+  border: 1px solid #99c3b7;
 }
 
-.sev-loanInfo .loanInfoTxt, .financialInfo .financialInfoTxt, .personalInfo .personalInfoTxt {
-	background-color: #99c3b7;
-	/* margin-top: 47px; */
+.sev-loanInfo .loanInfoTxt,
+.financialInfo .financialInfoTxt,
+.personalInfo .personalInfoTxt {
+  background-color: #99c3b7;
+  /* margin-top: 47px; */
 
-	height: 24px;
+  height: 24px;
 }
 
-.AccountNo, .birthDate, .dateApplied {
-	display: flex;
-	flex-direction: column;
-	margin-top: 30px;
-
+.AccountNo,
+.birthDate,
+.dateApplied {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
 
-.form-container{
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  /* height: 100%; */
 
-    width: 100%;
-    /* height: 100%; */
-    
-    /* border: 9px solid black; */
-    
-    /* margin-top: 800px; */
+  /* border: 9px solid black; */
+
+  /* margin-top: 800px; */
 }
 .form-container input {
-	background-color: white;
-	height: 30px;
-	width: 252px;
-	border: none;
-	border-bottom: 1px solid black;
-	border-radius: 4px;
-	display: inline-block;
+  background-color: white;
+  height: 30px;
+  width: 252px;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 4px;
+  display: inline-block;
 }
 
-
-
 .financialFields {
-	display: flex;
-	flex-direction: row;
-	/* border: 1px solid black; */
-	height: 205px;
-    border: 1px solid #99C3B7;
-    
-
-
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  height: 205px;
+  border: 1px solid #99c3b7;
 }
 
 .sev-loanFields {
-	display: flex;
-	flex-direction: row;
-    border: 1px solid #99C3B7;
-	height: 126px;
-	justify-content: space-evenly;
-
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #99c3b7;
+  height: 126px;
+  justify-content: space-evenly;
 }
-
 
 .form-container label {
-	color: #4f4f52;
-	font-family: "Roboto-Regular", Helvetica;
-	font-size: 14px;
-	font-weight: 800;
+  color: #4f4f52;
+  font-family: "Roboto-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 800;
 }
 
-.employmentStatus, .dependents, .income, .defaults{
-    display: flex;
-	flex-direction: column;
-	margin-top: 30px;
+.employmentStatus,
+.dependents,
+.income,
+.defaults {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 .residentialStatus {
-	display: flex;
-	flex-direction: column;
-	margin-top: 120px;
-	margin-left: -793px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  margin-left: -793px;
 }
-
-
 
 .employmentStatus {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 .dependents {
-	margin-left: 25px;
+  margin-left: 25px;
 }
 .income {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 .income input {
-	width: 128px;
+  width: 128px;
 }
 .defaults {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 .loyaltyDays {
-	display: flex;
-	flex-direction: column;
-	margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
 .loanAmountinfo {
-	display: flex;
-	flex-direction: column;
-    /* margin-left:15px; */
+  display: flex;
+  flex-direction: column;
+  /* margin-left:15px; */
 
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .loanType {
-	display: flex;
-	flex-direction: column;
-    /* margin-left: 20px; */
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 20px; */
 
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .loanTerm {
-	display: flex;
-	flex-direction: column;
-	/* margin-left: 20px; */
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 20px; */
 
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .loanTerm input {
-	width: 108px;
+  width: 108px;
 }
 
-.loanAmountinfo input, .dependents input {
-	width: 101px;
+.loanAmountinfo input,
+.dependents input {
+  width: 101px;
 }
-
-
 
 .form-container button {
-	width: 218px;
-	height: 42px;
-	color: #fff;
-	align-items: center;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 140%;
+  width: 218px;
+  height: 42px;
+  color: #fff;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 
-.buttons{
-	/* width: 218px; */
-    height: 42px;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    margin-top: 45px;
+.buttons {
+  /* width: 218px; */
+  height: 42px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 45px;
 }
 .backBTN {
-	background-color: #A1A1A1;
-	border: none;
- } 
+  background-color: #a1a1a1;
+  border: none;
+}
 
 .applyBTN {
-	background-color: #5E900F ;
-	border: none;
-	cursor: pointer;
+  background-color: #5e900f;
+  border: none;
+  cursor: pointer;
 
-	/* margin-left: 713px; */
+  /* margin-left: 713px; */
 }
 
 .backBTN:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
-.editBTN{
-	
-	border: none;
-	cursor: pointer;
+.editBTN {
+  border: none;
+  cursor: pointer;
 
-    background-color: #005F44;
+  background-color: #005f44;
 }
 
+.info-editable-field {
+  border: 2px solid green; /* Green border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px; /* Add some padding for better visual */
+  font-size: 16px; /* Set font size */
+  width: 100%; /* Expand to fill the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  background-color: white; /* White background */
+  color: #333; /* Text color */
+  outline: none; /* Remove default outline */
+}
 
- 
+/* On hover, add a slight shadow for better interaction feedback */
+.info-editable-field:hover {
+  box-shadow: 0px 0px 5px rgba(0, 128, 0, 0.3); /* Greenish shadow */
+}
+
+/* On focus, change the border color for more visibility */
+.info-editable-field:focus {
+  border-color: #008000; /* Darker green border */
+}
