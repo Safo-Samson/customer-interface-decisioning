@@ -14,12 +14,19 @@ const InformationCheck = () => {
   const location = useLocation();
 
   const [editBTNtext, setEditText] = useState("Edit");
-  const loanTypes = ["Credit Card", "Mortgage", "Personal Loan", "Car Loan"];
+  const loanTypes = [
+    "Credit Card",
+    "Mortgage",
+    "Personal Loan",
+    "Car Finance",
+    "OverDraft",
+  ];
   const ResidentTypes = ["Owned", "Rent", "Mortgaged", "Parents' House"];
   const EmpStatusTypes = ["Employed", "Unemployed", "Self-Employed", "Student"];
 
   const [editingLoanAmount, setEditingLoanAmount] = useState(false);
 
+  // handling the edit after it has been saved
   const enableEdit = (e) => {
     e.preventDefault();
     if (editBTNtext === "Edit") {
@@ -32,6 +39,9 @@ const InformationCheck = () => {
 
     setAcceptOpen(!acceptOpen);
     setEditingLoanAmount(false);
+    }
+    if (editBTNtext === "Save") {
+      updateCustomerInfor(AccountNo); // Call the function here
     }
   };
 
@@ -62,7 +72,9 @@ const InformationCheck = () => {
   const [dateApplied, setValue] = useState(
     location.state?.dateApplied || "undefined"
   );
-  const [AccountNo, setAccount] = useState(location.state?.AccountNo || "none");
+  const [AccountNo, setAccount] = useState(
+    location.state?.AccountNo || "6203423865"
+  );
   const [creditScore, setScore] = useState(location.state?.creditScore);
   const [birthDate, setBirth] = useState(location.state?.birthDate);
   const [residentialStatus, setResidential] = useState(
@@ -83,7 +95,34 @@ const InformationCheck = () => {
   const [acceptOpen, setAcceptOpen] = useState(false);
 
 
-  const [filterDay, setFilterDay] = useState("");
+  // fetch api call to update user
+
+  function updateCustomerInfor(user_id) {
+    const updatedData = {
+      occupation: employmentStatus,
+      residential_status: residentialStatus,
+      dependents: dependents,
+      salary: income,
+      loan_type: loanType,
+      loan_duration: loanTerm,
+      loan_amount: loanAmountinfo,
+    };
+    fetch(`http://77.91.124.124:5000/update-application/${user_id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message); // Message from the API response
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+
   return (
     <>
       <div className="informationCheck-container">
@@ -175,11 +214,14 @@ const InformationCheck = () => {
                     name="loanType"
                     className="info-editable-field" // Apply red outline style here
                   >
-                    {loanTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
+                    <option value={loanType}>{loanType}</option>
+                    {loanTypes
+                      .filter((type) => loanType !== type)
+                      .map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))}
                   </select>
                 </div>
               ) : (
@@ -386,7 +428,7 @@ const InformationCheck = () => {
               <button className="editBTN" onClick={enableEdit}>
                 {editBTNtext === "Edit" ? (
                   <span>
-                    <FontAwesomeIcon icon={faPen} /> Edit
+                    <FontAwesomeIcon icon={faPen} /> Edit Details
                   </span>
                 ) : (
                   "Save"
