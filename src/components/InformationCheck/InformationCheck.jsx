@@ -168,19 +168,19 @@ const InformationCheck= () => {
                                     readOnly
                                 />
                             </div>
-                        <div className="defaults">
-                                <label htmlFor="defaults"> Defaults</label>
+                            <div className="residentialStatus">
+                                <label htmlFor="residentialStatus"> Residential Status</label>
                                 <input
-                                    value={defaults}
-                                    onChange={(e) => setDefaults(e.target.value)}
-                                    type = "defaults"
+                                    value={residentialStatus}
+                                    onChange={(e) => setResidential(e.target.value)}
+                                    type = "residentialStatus"
                                     placeholder=""
-                                    id="defaults"
-                                    name="defaults"
+                                    id="residentialStatus"
+                                    name="residentialStatus"
                                     readOnly
                                 />
+                            </div>
 
-                        </div>
                         <div className="income">
                                 <label htmlFor="income"> Income</label>
                                 <input
@@ -207,18 +207,7 @@ const InformationCheck= () => {
                                 />
                             </div>
 
-                            <div className="residentialStatus">
-                                <label htmlFor="residentialStatus"> Residential Status</label>
-                                <input
-                                    value={residentialStatus}
-                                    onChange={(e) => setResidential(e.target.value)}
-                                    type = "residentialStatus"
-                                    placeholder=""
-                                    id="residentialStatus"
-                                    name="residentialStatus"
-                                    readOnly
-                                />
-                            </div>
+
 
                             
 

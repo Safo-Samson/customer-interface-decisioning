@@ -29,7 +29,7 @@ function App() {
           path="/CustomerInfo"
           element={
             <>
-              <CombinedBar /> <InfoCombined />
+              <CombinedBar /> <InfoCombined /> <Footer/>
             </>
           }
         />
@@ -37,7 +37,7 @@ function App() {
           path="/NewLoan"
           element={
             <>
-              <CombinedBar /> <NewLoan />
+              <CombinedBar /> <NewLoan /> <Footer/>
             </>
           }
         />
@@ -47,6 +47,7 @@ function App() {
             <>
               <CombinedBar />
               <SoftCombined />
+              <Footer/>
             </>
           }
         />
@@ -56,6 +57,7 @@ function App() {
             <>
               <CombinedBar />
               <ModelDecision />
+              <Footer/>
             </>
           }
         />
