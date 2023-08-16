@@ -6,8 +6,7 @@ import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, useLocation } from "react-router-dom";
-import Popup from '../PopUp'
-
+import Popup from "../PopUp";
 
 const InformationCheck = () => {
   const navigate = useNavigate();
@@ -33,15 +32,16 @@ const InformationCheck = () => {
       setEditText("Save");
       setEditingLoanAmount(true);
     } else {
-        e.preventDefault();
-        // navigate("/PopUp");
-    //   setEditText("Edit");
+      e.preventDefault();
+      // navigate("/PopUp");
+      //   setEditText("Edit");
 
-    setAcceptOpen(!acceptOpen);
-    setEditingLoanAmount(false);
+      setAcceptOpen(!acceptOpen);
+      setEditingLoanAmount(false);
     }
     if (editBTNtext === "Save") {
       updateCustomerInfor(AccountNo); // Call the function here
+      setEditText("Edit");
     }
   };
 
@@ -63,7 +63,6 @@ const InformationCheck = () => {
     e.preventDefault();
     navigate("/NewLoan");
   };
-
 
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
@@ -93,7 +92,6 @@ const InformationCheck = () => {
   );
   const [loanTerm, setTerm] = useState(location.state?.loanTerm || "3");
   const [acceptOpen, setAcceptOpen] = useState(false);
-
 
   // fetch api call to update user
 
@@ -424,7 +422,7 @@ const InformationCheck = () => {
                 <FontAwesomeIcon icon={faChevronLeft} />
                 Back
               </button>
-              
+
               <button className="editBTN" onClick={enableEdit}>
                 {editBTNtext === "Edit" ? (
                   <span>
@@ -434,22 +432,27 @@ const InformationCheck = () => {
                   "Save"
                 )}
                 {acceptOpen && (
-                    <Popup
-                        content={
-                            <>
-                                <b>Do you want to save your changes?</b>
-                                <p>By saving the changes to this form, you confirm that all information provided is accurate and complete. You acknowledge that any false or misleading information may have legal consequences, and you take full responsibility for the information provided.</p>
-                                <div className="Popup-buttons">
-                                <button>Cancel</button>
-                                <button>Confirm</button>
-                                </div>
-                            </>
-                        }
-                        // handleClose={toggleAcceptPopup}
-                        type="accepted"
-                    />
+                  <Popup
+                    content={
+                      <>
+                        <b>Do you want to save your changes?</b>
+                        <p>
+                          By saving the changes to this form, you confirm that
+                          all information provided is accurate and complete. You
+                          acknowledge that any false or misleading information
+                          may have legal consequences, and you take full
+                          responsibility for the information provided.
+                        </p>
+                        <div className="Popup-buttons">
+                          <button>Cancel</button>
+                          <button>Confirm</button>
+                        </div>
+                      </>
+                    }
+                    // handleClose={toggleAcceptPopup}
+                    type="accepted"
+                  />
                 )}
-
               </button>
               <button className="applyBTN" onClick={handleApply}>
                 Apply for loan <FontAwesomeIcon icon={faChevronRight} />
