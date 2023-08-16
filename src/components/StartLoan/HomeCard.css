@@ -67,15 +67,15 @@
   color: white;
   font-size: 15px;
   align-items: left;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .homeCard-promo p {
   color: white;
   font-size: 12px;
   align-items: left;
-  margin-left: 20px;
-
+  margin-left: 18px;
+  margin-right: 16px;
   /* padding: 10px */
 }
 
