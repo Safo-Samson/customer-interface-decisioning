@@ -16,12 +16,9 @@ import { useState } from "react";
 function Homepage() {
   const [SoftCheckOpen, setSoftCheckOpen] = useState(false);
 
-
-
-	const togglSoftCheckPopup = () => {
-		
-		setSoftCheckOpen(!SoftCheckOpen)
-	};
+  const togglSoftCheckPopup = () => {
+    setSoftCheckOpen(!SoftCheckOpen);
+  };
   return (
     <div className="Homepage-container">
       <VerticalBar />
@@ -36,8 +33,7 @@ function Homepage() {
             finances in order.`}
             promoIcon={faClock}
             promoHeader={`Get your money quickly`}
-            promoText={` Receive your money straight away if you apply and are approved between 9am and 8:30pm.
-             Otherwise, you'll have your money before 9am the next working day.`}
+            promoText={` Receive your money straight away if you apply and are approved between 9am and 8:30pm.,  Otherwise you'll have your money before 9am the next working day.`}
             buttonText={` APPLY FOR A LOAN`}
             pathname={"/NewLoan"}
           />

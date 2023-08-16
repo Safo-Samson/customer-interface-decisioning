@@ -6,8 +6,7 @@ import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, useLocation } from "react-router-dom";
-import Popup from '../PopUp'
-
+import Popup from "../PopUp";
 
 const InformationCheck = () => {
   const navigate = useNavigate();
@@ -65,7 +64,6 @@ const InformationCheck = () => {
     navigate("/NewLoan");
   };
 
-
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
     location.state?.loanAmount || "undefined"
@@ -94,7 +92,6 @@ const InformationCheck = () => {
   );
   const [loanTerm, setTerm] = useState(location.state?.loanTerm || "3");
   const [acceptOpen, setAcceptOpen] = useState(false);
-
 
   // fetch api call to update user
 
@@ -425,7 +422,7 @@ const InformationCheck = () => {
                 <FontAwesomeIcon icon={faChevronLeft} />
                 Back
               </button>
-              
+
               <button className="editBTN" onClick={enableEdit}>
                 {editBTNtext === "Edit" ? (
                   <span>
@@ -451,7 +448,6 @@ const InformationCheck = () => {
                         type="accepted"
                     />
                 )}
-
               </button>
               <button className="applyBTN" onClick={handleApply}>
                 Apply for loan <FontAwesomeIcon icon={faChevronRight} />
