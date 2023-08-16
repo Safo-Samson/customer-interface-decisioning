@@ -24,3 +24,6 @@ jobs:
       - name: Deploy
         run: |
           ssh -A jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
+
+
+#comment so i cn push
