@@ -21,9 +21,8 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - name: Add GCP host to known_hosts
-        run: |
-          ssh-keyscan -H 34.68.9.16 >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H 34.68.9.16 >> ~/.ssh/known_hosts
 
       - name: Deploy
         run: |
-          ssh -A jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
+          ssh jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
