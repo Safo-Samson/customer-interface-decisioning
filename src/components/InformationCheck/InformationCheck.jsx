@@ -33,17 +33,25 @@ const InformationCheck = () => {
       setEditingLoanAmount(true);
     } else {
       e.preventDefault();
-      // navigate("/PopUp");
-      //   setEditText("Edit");
-
       setAcceptOpen(!acceptOpen);
       setEditingLoanAmount(false);
     }
-    if (editBTNtext === "Save") {
-      updateCustomerInfor(AccountNo); // Call the function here
-      setEditText("Edit");
-    }
+    // if (editBTNtext === "Save") {
+    //   updateCustomerInfor(AccountNo); // Call the function here
+    //   setEditText("Edit");
+    // }
   };
+
+  function handlePopUpCancel() {
+    setAcceptOpen(!acceptOpen);
+    setEditText("Save");
+  }
+
+  function handlePopUpConfirm() {
+    setAcceptOpen(!acceptOpen);
+    updateCustomerInfor(AccountNo);
+    setEditText("Edit");
+  }
 
   // to edit the money with commas function
   const formatMoney = (amount) => {
@@ -188,19 +196,6 @@ const InformationCheck = () => {
                   readOnly
                 />
               </div>
-              {/* 
-              <div className="loanType">
-                <label htmlFor="loanType"> Loan Type</label>
-                <input
-                  value={loanType}
-                  onChange={(e) => setType(e.target.value)}
-                  type="loanType"
-                  placeholder=""
-                  id="loanType"
-                  name="loanType"
-                  readOnly
-                />
-              </div> */}
 
               {editBTNtext === "Save" ? (
                 <div className="loanType">
@@ -236,18 +231,6 @@ const InformationCheck = () => {
                   />
                 </div>
               )}
-              {/* <div className="loanAmountinfo">
-                <label htmlFor="loanAmountinfo"> Loan Amount</label>
-                <input
-                  value={loanAmountinfo}
-                  onChange={(e) => setAmountInfo(e.target.value)}
-                  type="loanAmountinfo"
-                  placeholder=""
-                  id="loanAmountinfo"
-                  name="loanAmountinfo"
-                  readOnly
-                />
-              </div> */}
 
               <div className="loanAmountinfo">
                 <label htmlFor="loanAmountinfo"> Loan Amount</label>
@@ -271,19 +254,6 @@ const InformationCheck = () => {
                   </div>
                 )}
               </div>
-
-              {/* <div className="loanTerm">
-                <label htmlFor="loanTerm">Loan Term</label>
-                <input
-                  value={loanTerm}
-                  onChange={(e) => setTerm(e.target.value)}
-                  type="loanTerm"
-                  placeholder="months"
-                  id="loanterm"
-                  name="loanTerm"
-                  readOnly
-                />
-              </div> */}
 
               <div className="loanTerm">
                 <label htmlFor="loanTerm"> Loan Term</label>
@@ -345,18 +315,6 @@ const InformationCheck = () => {
                   />
                 </div>
               )}
-              {/* <div className="defaults">
-                <label htmlFor="defaults"> Defaults</label>
-                <input
-                  value={defaults}
-                  onChange={(e) => setDefaults(e.target.value)}
-                  type="defaults"
-                  placeholder=""
-                  id="defaults"
-                  name="defaults"
-                  readOnly
-                />
-              </div> */}
               <div className="income">
                 <label htmlFor="income"> Income</label>
                 <input
@@ -444,8 +402,8 @@ const InformationCheck = () => {
                           responsibility for the information provided.
                         </p>
                         <div className="Popup-buttons">
-                          <button>Cancel</button>
-                          <button>Confirm</button>
+                          <button onClick={handlePopUpCancel}>Cancel</button>
+                          <button onClick={handlePopUpConfirm}>Confirm</button>
                         </div>
                       </>
                     }
