@@ -8,6 +8,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import './FindOutMoreLowerAmount.css'
 import { useNavigate } from "react-router-dom";
 import VerticalBar from "../UIComponents/VerticalBar";
+import insights from '../../assets/insights.json'
 
 const FindOutMoreLowerAmount= () =>{
 
@@ -22,12 +23,14 @@ const FindOutMoreLowerAmount= () =>{
     }
     const newLoanAmount = '5000'
 
-    const tip1 = "Electricity bill payment past due"
-    const tip1example = "Pay your electricity bill on time for the next six months to improve your credit score"
-    const tip2 = "Moved 3 times the past year"
-    const tip2example = "To improve your credit score, rent the same apartment/house for the next year"
-    const tip3 = "Pay off your existing debts"
-    const tip3example = "By paying off your existing debt you can significantly improve your credit score"
+
+    const { positive, negative, negative_suggestions} = insights;
+    const tip1 = negative[0]
+    const tip1example = negative_suggestions [0]
+    const tip2 = negative[1]
+    const tip2example = negative_suggestions [1]
+    // const tip3 = negative[2]
+    // const tip3example = negative_suggestions [2]
     return(
         <>
         <div className="findOutMoreLowerAmount-VerticalContainer">

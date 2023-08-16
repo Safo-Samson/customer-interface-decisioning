@@ -32,18 +32,19 @@ const InformationCheck = () => {
     if (editBTNtext === "Edit") {
       setEditText("Save");
       setEditingLoanAmount(true);
-    } else {
+    } else if (editBTNtext === "Save"){
         e.preventDefault();
-        // navigate("/PopUp");
-    //   setEditText("Edit");
+        setAcceptOpen(!acceptOpen);
+        setEditingLoanAmount(false);
 
-    setAcceptOpen(!acceptOpen);
-    setEditingLoanAmount(false);
-    }
-    if (editBTNtext === "Save") {
-      updateCustomerInfor(AccountNo); // Call the function here
+        // updateCustomerInfor(AccountNo); 
     }
   };
+  const handleConfirmSave = (e) => {
+    e.preventDefault();
+    updateCustomerInfor(AccountNo); 
+    setEditText("Edit");
+  }
 
   // to edit the money with commas function
   const formatMoney = (amount) => {
@@ -438,10 +439,11 @@ const InformationCheck = () => {
                         content={
                             <>
                                 <b>Do you want to save your changes?</b>
-                                <p>By saving the changes to this form, you confirm that all information provided is accurate and complete. You acknowledge that any false or misleading information may have legal consequences, and you take full responsibility for the information provided.</p>
+
+                                <div className="confirmation-txt">By saving the changes to this form, you confirm that all information provided is accurate and complete. You acknowledge that any false or misleading information may have legal consequences, and you take full responsibility for the information provided.</div>
                                 <div className="Popup-buttons">
-                                <button>Cancel</button>
-                                <button>Confirm</button>
+                                <button >Cancel</button>
+                                <button onClick={handleConfirmSave}>Confirm</button>
                                 </div>
                             </>
                         }

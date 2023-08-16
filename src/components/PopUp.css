@@ -69,7 +69,22 @@
   .box.accepted .Popup-buttons{
     /* border: 1px solid black; */
     display: flex;
-    margin-top: 230px;
+    /* margin-top: 90px; */
     /* margin-bottom: auto; */
     justify-content: space-between;
+  }
+
+  .box.accepted{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .box.accepted .confirmation-txt{
+    color: black;
+    display: flex;
+    justify-items: start;
+    /* border: 1px solid black; */
   }
