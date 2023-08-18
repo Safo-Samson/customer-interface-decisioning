@@ -8,6 +8,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Apex from "./Apex";
 import './SoftCheck.css'
 import { useNavigate } from "react-router-dom";
+import insights from '../../assets/insights.json';
 
 const SoftCheck= () =>{
     const navigate = useNavigate();
@@ -19,6 +20,21 @@ const SoftCheck= () =>{
         e.preventDefault();
         navigate('/NewLoan')
     }
+    const {positive, negative} = insights;
+    const negativeTip1 = negative[0];
+    const negativeTip2 = negative[1];
+    const negativeTip3 = negative[2];
+
+
+    const positiveTip1 = positive[0];
+    const positiveTip2 = positive[1];
+    const positiveTip3 = positive[2];
+
+
+
+
+
+
     return(
         <>
         <div className="softCheck-container">
@@ -37,17 +53,19 @@ const SoftCheck= () =>{
                     <FontAwesomeIcon className= 'softCheck-exclamationMarkIcon'icon={faExclamation} />
                     <div className="softCheck-bad-text">
                 
-                    <p><FontAwesomeIcon icon={faExclamation} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/> Electricity bill payment past due</p>
-                    <p><FontAwesomeIcon icon={faExclamation} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/> Moved 3 times the past year</p>
+                    <p>{negativeTip1 && <FontAwesomeIcon icon={faExclamation} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/> } {negativeTip1}</p>
+                    <p>{negativeTip2 && <FontAwesomeIcon icon={faExclamation} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/> } {negativeTip2}</p>
+                    <p>{negativeTip3 && <FontAwesomeIcon icon={faExclamation} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/> } {negativeTip3}</p>
+
                     </div>
                     </div>
 
                     <div className="softCheck-good">
                     <FontAwesomeIcon className= 'softCheck-checkMarkIcon'icon={faCheck} />
                     <div className="softCheck-bad-text">
-                    <p><FontAwesomeIcon icon={faCheck} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/>All debit balances paid off</p>
-                    <p><FontAwesomeIcon icon={faCheck} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/>Mix of 4 credit cards used</p>
-                    <p><FontAwesomeIcon icon={faCheck} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/>Stable income of the past 5 years</p>
+                    <p>{positiveTip1 && <FontAwesomeIcon icon={faCheck} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/>}{positiveTip1}</p>
+                    <p>{positiveTip2 && <FontAwesomeIcon icon={faCheck} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/>}{positiveTip2}</p>
+                    <p>{positiveTip3 && <FontAwesomeIcon icon={faCheck} style={{background: 'white', width: '10.67px', height:'10.67px',borderRadius: '20px', color: '#481468', padding: '3px', marginRight: '7px'}}/>}{positiveTip3}</p>
                     </div>
 
 

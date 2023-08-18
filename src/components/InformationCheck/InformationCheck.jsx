@@ -31,6 +31,7 @@ const InformationCheck = () => {
     if (editBTNtext === "Edit") {
       setEditText("Save");
       setEditingLoanAmount(true);
+<<<<<<< HEAD
     } else {
       e.preventDefault();
       setAcceptOpen(!acceptOpen);
@@ -40,7 +41,21 @@ const InformationCheck = () => {
     //   updateCustomerInfor(AccountNo); // Call the function here
     //   setEditText("Edit");
     // }
+=======
+    } else if (editBTNtext === "Save"){
+        e.preventDefault();
+        setAcceptOpen(!acceptOpen);
+        setEditingLoanAmount(false);
+
+        // updateCustomerInfor(AccountNo); 
+    }
+>>>>>>> 0a4345a051421dfe126ae4f1851a2a74edc09846
   };
+  const handleConfirmSave = (e) => {
+    e.preventDefault();
+    updateCustomerInfor(AccountNo); 
+    setEditText("Edit");
+  }
 
   function handlePopUpCancel() {
     setAcceptOpen(!acceptOpen);
@@ -390,6 +405,7 @@ const InformationCheck = () => {
                   "Save"
                 )}
                 {acceptOpen && (
+<<<<<<< HEAD
                   <Popup
                     content={
                       <>
@@ -410,6 +426,23 @@ const InformationCheck = () => {
                     // handleClose={toggleAcceptPopup}
                     type="accepted"
                   />
+=======
+                    <Popup
+                        content={
+                            <>
+                                <b>Do you want to save your changes?</b>
+
+                                <div className="confirmation-txt">By saving the changes to this form, you confirm that all information provided is accurate and complete. You acknowledge that any false or misleading information may have legal consequences, and you take full responsibility for the information provided.</div>
+                                <div className="Popup-buttons">
+                                <button >Cancel</button>
+                                <button onClick={handleConfirmSave}>Confirm</button>
+                                </div>
+                            </>
+                        }
+                        // handleClose={toggleAcceptPopup}
+                        type="accepted"
+                    />
+>>>>>>> 0a4345a051421dfe126ae4f1851a2a74edc09846
                 )}
               </button>
               <button className="applyBTN" onClick={handleApply}>
