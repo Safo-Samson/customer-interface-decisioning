@@ -31,7 +31,6 @@ const InformationCheck = () => {
     if (editBTNtext === "Edit") {
       setEditText("Save");
       setEditingLoanAmount(true);
-<<<<<<< HEAD
     } else {
       e.preventDefault();
       setAcceptOpen(!acceptOpen);
@@ -41,21 +40,7 @@ const InformationCheck = () => {
     //   updateCustomerInfor(AccountNo); // Call the function here
     //   setEditText("Edit");
     // }
-=======
-    } else if (editBTNtext === "Save"){
-        e.preventDefault();
-        setAcceptOpen(!acceptOpen);
-        setEditingLoanAmount(false);
-
-        // updateCustomerInfor(AccountNo); 
-    }
->>>>>>> 0a4345a051421dfe126ae4f1851a2a74edc09846
   };
-  const handleConfirmSave = (e) => {
-    e.preventDefault();
-    updateCustomerInfor(AccountNo); 
-    setEditText("Edit");
-  }
 
   function handlePopUpCancel() {
     setAcceptOpen(!acceptOpen);
