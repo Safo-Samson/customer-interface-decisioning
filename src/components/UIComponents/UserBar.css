@@ -87,7 +87,12 @@
     margin-left: 0; /* Remove margin-left for phones */
     align-items: flex-start; /* Align items to the left on phones */
   }
+
+  .user-bar-text {
+display: none;
 }
+}
+
 
 .user-custom-dropdown {
   display: inline-block;
