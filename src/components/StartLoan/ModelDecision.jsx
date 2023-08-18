@@ -61,8 +61,10 @@ const ModelDecision = ({ decision, setDecision }) => {
   const counterOfferIconColor = "#ffd02c";
 
   // waiting on advisor headers, icons and paragraphs
-  const decisionWaitingOnAdvisorHeader = "AN ADVISOR IS LOOKING AT YOUR APPLICATION - YOU WILL RECEIVE AN EMAIL"
-  const decisionWaitingOnAdvisorParagraph = "Thank you for applying for a mortgage, an advisor is looking at your application and will get back to you as soon as they can!"
+  const decisionWaitingOnAdvisorHeader =
+    "AN ADVISOR IS LOOKING AT YOUR APPLICATION - YOU WILL RECEIVE AN EMAIL.";
+  const decisionWaitingOnAdvisorParagraph =
+    "Thank you for applying for a mortgage, an advisor is looking at your application and will get back to you within 24hrs!";
   const decisionWaitingOnAdvisorIcon = faUserClock;
   const decisionWaitingOnAdvisorButton = "Manage my loans"
   const WaitingOnAdvisorIconColor = "gray";
