@@ -66,6 +66,12 @@ const InformationCheck = () => {
     setAcceptOpen(!acceptOpen);
     updateCustomerInfor(AccountNo);
     setEditText("Edit");
+
+    const [successMessage, setSuccessMessage] = useState("");
+    setSuccessMessage("Your details have been successfully updated");
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 1000);
   }
 
   // to edit the money with commas function
@@ -405,7 +411,6 @@ const InformationCheck = () => {
                   "Save"
                 )}
                 {acceptOpen && (
-<<<<<<< HEAD
                   <Popup
                     content={
                       <>
@@ -426,23 +431,6 @@ const InformationCheck = () => {
                     // handleClose={toggleAcceptPopup}
                     type="accepted"
                   />
-=======
-                    <Popup
-                        content={
-                            <>
-                                <b>Do you want to save your changes?</b>
-
-                                <div className="confirmation-txt">By saving the changes to this form, you confirm that all information provided is accurate and complete. You acknowledge that any false or misleading information may have legal consequences, and you take full responsibility for the information provided.</div>
-                                <div className="Popup-buttons">
-                                <button >Cancel</button>
-                                <button onClick={handleConfirmSave}>Confirm</button>
-                                </div>
-                            </>
-                        }
-                        // handleClose={toggleAcceptPopup}
-                        type="accepted"
-                    />
->>>>>>> 0a4345a051421dfe126ae4f1851a2a74edc09846
                 )}
               </button>
               <button className="applyBTN" onClick={handleApply}>
