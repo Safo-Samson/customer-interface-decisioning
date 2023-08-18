@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
 import horseLogo from "../../assets/horseLogo.jpeg";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faLock, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
@@ -32,6 +33,7 @@ function LoginForm() {
           <u>Cookie Policy</u>
           
           <div className="secure-login">
+          <FontAwesomeIcon icon={faLock} /> 
             <b>Youre logging into a secure site</b>
             <u>How can I tell that this site is secure?</u>
           </div>
@@ -78,14 +80,17 @@ function LoginForm() {
               <button>Continue </button>
             </div>
             <div className="mobile-app-try">
+            {/* <FontAwesomeIcon className='mobile-app-icon' icon={faMobileScreen} /> */}
+              <div className="mobile-app-try-txt">
               <h3>Why not try our secure Mobile Banking App?</h3>
               <p>With our app you get access to lots of extra features to make banking even easier. Things like freeze your card, check your PIN and set your own contactless limit. </p>
               <a href="">How to set up the app</a>
+              </div>
             </div>
           </div>
           <div className="helpSupport-contact">
-          <div className="helpSupport"><h3>Help & Support</h3> </div>
-          <div className="contact"><h3>Contact Us </h3></div>
+          <div className="helpSupport"><h3>Help & Support </h3> <FontAwesomeIcon icon={faAngleDown} /> </div>
+          <div className="contact"><h3>Contact Us </h3><FontAwesomeIcon icon={faAngleDown} /></div>
 
         </div>
         </div>

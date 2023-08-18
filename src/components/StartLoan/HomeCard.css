@@ -46,6 +46,7 @@
   line-height: 22px; /* spacing between lines*/
   padding-bottom: 20px;
   margin-bottom: 10px;
+  text-align: justify;
 }
 .homeCard-layout {
   display: flex;
@@ -62,6 +63,7 @@
   background: #2178b0;
   margin: 32px;
   margin-top: 0;
+  text-align: justify;
 }
 .homeCard-promo h4 {
   color: white;

@@ -24,6 +24,7 @@
 
     
   }
+
   
   .login-form input{
     border: 1px solid black;
@@ -123,7 +124,7 @@ body {
   border: 1px solid white;
   display: flex;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 11px;
   padding: 10px;
   /* margin-left: 220px; */
 }
@@ -189,6 +190,7 @@ body {
   justify-content: start;
   text-align: left;
 }
+
 .mobile-app-try h3{
   color: #2a684f;
 }
@@ -221,11 +223,13 @@ body {
 .helpSupport, .contact{
   border: 0.5px solid gray;
   color: #2a684f;
-  width: 250px;
+  width: 200px;
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
   /* background-color: red; */
 }
 
