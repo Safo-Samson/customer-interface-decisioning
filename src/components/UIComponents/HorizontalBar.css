@@ -7,7 +7,9 @@
   height: 60px;
 
 }
-
+.phone-icon{
+  display: none;
+}
 .bar-text {
   color: white;
   align-self: center;
@@ -44,23 +46,60 @@
   margin-right: 50px;
 }
 
-/* Responsive styles for phones and small screens(up to 767px) */
-@media (max-width: 1280px) {
-  .horizontal-container {
-    flex-direction: column; /* Stack items vertically on phones */
-    padding: 5px; /* Reduce padding for phones */
+
+
+/* Responsive styles for phones and small screens (up to 767px) */
+@media (max-width:1280px) {
+  .horizontal-bar {
+    flex-direction: column;
+    height: auto; 
+    padding: 0 8px;
+  }
+
+  .bar-text {
+   display: none;
+  }
+
+  .custom-dropdown .dropdown-header{
+    display: none;
+  }
+  .logo-container {
+    flex-direction: row;
+    justify-content: space-between; 
+    margin: 10px 0; 
+    /* background-color: red; */
+    width: 100%;
+    padding: 10px;
+    color:white;
+  }
+
+  .logo-text {
+    font-size: 14px; 
+    margin: 0; 
+    margin-right: -39px ;
   }
 
   .bank-logo {
-    margin-right: 0; /* Remove margin between logo and items on phones */
-    margin-bottom: 10px; /* Add more space between the logo and the items */
+  width: 50px;
+  height: 40px; 
+  margin-right: 10px; 
+  margin-bottom: 5px;
+}
+
+.phone-icon{
+  display: block;
+  /* background-color: red; */
+
+}
+  .custom-dropdown {
+    display: none; 
   }
 
-  .logo-container {
-    margin-left: 0; /* Remove margin-left for phones */
-    align-items: flex-start; /* Align items to the left on phones */
+  .profile-icon {
+    font-size: 24px; 
   }
 }
+
 
 .custom-dropdown {
   display: inline-block;

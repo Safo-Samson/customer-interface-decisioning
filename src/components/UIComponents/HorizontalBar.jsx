@@ -2,13 +2,25 @@ import "./HorizontalBar.css";
 import horseLogo from "../../assets/horseLogo.jpeg";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLock,
+  faBars,
+  faSatelliteDish,
+} from "@fortawesome/free-solid-svg-icons";
 const HorizontalBar = () => {
   return (
     <div className="horizontal-bar">
+      {/* Displayed on all screen sizes */}
       <div className="logo-container">
         <div className="logo-text">Lloyds bank</div>
         <img src={horseLogo} alt="Lloyds horse logo" className="bank-logo" />
+        <div className="phone-icon">
+          {/* <FontAwesomeIcon
+            icon={faSatelliteDish}
+            style={{ marginRight: "14px" }}
+          /> */}
+          <FontAwesomeIcon icon={faBars} />
+        </div>
       </div>
 
       <div className="custom-dropdown">

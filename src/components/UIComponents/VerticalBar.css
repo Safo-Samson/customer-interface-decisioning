@@ -60,3 +60,14 @@
 .logout-button:hover {
   border-color: #ffffff;
 }
+
+
+/* smaller screens*/
+
+.vertical-bar {
+  /* Existing styles */
+
+  @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    display: none; /* Hide the vertical bar on smaller screens */
+  }
+}
