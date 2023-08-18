@@ -59,7 +59,7 @@ const LoanAcceptedDetails = () => {
           <h1>
             <FontAwesomeIcon
               icon={faCoins}
-              style={{ marginRight: "17.22px", fontSize: "40px" }}
+              style={{ marginRight: "17.22px", fontSize: "40px", marginLeft: '20px'}}
             />
             YOUR LOAN DETAILS
           </h1>

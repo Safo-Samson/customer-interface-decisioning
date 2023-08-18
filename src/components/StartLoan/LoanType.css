@@ -8,6 +8,7 @@
   width: 1075px;
   border: 0.1px solid rgb(0, 158, 190);
 
+
   height: 30px;
 }
 .icon-type {
@@ -26,7 +27,7 @@
   margin-left: 2px;
   margin-bottom: 30px;
 
-  text-transform: lowercase;
+  text-transform: capitalize;
   /* border: 2px solid red; */
 }
 

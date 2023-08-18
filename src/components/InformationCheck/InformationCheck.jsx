@@ -93,6 +93,12 @@ const InformationCheck = () => {
   const [loanTerm, setTerm] = useState(location.state?.loanTerm || "3");
   const [acceptOpen, setAcceptOpen] = useState(false);
 
+  const [editingLoanTerm, setEditingLoanTerm] = useState(false);
+
+  const formatLoanTerm = (value) => {
+    return value !== '' ? `${value} month${value !== '1' ? 's' : ''}` : '';
+  };
+
   // fetch api call to update user
 
   function updateCustomerInfor(user_id) {
@@ -252,7 +258,6 @@ const InformationCheck = () => {
               <div className="loanAmountinfo">
                 <label htmlFor="loanAmountinfo"> Loan Amount</label>
                 {editingLoanAmount ? (
-                  <div className="info-editable-field">
                     <input
                       // value={formatMoney(loanAmountinfo)} This wont work well
                       value={loanAmountinfo}
@@ -263,8 +268,8 @@ const InformationCheck = () => {
                       name="loanAmountinfo"
                       // Add the money formatting function here
                       onBlur={() => setAmountInfo(loanAmountinfo)}
+                      style={{border: '1px solid green'}}
                     />
-                  </div>
                 ) : (
                   <div>
                     <input value={formatMoney(loanAmountinfo)} readOnly />
@@ -288,7 +293,6 @@ const InformationCheck = () => {
               <div className="loanTerm">
                 <label htmlFor="loanTerm"> Loan Term</label>
                 {editingLoanAmount ? (
-                  <div className="info-editable-field">
                     <input
                       // value={formatMoney(loanTerm)} This wont work well
                       value={loanTerm}
@@ -298,12 +302,13 @@ const InformationCheck = () => {
                       id="loanTerm"
                       name="loanTerm"
                       // Add the money formatting function here
-                      onBlur={() => setTerm(loanTerm)}
+                      onBlur={() =>  setEditingLoanTerm(false)}
+                      style={{border: '1px solid green'}}
                     />
-                  </div>
+                
                 ) : (
                   <div>
-                    <input value={loanTerm} readOnly />
+                    <input value={formatLoanTerm(loanTerm)} readOnly />
                   </div>
                 )}
               </div>

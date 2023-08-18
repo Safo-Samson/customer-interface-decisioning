@@ -61,9 +61,9 @@ const ModelDecision = ({ decision, setDecision }) => {
 
   const navigate = useNavigate();
 
-  const handleBack = (e) => {
+  const handleManage = (e) => {
     e.preventDefault();
-    navigate("/CustomerInfo");
+    navigate("/CurrentLoans");
   };
   const handleAskForHelp = (e) => {
     e.preventDefault();
@@ -79,6 +79,12 @@ const ModelDecision = ({ decision, setDecision }) => {
     navigate("/PaymentDetails");
   };
 
+  const handleDone = (e) => {
+    e.preventDefault();
+    navigate("/Home");
+  };
+
+
   return (
     <div className="mainDecision-container">
       <VerticalBar />
@@ -90,7 +96,7 @@ const ModelDecision = ({ decision, setDecision }) => {
               <h1>
                 <FontAwesomeIcon
                   icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px" }}
+                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
                 />
                 {decisionHeaderAccepted}
               </h1>
@@ -98,7 +104,7 @@ const ModelDecision = ({ decision, setDecision }) => {
                 <p>{decisionAcceptedParagraph}</p>
                 <FontAwesomeIcon
                   icon={decisionAcceptedIcon}
-                  style={{ fontSize: "50px", color: acceptedIconColor }}
+                  style={{ fontSize: "50px", color: acceptedIconColor}}
                 />
                 <button
                   className="miniDecision-container-button miniDecision-container-accepted-button"
@@ -113,7 +119,7 @@ const ModelDecision = ({ decision, setDecision }) => {
                 {" "}
                 <FontAwesomeIcon
                   icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px" }}
+                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
                 />
                 {decisionHeaderRejected}
               </h1>
@@ -136,7 +142,7 @@ const ModelDecision = ({ decision, setDecision }) => {
                 {" "}
                 <FontAwesomeIcon
                   icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px" }}
+                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
                 />
                 {decisionHeaderCounterOffer}
               </h1>
@@ -226,13 +232,13 @@ const ModelDecision = ({ decision, setDecision }) => {
               </div>
             </div>
           </div>
-          <button className="mBack" onClick={handleBack}>
+          <button className="mBack" onClick={handleManage}>
             {" "}
-            <FontAwesomeIcon icon={faChevronLeft} />
-            Back
+            {/* <FontAwesomeIcon icon={faChevronLeft} /> */}
+            Manage my loans
           </button>
 
-          <button className="mDone"> Done</button>
+          <button className="mDone" onClick={handleDone}> Done</button>
         </div>
       </div>
     </div>

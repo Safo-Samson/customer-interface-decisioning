@@ -15,7 +15,7 @@ const LoanType = (props) => {
   if (props.loanType === "Credit Card") {
     loanIcon = <FontAwesomeIcon icon={faCreditCard} />;
   } else if (props.loanType === "Personal Loan") {
-    loanIcon = <FontAwesomeIcon icon={faUser} />;
+    loanIcon = <FontAwesomeIcon icon={faUser} style={{paddingLeft:'2px'}}/>;
   } else if (props.loanType === "Mortgage") {
     loanIcon = <FontAwesomeIcon icon={faHouse} />;
   } else if (props.loanType === "Car Loan") {

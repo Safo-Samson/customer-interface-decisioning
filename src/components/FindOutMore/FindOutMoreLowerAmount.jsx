@@ -3,6 +3,7 @@ import { faUser} from "@fortawesome/free-solid-svg-icons";
 import { faExclamation } from "@fortawesome/free-solid-svg-icons";
 
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import './FindOutMoreLowerAmount.css'
@@ -15,7 +16,7 @@ const FindOutMoreLowerAmount= () =>{
     const navigate = useNavigate();
     const handleDone = (e) =>{
         e.preventDefault();
-        navigate('/home')
+        navigate('/ModelDecision')
     }
     const handleApply = (e) => {
         e.preventDefault();
@@ -71,7 +72,7 @@ const FindOutMoreLowerAmount= () =>{
                 </div>
             </div>
             <div className="findOutMoreLowerAmount-buttons">
-                <button className="findOutMoreLowerAmount-doneBTN" onClick={handleDone}>Done</button>
+                <button className="findOutMoreLowerAmount-doneBTN" onClick={handleDone}><FontAwesomeIcon icon={faChevronLeft} /> Back</button>
                 <button className="findOutMoreLowerAmount-askBTN">Ask for help</button>
             </div>
         </div>

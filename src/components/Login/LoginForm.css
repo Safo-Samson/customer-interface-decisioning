@@ -5,7 +5,7 @@
 	/* max-height: 100%;
   max-width: 100%; */
   min-height: 100vh;
-  background-color: #2a684f;
+  /* background-color: #2a684f; */
   /* justify-content: center; */
   align-items: center;
 	
@@ -17,19 +17,20 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 506px;
-    height: 492px;
+    width: 100%;
+    height: 100%;
     background-color: white;
-    padding: 10px 42px;
+    /* padding: 10px 42px; */
 
     
   }
   
   .login-form input{
-    background-color: #D9D9D9C2;
+    border: 1px solid black;
+    /* background-color: #D9D9D9C2; */
     height: 47px;
     width: 460px;
-    border-radius: 4px;
+    /* border-radius: 4px; */
   }
 .login-form label{
     color: black;
@@ -54,47 +55,57 @@
     overflow: hidden;
     position: relative;
     height:48px;
-    width: 384px;
+    width: 104px;
     background-color: #2a684f;
     font-size: large;
     color: white;
-    top: 60px;
+    /* top: 60px; */
     cursor: pointer;
+    border: none;
 
   }
 
 .loginForm-logo{
-    position:relative;
-    transform: scale(0.6);
+    /* position:relative; */
+    margin-left: -100px;
+    transform: scale(0.2);
 }
 
 
 
 .login-text{
-    color: var(--black-100);
+    color: black;
     font-family: "Inter-Bold", Helvetica;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 48px;
+    
+    /* line-height: 48px; */
 
-    white-space: nowrap;
-    width: fit-content;
-    text-align: center;
+    /* white-space: nowrap; */
+    /* width: fit-content; */
+    /* text-align: center; */
 }
 
 .loginForm-logo-header{
-    width: 1392px;
-    height: 200px;
+    width: 100%;
+    height: 100px;
     display: flex;
+    /* font-size: 20px; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: white;
-    margin-top: 90px;
+    /* margin-top: 90px; */
+    background-color: #2a684f;
+    
 
 }
 
+.loginForm-logo-header h1{
+  font-size: 20px;
+  /* margin-left: -200px; */
+}
 #AdvisorID{
   font-size: 23px;
 }
@@ -106,4 +117,118 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.secure-login{
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  padding: 10px;
+  /* margin-left: 220px; */
+}
+
+.mobile-cookies{
+  /* border: 1px solid wheat; */
+  
+  width: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 150px;
+  /* margin-right: -300px; */
+}
+
+.welcome-to-banking{
+  border: none;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  /* margin-right: 500px; */
+  width: 60%;
+}
+
+.rememberUser{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+.input-row label[for="remember"] {
+  /* margin-left: -430px; 
+  margin-top: -30px; */
+}
+
+.input-row input[type="checkbox"] {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+}
+
+.forgot-details{
+  border-bottom: 1px solid gray;
+  width: 60%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-right: 500px; */
+  color: #2a684f;
+}
+
+.mobile-app-try{
+  width: 60%;
+  height: 220px;
+  /* margin-right: 500px; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: left;
+}
+.mobile-app-try h3{
+  color: #2a684f;
+}
+
+.login-form-footer{
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 10px;
+  background-color: #2a684f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.left-and-right{
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.helpSupport-contact{
+  margin-left: -400px;
+  margin-top: 50px;
+  /* background-color: #2a684f; */
+}
+
+.helpSupport, .contact{
+  border: 0.5px solid gray;
+  color: #2a684f;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.contact{
+  border-top: none ;
 }
