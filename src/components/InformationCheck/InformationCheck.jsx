@@ -31,18 +31,33 @@ const InformationCheck = () => {
     if (editBTNtext === "Edit") {
       setEditText("Save");
       setEditingLoanAmount(true);
-    } else if (editBTNtext === "Save"){
-        e.preventDefault();
-        setAcceptOpen(!acceptOpen);
-        setEditingLoanAmount(false);
-
-        // updateCustomerInfor(AccountNo); 
+    } else {
+      e.preventDefault();
+      setAcceptOpen(!acceptOpen);
+      setEditingLoanAmount(false);
     }
+    // if (editBTNtext === "Save") {
+    //   updateCustomerInfor(AccountNo); // Call the function here
+    //   setEditText("Edit");
+    // }
   };
-  const handleConfirmSave = (e) => {
-    e.preventDefault();
-    updateCustomerInfor(AccountNo); 
+
+  function handlePopUpCancel() {
+    setAcceptOpen(!acceptOpen);
+    setEditText("Save");
+  }
+
+  function handlePopUpConfirm() {
+    setAcceptOpen(!acceptOpen);
+    updateCustomerInfor(AccountNo);
     setEditText("Edit");
+
+    // not being used atm
+    const [successMessage, setSuccessMessage] = useState("");
+    setSuccessMessage("Your details have been successfully updated");
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 1000);
   }
 
   // to edit the money with commas function
@@ -194,19 +209,6 @@ const InformationCheck = () => {
                   readOnly
                 />
               </div>
-              {/* 
-              <div className="loanType">
-                <label htmlFor="loanType"> Loan Type</label>
-                <input
-                  value={loanType}
-                  onChange={(e) => setType(e.target.value)}
-                  type="loanType"
-                  placeholder=""
-                  id="loanType"
-                  name="loanType"
-                  readOnly
-                />
-              </div> */}
 
               {editBTNtext === "Save" ? (
                 <div className="loanType">
@@ -242,18 +244,6 @@ const InformationCheck = () => {
                   />
                 </div>
               )}
-              {/* <div className="loanAmountinfo">
-                <label htmlFor="loanAmountinfo"> Loan Amount</label>
-                <input
-                  value={loanAmountinfo}
-                  onChange={(e) => setAmountInfo(e.target.value)}
-                  type="loanAmountinfo"
-                  placeholder=""
-                  id="loanAmountinfo"
-                  name="loanAmountinfo"
-                  readOnly
-                />
-              </div> */}
 
               <div className="loanAmountinfo">
                 <label htmlFor="loanAmountinfo"> Loan Amount</label>
@@ -276,19 +266,6 @@ const InformationCheck = () => {
                   </div>
                 )}
               </div>
-
-              {/* <div className="loanTerm">
-                <label htmlFor="loanTerm">Loan Term</label>
-                <input
-                  value={loanTerm}
-                  onChange={(e) => setTerm(e.target.value)}
-                  type="loanTerm"
-                  placeholder="months"
-                  id="loanterm"
-                  name="loanTerm"
-                  readOnly
-                />
-              </div> */}
 
               <div className="loanTerm">
                 <label htmlFor="loanTerm"> Loan Term</label>
@@ -350,18 +327,6 @@ const InformationCheck = () => {
                   />
                 </div>
               )}
-              {/* <div className="defaults">
-                <label htmlFor="defaults"> Defaults</label>
-                <input
-                  value={defaults}
-                  onChange={(e) => setDefaults(e.target.value)}
-                  type="defaults"
-                  placeholder=""
-                  id="defaults"
-                  name="defaults"
-                  readOnly
-                />
-              </div> */}
               <div className="income">
                 <label htmlFor="income"> Income</label>
                 <input
@@ -437,21 +402,26 @@ const InformationCheck = () => {
                   "Save"
                 )}
                 {acceptOpen && (
-                    <Popup
-                        content={
-                            <>
-                                <b>Do you want to save your changes?</b>
-
-                                <div className="confirmation-txt">By saving the changes to this form, you confirm that all information provided is accurate and complete. You acknowledge that any false or misleading information may have legal consequences, and you take full responsibility for the information provided.</div>
-                                <div className="Popup-buttons">
-                                <button >Cancel</button>
-                                <button onClick={handleConfirmSave}>Confirm</button>
-                                </div>
-                            </>
-                        }
-                        // handleClose={toggleAcceptPopup}
-                        type="accepted"
-                    />
+                  <Popup
+                    content={
+                      <>
+                        <b>Do you want to save your changes?</b>
+                        <p>
+                          By saving the changes to this form, you confirm that
+                          all information provided is accurate and complete. You
+                          acknowledge that any false or misleading information
+                          may have legal consequences, and you take full
+                          responsibility for the information provided.
+                        </p>
+                        <div className="Popup-buttons">
+                          <button onClick={handlePopUpCancel}>Cancel</button>
+                          <button onClick={handlePopUpConfirm}>Confirm</button>
+                        </div>
+                      </>
+                    }
+                    // handleClose={toggleAcceptPopup}
+                    type="accepted"
+                  />
                 )}
               </button>
               <button className="applyBTN" onClick={handleApply}>
