@@ -7,6 +7,7 @@ import {
   faChevronLeft,
   faCircleDown,
   faCircleExclamation,
+  faUserClock
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -14,11 +15,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 const ModelDecision = ({ decision, setDecision }) => {
   // decisions can be "accepted 1" or "rejected 0" or rejected with "counter offer 2";
   // const ModelDecision = decision || Math.floor(Math.random() * 3) + 1;
-
+  // Math.floor(Math.random() * 4) + 1
   const location = useLocation();
 
   const [ModelDecision, setModelDeicison] = useState(
-    decision || location.state?.decision || Math.floor(Math.random() * 3) + 1
+    decision || location.state?.decision || 4
   );
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
@@ -58,6 +59,14 @@ const ModelDecision = ({ decision, setDecision }) => {
   const decisionCounterOfferIcon = faCircleExclamation;
   const decisionCounterOfferButton = "Find out more";
   const counterOfferIconColor = "#ffd02c";
+
+  // waiting on advisor headers, icons and paragraphs
+  const decisionWaitingOnAdvisorHeader = "AN ADVISOR IS LOOKING AT YOUR APPLICATION - YOU WILL RECEIVE AN EMAIL"
+  const decisionWaitingOnAdvisorParagraph = "Thank you for applying for a mortgage, an advisor is looking at your application and will get back to you as soon as they can!"
+  const decisionWaitingOnAdvisorIcon = faUserClock;
+  const decisionWaitingOnAdvisorButton = "Manage my loans"
+  const WaitingOnAdvisorIconColor = "gray";
+
 
   const navigate = useNavigate();
 
@@ -162,7 +171,31 @@ const ModelDecision = ({ decision, setDecision }) => {
                 </button>
               </div>
             </>
-          ) : null}
+          ) : ModelDecision === 4 ? (
+            <>
+              <h1>
+                {" "}
+                <FontAwesomeIcon
+                  icon={faCoins}
+                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
+                />
+                {decisionWaitingOnAdvisorHeader}
+              </h1>
+              <div className="miniDecision-container miniDecision-container-waiting">
+                <p>{decisionWaitingOnAdvisorParagraph}</p>
+
+                <FontAwesomeIcon
+                  icon={decisionWaitingOnAdvisorIcon}
+                  style={{ fontSize: "50px", color: WaitingOnAdvisorIconColor }}
+                />
+                <button
+                  className="miniDecision-container-button miniDecision-container-waiting-button"
+                  onClick={handleFindOutMore}>
+                  {decisionWaitingOnAdvisorButton}
+                </button>
+              </div>
+            </>
+          ): null}
 
           <div className="horizonaLine"></div>
           <div className="loanInfo-container">
