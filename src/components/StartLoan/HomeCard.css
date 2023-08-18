@@ -98,37 +98,32 @@
   background-color: #45a049;
 }
 
-
 /*media queries for smaller screens*/
-
 
 @media (max-width: 1280px) {
   .HomeCard-container {
-    width: 359px; 
-    border-top: 8px solid #005f44; 
-    padding: 0px; 
+    width: 359px;
+    border-top: 8px solid #005f44;
+    padding: 0px;
     /* background-color: red; */
-    margin-left: -178px;;
+    margin-left: -178px;
     margin-bottom: 20px;
     padding: 20px 0;
   }
 
   .homeCard-layout {
-    flex-direction: column-reverse; 
+    flex-direction: column-reverse;
     align-items: center;
-    margin-left: -18px;;
+    margin-left: -18px;
     /* background-color: aqua; */
     justify-content: space-around;
     width: 239px;
   }
 
   .homeCard-promo {
-    width: auto; 
+    width: auto;
     /* margin: 16px 0; */
   }
-
-
-
 }
 
 /* Other original styles */

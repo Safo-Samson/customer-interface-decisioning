@@ -1,5 +1,6 @@
 .small-support-container {
-  width: 1040px;
+  min-width: 1040px;
+  max-width: max-content;
   height: 170px;
   border: none;
   margin-left: -100px;
@@ -62,17 +63,16 @@
   color: white;
 }
 
-
 /* Adjustments for smaller screens */
-@media (max-width: 1280px) { 
+@media (max-width: 1280px) {
   .homeCard-layout {
     flex-direction: column;
   }
 
   .small-support-container {
-    max-width: 39%; 
-    padding: 10px; 
-    flex-direction: column; 
+    max-width: 39%;
+    padding: 10px;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     height: max-content;
@@ -80,19 +80,19 @@
   }
 
   .small-service-img {
-    width: 60%; 
-    height: auto; 
+    width: 60%;
+    height: auto;
     margin-right: 0;
   }
 
   .small-support-container-text h5 {
-    font-size: 18px; 
-    margin-bottom: 0; 
+    font-size: 18px;
+    margin-bottom: 0;
   }
 
   .small-support-container-text p {
-    width: 100%; 
-    font-size: 16px; 
+    width: 100%;
+    font-size: 16px;
     text-align: left;
     margin-left: 14px;
   }
