@@ -16,9 +16,9 @@ const VerticalBar = () => {
             saving & investment{" "}
             <FontAwesomeIcon icon={faPlus} className="vert-button-icon" />
           </button>
-          <button className="vert-button active">
+          <button className="vert-button active" d>
             Loans & cars finance{" "}
-            <FontAwesomeIcon icon={faPlus} className="vert-button-icon" />
+            {/* <FontAwesomeIcon icon={faPlus} className="vert-button-icon" /> */}
           </button>
           <button className="vert-button">
             bank accounts{" "}

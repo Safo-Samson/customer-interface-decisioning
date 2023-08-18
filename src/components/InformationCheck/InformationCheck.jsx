@@ -52,6 +52,7 @@ const InformationCheck = () => {
     updateCustomerInfor(AccountNo);
     setEditText("Edit");
 
+    // not being used atm
     const [successMessage, setSuccessMessage] = useState("");
     setSuccessMessage("Your details have been successfully updated");
     setTimeout(() => {

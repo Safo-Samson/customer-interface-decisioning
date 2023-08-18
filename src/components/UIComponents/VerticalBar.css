@@ -11,11 +11,13 @@
   max-height: 79.5vh;
 }
 
+
 .vert-button {
   margin-bottom: 10px;
   padding: 10px 20px;
+  /* padding-left: 39px; */
   text-transform: uppercase;
-  text-align: center;
+
   font-weight: bolder;
   font-size: 16px;
   border: none;
@@ -26,6 +28,10 @@
   cursor: pointer;
   margin-right: 50px;
   width: 300px;
+    display: flex;
+  justify-content: space-between; /* Aligns content at both ends ,esp for iconn to lie on the right */
+  align-items: center; /* Aligns items vertically */
+    text-align: center;
 }
 
 .vert-button:hover {
@@ -33,12 +39,26 @@
 }
 .vert-button.active {
   color: #3fd113; /* White text color */
+  position: relative;
+  height: 70px;
+    border-bottom:1px solid #000000;
+  padding-left: 50px;
+  padding-top: 0;;
+}
+
+.vert-button.active::after {
+  content: "";
+  position: absolute;
+  left: 35%;
+  bottom: 0;
+  width: 20%;
+  height: 2px;
   border: 2px solid #3fd113;
-  border-right: none;
+  background-color: #3fd113;
+  margin-bottom: 10px;
+ 
 }
-.vert-button-icon {
-  margin-left: auto;
-}
+
 .logout-button:hover {
   border-color: #ffffff;
 }
