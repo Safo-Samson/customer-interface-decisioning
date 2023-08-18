@@ -149,6 +149,7 @@
   /* margin-left: 48px; */
   cursor: pointer;
   border: none;
+  margin-right: 10px;
   /* margin-top: 20px;s */
 }
 
@@ -182,20 +183,162 @@
   opacity: 1;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 748px) and (max-width: 1279px){
   .applyLoan-container {
-    width: 466px;
-    height: 100%;
-    border: none;
-    border-top: 11px solid #005f44;
-    /* border: 1px solid black; */
-    color: #005f44;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    background-color: white;
-    /* justify-content: center; */
-    align-items: center;
+
+   max-width: 500px;
+   margin-left: -50px;
   }
+
+  .sev-mainContent {
+  display: flex;
+  flex-direction: column;
+    min-width: min-content;
+   max-width: min-content;
+  /* background-color: red; */
+
+}
+
+.sev-loanHeader {
+  margin-left: 31px;
+  font-size: large;
+}
+
+.newloan-buttons {
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: fit-content;
+  margin-left: 27px;
+}
+
+.decide-container {
+  height: auto;
+  
+}
+
+.enterAmount-container {
+  width:auto;
+  height: auto;
+  /* background-color: red; */
+
+}
+
+.loanAmount input {
+  width:auto;
+  height: 57px;
+  flex-shrink: 0;
+
+
+}
+
+.loanAmount {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  /* background-color: #5e900f; */
+}
+
+.loanAmountLabel{
+  display: none;
+}
+
+}
+
+
+/*only for phones*/
+@media (max-width: 747px) {
+  .applyLoan-container {
+   /* min-width: min-content; */
+   max-width: 350px;
+   margin-left: -110px;
+  }
+
+  .sev-mainContent {
+  display: flex;
+  flex-direction: column;
+   max-width: 350px;
+  /* background-color: red; */
+
+}
+
+
+
+.sev-loanHeader {
+  margin-left: 31px;
+  font-size: small;
+}
+
+.newloan-buttons {
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: fit-content;
+  margin-left: 27px;
+}
+
+.decide-container button {
+  width: 120px;
+  height: 120px;
+  font-size: 13px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.decide-container {
+  color: #525252;
+  text-align: center;
+  width: 350px;
+  height: auto;
+
+}
+
+.enterAmount-container {
+  width:auto;
+  height: auto;
+
+}
+.loanAmount input {
+  width:auto;
+  height: 57px;
+  flex-shrink: 0;
+
+}
+
+.loanAmount {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.newloan-buttons {
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  margin-right: 13px;
+  margin-left: 44px;
+}
+
+.backBtn {
+  width: auto;
+padding: 0 30px
+}
+
+.nextBtn {
+  width:auto;
+padding: 0 30px
+}
+
+.loanAmountLabel{
+  display: none;
+}
 }

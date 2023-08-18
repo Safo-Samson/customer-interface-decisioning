@@ -117,7 +117,8 @@
     margin-left: -18px;
     /* background-color: aqua; */
     justify-content: space-around;
-    width: 239px;
+     min-width: min-content;
+    /* width: 239px; */
   }
 
   .homeCard-promo {
