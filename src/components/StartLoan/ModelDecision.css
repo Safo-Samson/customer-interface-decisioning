@@ -67,6 +67,10 @@
   border: 1px solid #ffd02c;
   border-top: 20px solid #ffd02c;
 }
+.miniDecision-container-waiting {
+  border: 1px solid gray;
+  border-top: 20px solid gray;
+}
 .miniDecision-container p {
   font-size: 20px;
   color: #000;
@@ -108,6 +112,16 @@
 .miniDecision-container-counter-button:hover {
   border: 0.901px solid white;
   background: #ffd02c;
+  color: white;
+}
+
+.miniDecision-container-waiting-button {
+  border: 0.901px solid gray;
+  color: gray;
+}
+.miniDecision-container-waiting-button:hover {
+  border: 0.901px solid white;
+  background: gray;
   color: white;
 }
 .miniDecision-container-accepted-button:hover {
