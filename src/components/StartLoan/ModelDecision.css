@@ -238,7 +238,7 @@
     font-size: 20px;
     max-width: fit-content;
     margin-left: 0px;
-    margin-left: 0px;
+    margin-left: 160px;
     padding-left: 90px;
   }
 
@@ -250,7 +250,7 @@
   min-height: 23.5vh; */
     width: 350px;
     /* height: fit-content; */
-    border: 1px solid #99c3b7;
+    /* border: 1px solid #99c3b7; */
     color: #005f44;
     background-color: rgb(255, 255, 255);
 
@@ -275,7 +275,7 @@
     margin-top: 20px;
     padding-left: 10px;
     margin-bottom: 150px;
-    /* display: none; */
+    display: none;
   }
 
   .loanField {
@@ -342,7 +342,7 @@
   min-height: 23.5vh; */
     width: 350px;
     /* height: fit-content; */
-    border: 1px solid #99c3b7;
+    /* border: 1px solid #99c3b7; */
     color: #005f44;
     background-color: rgb(255, 255, 255);
 
