@@ -163,27 +163,48 @@
   margin-top: 30px;
 }
 
+
+.header-icon{
+ margin-right: 10.22px;
+  font-size: 40px;
+  margin-left: 46px;
+}
 .loanField input {
   height: 30px;
   border: none;
   border-bottom: 1px solid rgb(63, 61, 61);
 }
 
-.mBack {
-  width: 218px;
+.miniDecisions-buttons {
   height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  margin-right: 83px;
+  margin-left: 81px;
+  /* background-color: red; */
+}
+
+.mBack {
+
+   width: 218px;
+padding: 0 30px;
+  /* width: 218px;
+  height: 42px; */
   flex-shrink: 0;
   background: #a1a1a1;
   border: none;
   color: white;
   font-size: 15px;
   font-style: normal;
-  margin-left: 80px;
-  margin-top: 0px;
+  /* margin-left: 80px;
+  margin-top: 0px; */
   cursor: pointer;
 }
 
 .mDone {
+
   width: 218px;
   height: 42px;
   flex-shrink: 0;
@@ -192,8 +213,212 @@
   color: white;
   font-size: 15px;
   font-style: normal;
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: 80px;
-  margin-top: -42px;
+  margin-top: -42px; */
   cursor: pointer;
+}
+
+
+@media (min-width: 748px) and (max-width: 1279px){
+ .mainDecision-remaining-content {
+  /* Use 90% of the remaining width */
+  padding-left: 140px;
+  padding-right: 0px;
+}
+  .ModelDecision-container {
+  min-width:fit-content;
+  min-height: fit-content;
+  min-height: auto;
+   /* max-width: 259px; */
+    margin-left: -178px;
+  /* background-color: rgb(192, 22, 22); */
+  align-items: left; /*Center vertically */
+  padding-top: 33.08px;
+  padding-left:5px;
+  padding-right: 5px;
+}
+.ModelDecision-container h1 {
+  font-size: 20px;
+  max-width: fit-content;
+   margin-left: 0px;
+    margin-left: 0px;
+  padding-left:90px;
+  
+}
+
+.header-icon{
+    margin-left: 0px;
+}
+.miniDecision-container {
+  /* min-width: 200px;
+  min-height: 23.5vh; */
+  width: 350px;
+  /* height: fit-content; */
+  border: 1px solid #99c3b7;
+  color: #005f44;
+  background-color: rgb(255, 255, 255);
+
+
+  padding-bottom: 33.08px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 20px;
+}
+
+.miniDecision-container-button {
+  width: 238px;
+  height: 43.867px;
+  margin-left: 50px;
+ 
+}
+
+
+.loanInfo-container {
+  max-width: 84.8%;
+  background-color: #99c3b7;
+  height: 24px;
+  /* min-width: 200px; */
+  margin-left: 80px;
+  margin-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 150px;
+  /* display: none; */
+      
+}
+
+
+.loanField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.horizonaLine {
+/* display: none; */
+}
+
+.miniDecisions-buttons {
+  height: 42px;
+  margin-top: 20px;
+  margin-right: 3px;
+  margin-left: 54px;
+
+}
+.mBack {
+  width: 120px;
+  padding: 0 30px
+}
+
+.mDone {
+  width: 120px;
+  padding: 0 30px;
+  margin-left: 100px;
+
+}
+
+}
+
+
+/*only for phones*/
+@media (max-width: 747px) {
+
+  .mainDecision-remaining-content {
+  /* Use 90% of the remaining width */
+  padding-left: 140px;
+  padding-right: 0px;
+  /* background-color: white; */
+}
+  .ModelDecision-container {
+  min-width:fit-content;
+  min-height: fit-content;
+  min-height: auto;
+   /* max-width: 259px; */
+    margin-left: -178px;
+  /* background-color: rgb(192, 22, 22); */
+  align-items: left; /*Center vertically */
+  padding-top: 33.08px;
+  padding-left:5px;
+  padding-right: 5px;
+}
+.ModelDecision-container h1 {
+  font-size: 20px;
+  max-width: fit-content;
+   margin-left: 0px;
+    margin-left: 0px;
+  padding-left:90px;
+  
+}
+
+.header-icon{
+    margin-left: 0px;
+}
+.miniDecision-container {
+  /* min-width: 200px;
+  min-height: 23.5vh; */
+  width: 350px;
+  /* height: fit-content; */
+  border: 1px solid #99c3b7;
+  color: #005f44;
+  background-color: rgb(255, 255, 255);
+
+
+  padding-bottom: 33.08px;
+  margin-left: 50px;
+  margin-right: 0px;
+  margin-top: 20px;
+}
+
+.miniDecision-container-button {
+  width: 238px;
+  height: 43.867px;
+  margin-left: 50px;
+ 
+}
+
+
+.loanInfo-container {
+  max-width: 84.8%;
+  background-color: #99c3b7;
+  height: 24px;
+  /* min-width: 200px; */
+  margin-left: 80px;
+  margin-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 150px;
+  display: none;
+      
+}
+
+
+.loanField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.horizonaLine {
+display: none;
+}
+
+.miniDecisions-buttons {
+  height: 42px;
+  margin-top: 20px;
+  margin-right: 3px;
+  margin-left: 54px;
+
+}
+.mBack {
+  width: 120px;
+  padding: 0 30px
+}
+
+.mDone {
+  width: 120px;
+  padding: 0 30px;
+  margin-left: 100px;
+
+}
+
+
 }

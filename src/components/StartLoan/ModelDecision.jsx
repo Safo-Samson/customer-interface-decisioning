@@ -19,7 +19,7 @@ const ModelDecision = ({ decision, setDecision }) => {
   const location = useLocation();
 
   const [ModelDecision, setModelDeicison] = useState(
-    decision || location.state?.decision || 4
+    decision || location.state?.decision || Math.floor(Math.random() * 4) + 1
   );
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
@@ -66,9 +66,8 @@ const ModelDecision = ({ decision, setDecision }) => {
   const decisionWaitingOnAdvisorParagraph =
     "Thank you for applying for a mortgage, an advisor is looking at your application and will get back to you within 24hrs!";
   const decisionWaitingOnAdvisorIcon = faUserClock;
-  const decisionWaitingOnAdvisorButton = "Manage my loans"
+  const decisionWaitingOnAdvisorButton = "Manage my loans";
   const WaitingOnAdvisorIconColor = "gray";
-
 
   const navigate = useNavigate();
 
@@ -95,7 +94,6 @@ const ModelDecision = ({ decision, setDecision }) => {
     navigate("/Home");
   };
 
-
   return (
     <div className="mainDecision-container">
       <VerticalBar />
@@ -105,17 +103,14 @@ const ModelDecision = ({ decision, setDecision }) => {
           {ModelDecision === 1 ? (
             <>
               <h1>
-                <FontAwesomeIcon
-                  icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
-                />
+                <FontAwesomeIcon icon={faCoins} className="header-icon" />
                 {decisionHeaderAccepted}
               </h1>
               <div className="miniDecision-container miniDecision-container-accepted">
                 <p>{decisionAcceptedParagraph}</p>
                 <FontAwesomeIcon
                   icon={decisionAcceptedIcon}
-                  style={{ fontSize: "50px", color: acceptedIconColor}}
+                  style={{ fontSize: "50px", color: acceptedIconColor }}
                 />
                 <button
                   className="miniDecision-container-button miniDecision-container-accepted-button"
@@ -127,11 +122,7 @@ const ModelDecision = ({ decision, setDecision }) => {
           ) : ModelDecision === 2 ? (
             <>
               <h1>
-                {" "}
-                <FontAwesomeIcon
-                  icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
-                />
+                <FontAwesomeIcon icon={faCoins} className="header-icon" />
                 {decisionHeaderRejected}
               </h1>
               <div className="miniDecision-container miniDecision-container-rejected">
@@ -150,11 +141,7 @@ const ModelDecision = ({ decision, setDecision }) => {
           ) : ModelDecision === 3 ? (
             <>
               <h1>
-                {" "}
-                <FontAwesomeIcon
-                  icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
-                />
+                <FontAwesomeIcon icon={faCoins} className="header-icon" />
                 {decisionHeaderCounterOffer}
               </h1>
               <div className="miniDecision-container miniDecision-container-counter">
@@ -176,11 +163,7 @@ const ModelDecision = ({ decision, setDecision }) => {
           ) : ModelDecision === 4 ? (
             <>
               <h1>
-                {" "}
-                <FontAwesomeIcon
-                  icon={faCoins}
-                  style={{ marginRight: "10.22px", fontSize: "40px", marginLeft:'46px' }}
-                />
+                <FontAwesomeIcon icon={faCoins} className="header-icon" />
                 {decisionWaitingOnAdvisorHeader}
               </h1>
               <div className="miniDecision-container miniDecision-container-waiting">
@@ -197,7 +180,7 @@ const ModelDecision = ({ decision, setDecision }) => {
                 </button>
               </div>
             </>
-          ): null}
+          ) : null}
 
           <div className="horizonaLine"></div>
           <div className="loanInfo-container">
@@ -267,13 +250,18 @@ const ModelDecision = ({ decision, setDecision }) => {
               </div>
             </div>
           </div>
-          <button className="mBack" onClick={handleManage}>
-            {" "}
-            {/* <FontAwesomeIcon icon={faChevronLeft} /> */}
-            Manage my loans
-          </button>
+          <div className="miniDecisions-buttons">
+            <button className="mBack" onClick={handleManage}>
+              {" "}
+              {/* <FontAwesomeIcon icon={faChevronLeft} /> */}
+              Manage my loans
+            </button>
 
-          <button className="mDone" onClick={handleDone}> Done</button>
+            <button className="mDone" onClick={handleDone}>
+              {" "}
+              Done
+            </button>
+          </div>
         </div>
       </div>
     </div>
