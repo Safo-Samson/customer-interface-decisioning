@@ -2,6 +2,7 @@
 
 .newLoan-container {
   display: flex;
+    /* background-color: red; */
   /* background-color: #EEEEEE; */
 }
 
@@ -12,4 +13,17 @@
   flex: 1;
   /* background-color: white; */
   /* Add any additional styling you need for the remaining content */
+}
+
+
+@media (max-width: 747px) {
+  .newLoan-remaining-content {
+  /* Use 90% of the remaining width */
+  padding-left: 130px;
+  padding-right: 0px;
+  flex: 1;
+
+  /* background-color: white; */
+  /* Add any additional styling you need for the remaining content */
+}
 }
