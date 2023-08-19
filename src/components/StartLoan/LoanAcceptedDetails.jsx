@@ -57,10 +57,7 @@ const LoanAcceptedDetails = () => {
       <div className="acceptedDetails-remaining-content">
         <div className="loanDetails-container">
           <h1>
-            <FontAwesomeIcon
-              icon={faCoins}
-              style={{ marginRight: "17.22px", fontSize: "40px", marginLeft: '20px'}}
-            />
+            <FontAwesomeIcon icon={faCoins} className="header-icon2" />
             YOUR LOAN DETAILS
           </h1>
           <SelectedCustomer />

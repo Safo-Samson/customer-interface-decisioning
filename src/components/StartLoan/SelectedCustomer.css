@@ -30,3 +30,52 @@
   border-bottom: 1px solid black;
   max-width: 190px;
 }
+
+
+@media (max-width: 747px) {
+  .sel-customer-info {
+  max-width: fit-content;
+  flex-direction: column;
+  margin-right: 0;
+
+}
+
+.sel-customer-info-1 {
+  flex-direction: column;
+}
+
+.sel-customer-personalInfo {
+  margin-right: 0px;
+  margin-bottom: 20px;
+  /* background-color: aqua; */
+  min-width: fit-content;
+  color: rgb(136, 136, 136);
+}
+}
+
+@media (min-width: 748px) and (max-width: 1279px) {
+   .sel-customer-info {
+  max-width: fit-content;
+  flex-direction: column;
+  margin-right: 0;
+
+}
+
+.sel-customer-info-1 {
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+.sel-customer-personalInfo input {
+  min-width: fit-content;
+   max-width: fit-content;
+   margin-right: 9px;
+}
+.sel-customer-personalInfo {
+  margin-right: 0px;
+  margin-bottom: 20px;
+  /* background-color: aqua; */
+  min-width: fit-content;
+  color: rgb(136, 136, 136);
+}
+}

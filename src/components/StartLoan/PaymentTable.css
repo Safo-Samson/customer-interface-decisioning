@@ -25,3 +25,36 @@
 .custom-table tbody {
   background-color: white;
 }
+
+@media (max-width: 747px) {
+  .custom-table {
+  width: fit-content;
+  min-width: fit-content;
+  }
+  .custom-table th, .custom-table td {
+  border: 1px solid #99C3B7;;
+  padding: 2px;
+  text-align: left;
+  padding-left: 3px;
+  min-width: 0px;
+  text-transform: capitalize;
+  padding-right: 0;
+}
+  }
+
+
+  @media (min-width: 748px) and (max-width: 1279px){
+    .custom-table {
+  width: fit-content;
+  min-width: fit-content;
+  }
+  .custom-table th, .custom-table td {
+  border: 1px solid #99C3B7;;
+  padding: 2px;
+  text-align: left;
+  padding-left: 3px;
+  min-width: 0px;
+  text-transform: capitalize;
+  padding-right: 0;
+}
+  }
