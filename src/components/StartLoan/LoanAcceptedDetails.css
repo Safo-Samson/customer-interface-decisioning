@@ -105,138 +105,136 @@
 }
 
 @media (max-width: 747px) {
-.acceptedDetails-remaining-content {
-  padding-left: 10px;
-  padding-right: 0px;
-}
-
-.loanDetails-container {
-  max-width:fit-content;
-  min-height: 73.5vh;
-  position: relative; /* for the button to be styled well*/
-  min-width: fit-content;
-}
-.payment-schedule-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0rem;
-  padding-top: 0px;
-  padding-right: 0px;
-  margin: 1rem 0;
-  margin-left: 0px;
-  margin-right: 0px;
-  color: rgb(43, 42, 42);
-  /* background-color: rgb(7, 255, 48); */
-  text-transform: uppercase;
-  max-height: 480px;
-  max-width: fit-content;
-}
-
-.loan-schedule-header {
-  display: flex;
-  min-width: min-content;
-  /* align-items: center; */
-  justify-content: space-between;
-  text-transform: capitalize;
-  padding-left: 0px;
-  margin-top: 10px;
-  font-size: medium;
-  /* background-color: rgb(206, 201, 248); */
-}
-.loan-schedule-tables-container {
-  display: flex;
-  /* justify-content: space-evenly; */
-  flex-direction: column-reverse;
-  min-width: fit-content;
-  padding-left: 0px;
-  /* background-color: red; */
-}
-.small-tables-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* space between makes the size match the bigger one*/
-  font-size: smaller;
-  /* background-color: aqua; */
-  margin-right: 20px;
-  /* background-color: red; */
-   display: none; 
-}
-
-.big-table {
-  min-width: auto;
-  min-height: auto;
-
-}
-
-.header-icon2 {
-  margin-right: 12px;
-  font-size: 30px;
-  margin-left: 4px;
-}
-
-}
-
-  @media (min-width: 748px) and (max-width: 1279px){
-.acceptedDetails-remaining-content {
-  padding-left: 10px;
-  padding-right: 0px;
-}
-
-.loanDetails-container {
-  max-width:fit-content;
-  min-height:  fit-content;
-  position: relative; /* for the button to be styled well*/
-  min-width: fit-content;
-}
-.payment-schedule-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0rem;
-  padding-top: 0px;
-  padding-right: 0px;
-  margin: 1rem 0;
-  margin-left: 0px;
-  margin-right: 0px;
-  color: rgb(43, 42, 42);
-  /* background-color: rgb(7, 255, 48); */
-  text-transform: uppercase;
-  max-height: 480px;
-  max-width: fit-content;
-}
-
-.loan-schedule-header {
-  display: flex;
-  min-width: min-content;
-  /* align-items: center; */
-  justify-content: space-between;
-  text-transform: capitalize;
-  padding-left: 30px;
-  margin-top: 10px;
-  font-size: medium;
-  /* background-color: rgb(206, 201, 248); */
-}
-.loan-schedule-tables-container {
-  display: flex;
-  /* justify-content: space-evenly; */
-  flex-direction: column;
-  min-width: fit-content;
-  padding: 10px;
-  /* background-color: red; */
-}
-.small-tables-container {
-   display: none; 
-}
-
-.big-table {
-  min-width: auto;
-  min-height: auto;
-}
-
-.header-icon2 {
-  margin-right: 12px;
-  font-size: 30px;
-  margin-left: 4px;
-}
+  .acceptedDetails-remaining-content {
+    padding-left: 10px;
+    padding-right: 0px;
   }
+
+  .loanDetails-container {
+    max-width: fit-content;
+    min-height: 73.5vh;
+    position: relative; /* for the button to be styled well*/
+    min-width: fit-content;
+  }
+  .payment-schedule-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0rem;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin: 1rem 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: rgb(43, 42, 42);
+    /* background-color: rgb(7, 255, 48); */
+    text-transform: uppercase;
+    max-height: 480px;
+    max-width: fit-content;
+  }
+
+  .loan-schedule-header {
+    display: flex;
+    min-width: min-content;
+    /* align-items: center; */
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding-left: 0px;
+    margin-top: 10px;
+    font-size: medium;
+    /* background-color: rgb(206, 201, 248); */
+  }
+  .loan-schedule-tables-container {
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: column-reverse;
+    min-width: fit-content;
+    padding-left: 0px;
+    /* background-color: red; */
+  }
+  .small-tables-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* space between makes the size match the bigger one*/
+    font-size: smaller;
+    /* background-color: aqua; */
+    margin-right: 20px;
+    /* background-color: red; */
+    display: none;
+  }
+
+  .big-table {
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .header-icon2 {
+    margin-right: 12px;
+    font-size: 30px;
+    margin-left: 4px;
+  }
+}
+
+@media (min-width: 748px) and (max-width: 1279px) {
+  .acceptedDetails-remaining-content {
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+
+  .loanDetails-container {
+    max-width: fit-content;
+    min-height: f73.5vh;
+    position: relative; /* for the button to be styled well*/
+    min-width: fit-content;
+  }
+  .payment-schedule-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0rem;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin: 1rem 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: rgb(43, 42, 42);
+    /* background-color: rgb(7, 255, 48); */
+    text-transform: uppercase;
+    max-height: 480px;
+    max-width: fit-content;
+  }
+
+  .loan-schedule-header {
+    display: flex;
+    min-width: min-content;
+    /* align-items: center; */
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding-left: 30px;
+    margin-top: 10px;
+    font-size: medium;
+    /* background-color: rgb(206, 201, 248); */
+  }
+  .loan-schedule-tables-container {
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+    min-width: fit-content;
+    padding: 10px;
+    /* background-color: red; */
+  }
+  .small-tables-container {
+    display: none;
+  }
+
+  .big-table {
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .header-icon2 {
+    margin-right: 12px;
+    font-size: 30px;
+    margin-left: 4px;
+  }
+}
