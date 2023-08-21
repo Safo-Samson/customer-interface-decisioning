@@ -11,6 +11,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import Popup from "../PopUp";
+import RatingStars from "react-rating-stars-component";
 
 const ModelDecision = ({ decision, setDecision }) => {
   // decisions can be "accepted 1" or "rejected 0" or rejected with "counter offer 2";
@@ -68,6 +70,8 @@ const ModelDecision = ({ decision, setDecision }) => {
   const decisionWaitingOnAdvisorIcon = faUserClock;
   const decisionWaitingOnAdvisorButton = "Manage my loans";
   const WaitingOnAdvisorIconColor = "gray";
+    const [acceptOpen, setAcceptOpen] = useState(false);
+
 
   const navigate = useNavigate();
 
@@ -91,8 +95,13 @@ const ModelDecision = ({ decision, setDecision }) => {
 
   const handleDone = (e) => {
     e.preventDefault();
-    navigate("/Home");
-  };
+    setAcceptOpen(!acceptOpen);  };
+
+  const handleConfirmRate = (e) => {
+    e.preventDefault();
+    navigate("/Home")  };
+
+
 
   return (
     <div className="mainDecision-container">
@@ -261,6 +270,25 @@ const ModelDecision = ({ decision, setDecision }) => {
               {" "}
               Done
             </button>
+            {acceptOpen && (
+                  <Popup
+                    content={
+                      <>
+                        <b>Rate Your Experience</b>
+                        <RatingStars
+                            count={5}
+                            onChange={(newRating) => console.log(newRating)}
+                            size={24}
+                            activeColor="#ffd700"
+                          />
+                          <button onClick={handleConfirmRate}>Confirm</button>
+                        
+                      </>
+                    }
+                    // handleClose={toggleAcceptPopup}
+                    type="rate"
+                  />
+                )}
           </div>
         </div>
       </div>

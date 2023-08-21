@@ -3,7 +3,7 @@ import "./PopUp.css"
  
 const Popup = props => {
   return (
-    <div className={"popup-box"}>
+    <div className={`popup-box ${props.type}`}>
       <div className={`box ${props.type}`}>
         {props.content}
       </div>

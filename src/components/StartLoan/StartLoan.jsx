@@ -90,7 +90,7 @@ return (
               size="2xl"
               style={{ color: "#005F44" ,marginBottom: '10px', marginLeft: '35px', marginRight: '40px'}}
             />
-            Loan
+            Personal Loan
           </button>
           <button className={`carFinance ${selectLoanValue === 'Car Finance' ? 'selectedButton' : ''}`}
           onClick={() => handleSelectedLoan('Car Finance')}>
