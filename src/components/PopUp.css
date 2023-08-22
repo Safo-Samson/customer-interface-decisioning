@@ -130,3 +130,17 @@
     /* border: 1px solid black; */
   }
 
+.box.rate .rating-input{
+  width: 350px;
+  height: 30px;
+  /* font-size: 5px; */
+  /* border: 1px solid#006A4D; */
+
+}
+
+.box.rate .rating-input-container{
+  font-size: 15px;
+  color: black;
+  font-weight: 300;
+  margin-top: 10px;
+}

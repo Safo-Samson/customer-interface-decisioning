@@ -13,6 +13,8 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import VerticalBar from "../UIComponents/VerticalBar";
 import { useNavigate } from "react-router-dom";
+import pound from "../../assets/pound.png";
+
 
 
 const StartLoan = () =>{
@@ -118,7 +120,8 @@ return (
           <div className="loanAmount">
             <label className="loanAmountLabel"> Loan Amount</label>
             <div className="inputFieldLoan">
-              <FontAwesomeIcon className="poundSign" icon={faSterlingSign} style={{height:'35px', marginRight:'5px', marginBottom:'-10px'}}/>
+              <img src={pound} alt="pound sign" className="poundSign" style={{height:'35px', marginRight:'5px', marginBottom:'-10px'}} />
+              {/* <FontAwesomeIcon className="poundSign" icon={faSterlingSign} style={{height:'35px', marginRight:'5px', marginBottom:'-10px'}}/> */}
               <input
                 value={loanAmount}
                 onChange={(e) => setLoan(e.target.value)}

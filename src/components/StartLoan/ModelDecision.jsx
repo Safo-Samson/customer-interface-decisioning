@@ -64,7 +64,7 @@ const ModelDecision = ({ decision, setDecision }) => {
 
   // waiting on advisor headers, icons and paragraphs
   const decisionWaitingOnAdvisorHeader =
-    "AN ADVISOR IS LOOKING AT YOUR APPLICATION - YOU WILL RECEIVE AN EMAIL.";
+    "AN ADVISOR IS LOOKING AT YOUR APPLICATION - YOU WILL RECEIVE AN EMAIL";
   const decisionWaitingOnAdvisorParagraph =
     "Thank you for applying for a mortgage, an advisor is looking at your application and will get back to you within 24hrs!";
   const decisionWaitingOnAdvisorIcon = faUserClock;
@@ -280,7 +280,14 @@ const ModelDecision = ({ decision, setDecision }) => {
                             onChange={(newRating) => console.log(newRating)}
                             size={24}
                             activeColor="#ffd700"
+
                           />
+                          <div className="rating-input-container">
+                          <label htmlFor="rating-input">Give us additional comments and help us improve!</label>
+                          <input 
+                          className="rating-input"
+                          placeholder=""></input>
+                          </div>
                           <button onClick={handleConfirmRate}>Confirm</button>
                         
                       </>

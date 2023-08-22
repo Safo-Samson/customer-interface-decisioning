@@ -2,6 +2,9 @@ import "./SmallSupport.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSterlingSign } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import pound from '../../assets/pound.png'
+
+
 function SmallSupport() {
   const navigate = useNavigate();
   function manageCurrentLoans() {
@@ -17,14 +20,16 @@ function SmallSupport() {
 
       <div className="small-support-container-text">
         <h5>
-          <FontAwesomeIcon
+        <img src={pound} alt="pound sign"  style={{marginRight:'5px', fontSize: "20px",fontWeight: "bolder", height: '20px', color: 'green' }} />
+
+          {/* <FontAwesomeIcon
             icon={faSterlingSign}
             style={{
               marginRight: "10px",
               fontSize: "20px",
               fontWeight: "bolder",
             }}
-          />
+          /> */}
           CREDIT SCORE CHECK
         </h5>
         <p>
