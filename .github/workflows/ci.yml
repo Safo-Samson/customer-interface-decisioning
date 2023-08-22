@@ -26,7 +26,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 34.68.9.16 
-          username: jambird  
+          username: jambird  # Use the correct username here
           key: ${{ secrets.SSH_PRIVATE_KEY }}   # Set the private SSH key as a secret
           script: |
             # Stop Nginx if it's running
@@ -40,3 +40,6 @@ jobs:
 
             # Start Nginx
             sudo service nginx start
+
+          # Disable strict host key checking
+          ssh_options: -o StrictHostKeyChecking=no
