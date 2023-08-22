@@ -1,0 +1,42 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint and test with auto-fix
+        run: npm run lint -- --fix
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to VM instance
+        uses: appleboy/ssh-action@master
+        with:
+          host: 34.68.9.16 
+          username: burner-jambird  
+          key: ${{ secrets.SSH_PRIVATE_KEY }}   # Set the private SSH key as a secret
+          script: |
+            # Stop Nginx if it's running
+            sudo service nginx stop
+            
+            # Remove old build files
+            sudo rm -rf /var/www/html/customer-interface-decisioning/*
+
+            # Copy build files to the Nginx root directory
+            sudo cp -r ./dist/* /var/www/html/customer-interface-decisioning/
+
+            # Start Nginx
+            sudo service nginx start
