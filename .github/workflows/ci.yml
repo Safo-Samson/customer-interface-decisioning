@@ -26,7 +26,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 34.68.9.16 
-          username: burner-jambird  
+          username: jambird  
           key: ${{ secrets.SSH_PRIVATE_KEY }}   # Set the private SSH key as a secret
           script: |
             # Stop Nginx if it's running
