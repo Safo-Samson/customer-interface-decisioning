@@ -1,4 +1,4 @@
-name: Deploy to GCP
+name: CI/CD Workflow
 
 on:
   push:
@@ -6,25 +6,39 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Configure SSH keys
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint and test
         run: |
-              mkdir -p ~/.ssh/
-              echo "${{ secrets.GCP_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-              chmod 600 ~/.ssh/id_rsa
-              ssh-keyscan github.com >> ~/.ssh/known_hosts
-              ssh-keyscan -H 34.68.9.16 >> ~/.ssh/known_hosts
+          npm run lint
+          npm test
 
+      - name: Build
+        run: npm run build
 
-      - name: Deploy
-        run: |
-          ssh -A jambird@34.68.9.16 "cd /var/www/html/customer-interface-decisioning && git pull"
+      - name: Deploy to VM instance
+        uses: appleboy/ssh-action@master
+        with:
+          host: 34.68.9.16 
+          username: burner-jambird  
+          key: ${{ secrets.SSH_PRIVATE_KEY }}   # Set the private SSH key as a secret
+          script: |
+            # Stop Nginx if it's running
+            sudo service nginx stop
+            
+            # Remove old build files
+            sudo rm -rf /var/www/html/customer-interface-decisioning/*
 
+            # Copy build files to the Nginx root directory
+            sudo cp -r ./dist/* /var/www/html/customer-interface-decisioning/
 
-#comment so i cn push
+            # Start Nginx
+            sudo service nginx start
