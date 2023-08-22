@@ -87,7 +87,7 @@ const InformationCheck = () => {
     location.state?.dateApplied || "undefined"
   );
   const [AccountNo, setAccount] = useState(
-    location.state?.AccountNo || "6203423865"
+    location.state?.cusID || "6203423865"
   );
   const [creditScore, setScore] = useState(location.state?.creditScore);
   const [birthDate, setBirth] = useState(location.state?.birthDate);
@@ -105,13 +105,13 @@ const InformationCheck = () => {
   const [loyaltyDays, setLoyalty] = useState(
     location.state?.loyaltyDays || "729"
   );
-  const [loanTerm, setTerm] = useState(location.state?.loanTerm || "3");
+  const [loanTerm, setTerm] = useState(location.state?.loanTerm || "7");
   const [acceptOpen, setAcceptOpen] = useState(false);
 
   const [editingLoanTerm, setEditingLoanTerm] = useState(false);
 
   const formatLoanTerm = (value) => {
-    return value !== '' ? `${value} month${value !== '1' ? 's' : ''}` : '';
+    return value !== "" ? `${value} month${value !== "1" ? "s" : ""}` : "";
   };
 
   // fetch api call to update user
@@ -248,18 +248,18 @@ const InformationCheck = () => {
               <div className="loanAmountinfo">
                 <label htmlFor="loanAmountinfo"> Loan Amount</label>
                 {editingLoanAmount ? (
-                    <input
-                      // value={formatMoney(loanAmountinfo)} This wont work well
-                      value={loanAmountinfo}
-                      onChange={(e) => setAmountInfo(e.target.value)}
-                      type="text"
-                      placeholder=""
-                      id="loanAmountinfo"
-                      name="loanAmountinfo"
-                      // Add the money formatting function here
-                      onBlur={() => setAmountInfo(loanAmountinfo)}
-                      style={{border: '1px solid green'}}
-                    />
+                  <input
+                    // value={formatMoney(loanAmountinfo)} This wont work well
+                    value={loanAmountinfo}
+                    onChange={(e) => setAmountInfo(e.target.value)}
+                    type="text"
+                    placeholder=""
+                    id="loanAmountinfo"
+                    name="loanAmountinfo"
+                    // Add the money formatting function here
+                    onBlur={() => setAmountInfo(loanAmountinfo)}
+                    style={{ border: "1px solid green" }}
+                  />
                 ) : (
                   <div>
                     <input value={formatMoney(loanAmountinfo)} readOnly />
@@ -270,19 +270,18 @@ const InformationCheck = () => {
               <div className="loanTerm">
                 <label htmlFor="loanTerm"> Loan Term</label>
                 {editingLoanAmount ? (
-                    <input
-                      // value={formatMoney(loanTerm)} This wont work well
-                      value={loanTerm}
-                      onChange={(e) => setTerm(e.target.value)}
-                      type="text"
-                      placeholder=""
-                      id="loanTerm"
-                      name="loanTerm"
-                      // Add the money formatting function here
-                      onBlur={() =>  setEditingLoanTerm(false)}
-                      style={{border: '1px solid green'}}
-                    />
-                
+                  <input
+                    // value={formatMoney(loanTerm)} This wont work well
+                    value={loanTerm}
+                    onChange={(e) => setTerm(e.target.value)}
+                    type="text"
+                    placeholder=""
+                    id="loanTerm"
+                    name="loanTerm"
+                    // Add the money formatting function here
+                    onBlur={() => setEditingLoanTerm(false)}
+                    style={{ border: "1px solid green" }}
+                  />
                 ) : (
                   <div>
                     <input value={formatLoanTerm(loanTerm)} readOnly />
