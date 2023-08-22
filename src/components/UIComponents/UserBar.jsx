@@ -7,6 +7,8 @@ import {
   faHouseChimney,
 } from "@fortawesome/free-solid-svg-icons"; // Import the envelope (message) icon
 
+import { Link } from "react-router-dom";
+
 const UserBar = () => {
   const [formattedDate, setFormattedDate] = useState("");
   const [unreadMessages, setUnreadMessages] = useState(4); // Replace with your actual unread message count
@@ -40,7 +42,14 @@ const UserBar = () => {
 
       <div className="user-bar-text">
         <h4>
-          <FontAwesomeIcon icon={faHouseChimney} style={{ fontSize: "18px" }} />
+          {" "}
+          <Link to="/home" style={{ textDecoration: "none", color: "#006a4c" }}>
+            {" "}
+            <FontAwesomeIcon
+              icon={faHouseChimney}
+              style={{ fontSize: "18px" }}
+            />
+          </Link>
         </h4>
         <h4>Your Accounts</h4>
         <h4>Your Profile</h4>
@@ -51,7 +60,12 @@ const UserBar = () => {
             <div className="unread-messages">{unreadMessages}</div>
           )}
         </h4>
-        <h4>Log off</h4>
+        <h4>
+          <Link to="/" style={{ textDecoration: "none", color: "#006a4c" }}>
+            {" "}
+            Log off
+          </Link>
+        </h4>
       </div>
     </div>
   );
