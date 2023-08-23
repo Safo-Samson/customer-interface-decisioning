@@ -27,57 +27,52 @@ jobs:
         with:
           host: 34.68.9.16 
           username: jambird  # Use the correct username here
-          key: -----BEGIN OPENSSH PRIVATE KEY-----
-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
------END OPENSSH PRIVATE KEY-----
+          key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
    # Set the private SSH key as a secret
           script: |
             # Stop Nginx if it's running
             sudo service nginx stop
-            
-            # Remove old build files
-            sudo rm -rf /var/www/html/customer-interface-decisioning/*
 
-            # Copy build files to the Nginx root directory
-            sudo cp -r ./dist/* /var/www/html/customer-interface-decisioning/
+            # Overwrite existing build files with new ones
+            sudo cp -r /var/www/html/customer-interface-decisioning/ /var/www/html/customer-interface-decisioning/
 
             # Start Nginx
             sudo service nginx start
-
-          # Disable strict host key checking
-          ssh_options: -o StrictHostKeyChecking=no
