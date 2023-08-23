@@ -37,7 +37,7 @@ const CurrrentLoans = () => {
             <div className="current-loanFields">
               <LoanType
                 loanType={"Credit Card"}
-                status={"Pending"}
+                status={"Done"}
                 amount={8000}
                 details={"Details"}
                 // nextPayment={new Date("none").toLocaleDateString()}
@@ -51,10 +51,10 @@ const CurrrentLoans = () => {
               />
               <LoanType
                 loanType={"Personal Loan"}
-                status={"Done"}
-                amount={50000}
+                status={"In Progress"}
+                amount={15000}
                 details={"Details"}
-                // nextPayment={new Date().toLocaleDateString()}
+                nextPayment={new Date('2023-09-23').toLocaleDateString()}
               />
             </div>
           </div>

@@ -9,7 +9,7 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="AccountNo"> First Name</label>
             <input
-              value= 'Lionel'
+              value= 'Janet'
               type="AccountNo"
               placeholder=""
               id="AccountNo"
@@ -21,7 +21,7 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="birthDate"> Last Name</label>
             <input
-              value='Messi'
+              value='Carter'
               type=""
               placeholder=""
               id="birthDate"

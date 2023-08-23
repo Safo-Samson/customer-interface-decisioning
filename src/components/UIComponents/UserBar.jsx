@@ -32,7 +32,7 @@ const UserBar = () => {
   return (
     <div className="user-bar">
       <div className="user-logo-container">
-        <div className="user-logo-text">Mr. L.Messi</div>
+        <div className="user-logo-text">Ms. J. Carter</div>
 
         <div className="Last-login">
           <FontAwesomeIcon icon={faLock} style={{ marginRight: "10px" }} />

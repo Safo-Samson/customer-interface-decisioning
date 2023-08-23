@@ -26,9 +26,10 @@
   flex-direction: column;
   align-items: left; /*Center vertically */
   padding-top: 13.08px;
-  padding-bottom: 33.08px;
+  padding-bottom: 53.08px;
   padding-left: 25px;
   position: relative; /* for the button to be styled well*/
+  
 }
 
 .payment-schedule-container {
@@ -73,6 +74,8 @@
   position: absolute; /* in relation to the container*/
   bottom: 0;
   left: 0;
+  margin-bottom: 15px;
+
 }
 
 .loan-schedule-tables-container {
@@ -86,7 +89,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* space between makes the size match the bigger one*/
-  font-size: smaller;
+  font-size: small;
   /* background-color: aqua; */
   margin-right: 20px;
   /* background-color: red; */

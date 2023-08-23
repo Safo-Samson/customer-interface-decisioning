@@ -21,7 +21,7 @@ const ModelDecision = ({ decision, setDecision }) => {
   const location = useLocation();
 
   const [ModelDecision, setModelDeicison] = useState(
-    decision || location.state?.decision || Math.floor(Math.random() * 4) + 1
+    decision || location.state?.decision || 1
   );
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(

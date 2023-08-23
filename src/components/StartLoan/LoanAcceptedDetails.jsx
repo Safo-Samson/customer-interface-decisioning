@@ -5,7 +5,7 @@ import { faCoins, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import PaymentTable from "./PaymentTable";
 import SelectedCustomer from "./SelectedCustomer";
 import { useNavigate } from "react-router-dom";
-import jsonData from "../../assets/5843479162_loanSchedule.json";
+import jsonData from "../../assets/TEST_loanSchedule.json";
 const LoanAcceptedDetails = () => {
   const headers = [
     "Month",
@@ -15,7 +15,7 @@ const LoanAcceptedDetails = () => {
     "Interest",
     "Balance",
   ];
-  const { Month, Date, Payment, Principal, Interest, Balance } = jsonData;
+  const { Month, Date, Payment, Principal, Interest, Balance, annual_interest_rate, loan_in_years, frequency_of_payment, first_payment_date, payment_per_period, total_payments, total_interest } = jsonData;
   const data = Month.map((month, index) => [
     month,
     Date[index],
@@ -24,13 +24,15 @@ const LoanAcceptedDetails = () => {
     `£${Interest[index]}`,
     `£${Balance[index]}`,
   ]);
-  const headers1 = ["Month", "Date"];
+  const headers1 = ["Summary", ""];
   const data1 = [
-    ["Annual Interest Rate", ""],
-    ["Term of Loan in Years", ""],
-    ["First Payment Date", ""],
-    ["First Payment Date", ""],
-    ["Payment (per period)", ""],
+    ["Annual Interest Rate", annual_interest_rate],
+    ["Term of Loan in Years", loan_in_years],
+    ["First Payment Date", first_payment_date],
+    ["Payment (per period)", payment_per_period],
+    ["Frequency of payment", frequency_of_payment],
+    ["Total payments", total_payments],
+    ["Total interest paid", total_interest]
   ];
   const headers2 = ["Month", "Date"];
   const data2 = [
@@ -68,7 +70,7 @@ const LoanAcceptedDetails = () => {
               <div className="small-tables-container">
                 {" "}
                 <PaymentTable headers={headers1} data={data1} />
-                <PaymentTable headers={headers2} data={data2} />
+                {/* <PaymentTable headers={headers2} data={data2} /> */}
               </div>
 
               <div className="big-table">
@@ -77,7 +79,7 @@ const LoanAcceptedDetails = () => {
               </div>
             </div>
             <h2 className="loan-schedule-header">
-              Next payment scheduled for 02/08/2023{" "}
+              Next payment scheduled for 23/09/2023{" "}
             </h2>
           </div>
           <button className="paymentschedule-back" onClick={handleBack}>
