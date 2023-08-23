@@ -70,15 +70,9 @@ jobs:
           script: |
             # Stop Nginx if it's running
             sudo service nginx stop
-            
-            # Remove old build files
-            sudo rm -rf /var/www/html/customer-interface-decisioning/*
 
-            # Copy build files to the Nginx root directory
-            sudo cp -r ./dist/* /var/www/html/customer-interface-decisioning/
+            # Overwrite existing build files with new ones
+            sudo cp -r dist/* /var/www/html/customer-interface-decisioning/
 
             # Start Nginx
             sudo service nginx start
-
-          # # Disable strict host key checking
-          # ssh_options: -o StrictHostKeyChecking=no
