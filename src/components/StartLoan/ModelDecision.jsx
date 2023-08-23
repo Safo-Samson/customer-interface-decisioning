@@ -25,14 +25,14 @@ const ModelDecision = ({ decision, setDecision }) => {
   );
   const [loanType, setType] = useState(location.state?.loanType || "undefined");
   const [loanAmountinfo, setAmountInfo] = useState(
-    location.state?.amount || "undefined"
+    location.state?.loanAmountinfo || "undefined"
   );
   const [dateApplied, setValue] = useState(
     location.state?.dateApplied || "undefined"
   );
 
   const [applicationID, setID] = useState(
-    location.state?.applicationID || "undefined"
+    location.state?.AccountNo || "undefined"
   );
 
   const [loanTerm, setTerm] = useState(location.state?.loanTerm || "3 months");

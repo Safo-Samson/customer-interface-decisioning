@@ -36,10 +36,7 @@ const InformationCheck = () => {
       setAcceptOpen(!acceptOpen);
       setEditingLoanAmount(false);
     }
-    // if (editBTNtext === "Save") {
-    //   updateCustomerInfor(AccountNo); // Call the function here
-    //   setEditText("Edit");
-    // }
+
   };
 
   function handlePopUpCancel() {
@@ -70,7 +67,15 @@ const InformationCheck = () => {
   // handling apply button
   const handleApply = (e) => {
     e.preventDefault();
-    navigate("/ModelDecision");
+    navigate("/ModelDecision", {state:
+    {
+      AccountNo: AccountNo,
+      dateApplied: dateApplied,
+      loanType: loanType,
+      loanTerm: loanTerm,
+      loanAmountinfo: loanAmountinfo
+
+    }});
   };
 
   // handling close button
@@ -150,7 +155,12 @@ const InformationCheck = () => {
           <h1 className="sev-infoHeader">MY DETAILS</h1>
         </div>
 
+        <div className="warning">
+            <p>Please make sure your contact information is up-to-date. <br />If you want to change your contact details, you can do so through this <a href=''>link</a></p>
+          </div>
+
         <form className="form-container">
+
           <div className="personalInfo">
             <div className="personalInfoTxt">CUSTOMER INFORMATION</div>
             <div className="personalFields">
@@ -384,6 +394,7 @@ const InformationCheck = () => {
                 </div>
               )}
             </div>
+
 
             <div className="buttons">
               <button className="backBTN" onClick={handleClose}>

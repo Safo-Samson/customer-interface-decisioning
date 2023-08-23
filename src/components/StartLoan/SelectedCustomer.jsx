@@ -1,6 +1,7 @@
 import "./SelectedCustomer.css";
 
 const SelectedCustomer = (props) => {
+
   return (
     <>
       <div className="sel-customer-info">
@@ -8,7 +9,7 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="AccountNo"> First Name</label>
             <input
-              value={props.AccountNo}
+              value= 'Lionel'
               type="AccountNo"
               placeholder=""
               id="AccountNo"
@@ -20,8 +21,8 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="birthDate"> Last Name</label>
             <input
-              value={props.birthDate}
-              type="date"
+              value='Messi'
+              type=""
               placeholder=""
               id="birthDate"
               name="birthDate"
@@ -29,13 +30,13 @@ const SelectedCustomer = (props) => {
             />
           </div>
           <div className="sel-customer-personalInfo">
-            <label htmlFor="loyaltyDays"> Loan Type</label>
+            <label htmlFor="loanType"> Loan Type</label>
             <input
-              value={props.loyaltyDays}
-              type="loyaltyDays"
+              value='Personal Loan' // Change
+              type=""
               placeholder=""
-              id="loyaltyDays"
-              name="loyaltyDays"
+              id="loanType"
+              name="loanType"
               readOnly
             />
           </div>
@@ -43,7 +44,7 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="AccountNo"> Loan Amount</label>
             <input
-              value={props.AccountNo}
+              value='15,000' // Change in the future
               type="AccountNo"
               placeholder=""
               id="AccountNo"
@@ -57,8 +58,8 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="AccountNo"> Date Applied</label>
             <input
-              value={props.AccountNo}
-              type="AccountNo"
+              value=''
+              type="date"
               placeholder=""
               id="AccountNo"
               name="AccountNo"
@@ -69,7 +70,7 @@ const SelectedCustomer = (props) => {
             <label htmlFor="AccountNo"> Date Accepted</label>
             <input
               value={props.AccountNo}
-              type="AccountNo"
+              type="date"
               placeholder=""
               id="AccountNo"
               name="AccountNo"
@@ -79,7 +80,7 @@ const SelectedCustomer = (props) => {
           <div className="sel-customer-personalInfo">
             <label htmlFor="AccountNo"> Account Number</label>
             <input
-              value={props.AccountNo}
+              value='1770842504'
               type="AccountNo"
               placeholder=""
               id="AccountNo"

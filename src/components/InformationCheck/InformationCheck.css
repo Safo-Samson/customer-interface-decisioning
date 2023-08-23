@@ -215,3 +215,15 @@
   border: 1px solid green;
   padding: 8px;
 }
+
+.warning{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  height: 56px;
+  /* border: 1px solid #99c3b7; */
+  display: flex;
+  justify-content: start;
+  margin-top: 15px;
+  margin-left: 75px;
+}
