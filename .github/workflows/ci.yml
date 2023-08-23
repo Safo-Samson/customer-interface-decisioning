@@ -72,7 +72,7 @@ jobs:
             sudo service nginx stop
 
             # Overwrite existing build files with new ones
-            sudo cp -r /var/www/html/customer-interface-decisioning/* /var/www/html/customer-interface-decisioning/
+            sudo cp -r /var/www/html/customer-interface-decisioning/ /var/www/html/customer-interface-decisioning/
 
             # Start Nginx
             sudo service nginx start
